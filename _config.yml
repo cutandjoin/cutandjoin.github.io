@@ -1,2 +1,8 @@
 theme: minima
-skin: solarized
+title: "My Site"
+skin: default
+
+# Navbar configuration
+header_pages:
+  - about.md
+  - contact.md
