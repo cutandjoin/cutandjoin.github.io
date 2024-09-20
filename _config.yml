@@ -1,8 +1,4 @@
-theme: minima
+theme: jekyll-theme-minimal
 title: "My Site"
 skin: default
 
-# Navbar configuration
-header_pages:
-  - about.md
-  - contact.md
