@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # License Agreement for Cjum
 
 Cjum is freeware.  
