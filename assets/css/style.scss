@@ -3,10 +3,13 @@
 
 @import "{{ site.theme }}";
 
-.sidebar {
-  width: 20% !important;
+.wrapper {
+  width:1200px;
+  margin:0 auto;
 }
 
-.content {
-  width: 80% !important;
+section {
+  width:900px;
+  float:right;
+  padding-bottom:50px;
 }
