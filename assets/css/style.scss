@@ -3,6 +3,10 @@
 
 @import "{{ site.theme }}";
 
+body {
+  color: #555555;
+}
+
 /* Default styles (mainly for PC) */
 .wrapper {
   width: 1200px;
