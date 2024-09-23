@@ -3,13 +3,92 @@
 
 @import "{{ site.theme }}";
 
+/* Default styles (mainly for PC) */
 .wrapper {
-  width:1200px;
-  margin:0 auto;
+  width: 1200px;
+  margin: 0 auto;
 }
 
 section {
-  width:900px;
-  float:right;
-  padding-bottom:50px;
+  width: 900px;
+  float: right;
+  padding-bottom: 50px;
+}
+
+/* For tablets (screens 1024px and below) */
+@media (max-width: 1024px) {
+  .wrapper {
+    width: 90%; /* Adjust width to 90% */
+    margin: 0 auto;
+  }
+
+  section {
+    width: 80%; /* Set content width wider */
+    float: none; /* Disable float for vertical layout */
+    padding-bottom: 40px;
+  }
+}
+
+/* For large smartphones (screens 768px and below) */
+@media (max-width: 768px) {
+  .wrapper {
+    width: 95%; /* Adjust width to be closer to full screen */
+    padding: 0 20px;
+  }
+
+  section {
+    width: 100%; /* Expand content to full width */
+    padding-bottom: 30px;
+  }
+
+  /* Adjust text and other elements */
+  h1 {
+    font-size: 1.8em; /* Decrease font size for headers */
+  }
+
+  p {
+    font-size: 1em; /* Adjust paragraph font size */
+  }
+}
+
+/* For small smartphones (screens 480px and below) */
+@media (max-width: 480px) {
+  .wrapper {
+    width: 100%; /* Full width */
+    padding: 0 15px;
+  }
+
+  section {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 1.5em; /* Decrease header size further */
+  }
+
+  p {
+    font-size: 0.9em; /* Make paragraph text smaller */
+  }
+}
+
+/* For very small devices (screens 320px and below) */
+@media (max-width: 320px) {
+  .wrapper {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  section {
+    width: 100%;
+    padding-bottom: 15px;
+  }
+
+  h1 {
+    font-size: 1.3em; /* Smallest header size */
+  }
+
+  p {
+    font-size: 0.85em; /* Smallest paragraph size */
+  }
 }
