@@ -4,9 +4,9 @@
 @import "{{ site.theme }}";
 
 .sidebar {
-  width: 200px;
+  width: 20% !important;
 }
+
 .content {
-  margin-left: 220px;
-  max-width: calc(100% - 220px);
+  width: 80% !important;
 }
