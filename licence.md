@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 ---
 
 # License Agreement for Cjum
