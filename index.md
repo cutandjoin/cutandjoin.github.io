@@ -3,6 +3,8 @@ layout: default
 title: "Cjum"
 ---
 # Cjum
+![Cjum Screenshot](img/ss00.png)
+
 ## Overview
 **Cjum** (pronounced "see-jum") is a simple MP3 file editing software designed for Windows PCs. Files are imported by dragging and dropping them onto the interface, after which they can be processed and exported according to the specified settings. Operations can be defined using text input, allowing multiple independent actions to be executed sequentially. The software enables fast file editing without the need for decoding and re-encoding the audio.  
 
@@ -23,7 +25,7 @@ You can download the latest version of Cjum from the link below:
 **Version**: 1.8.0.0  
 **Release Date**: September 23, 2024  
 **File Size**: 1.14 MB  
-**SHA-256**: 26B91D01B8DF0CEA204F9C051363DC4B49A37D5A5AB16228113E001083026205  
+**SHA-256**: 26b91d01b8df0cea204f9c051363dc4b49a37d5a5ab16228113e001083026205 
 
 ## Supported Devices
 Cjum requires a PC with the following software installed:
@@ -41,7 +43,7 @@ Cjum requires a PC with the following software installed:
 
 ## Installation and Execution
 1. Extract the ZIP file and place the "Cjum" folder on a drive with read/write access.
-2. Run `Cjum.exe` to start the software.
+2. Run "Cjum.exe" to start the software.
 
 ## Changelog
 
