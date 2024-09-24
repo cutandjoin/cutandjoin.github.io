@@ -3,7 +3,7 @@ layout: default
 title: "Cjum"
 ---
 # Cjum
-![Cjum Screenshot](img/ss00.png)
+<a href="img/ss00.png"><img src="img/ss00.png" alt="Cjum Screenshot" width="700px"></a>
 
 ## Overview
 **Cjum** (pronounced "see-jum") is a simple MP3 file editing software designed for Windows PCs. Files are imported by dragging and dropping them onto the interface, after which they can be processed and exported according to the specified settings. Operations can be defined using text input, allowing multiple independent actions to be executed sequentially. The software enables fast file editing without the need for decoding and re-encoding the audio.  
