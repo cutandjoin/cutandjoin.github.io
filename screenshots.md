@@ -3,8 +3,8 @@ layout: default
 ---
 
 # Screenshots
-![Screenshot01](img/ss01.png)  
+<a href="img/ss01.png"><img src="img/ss01.png" alt="Screenshot01" width="700px"></a>  
 <br>  
-![Screenshot02](img/ss02.png)  
+<a href="img/ss02.png"><img src="img/ss02.png" alt="Screenshot02" width="700px"></a>  
 <br>  
-![Screenshot03](img/ss03.png)
+<a href="img/ss03.png"><img src="img/ss03.png" alt="Screenshot03" width="700px"></a>  
