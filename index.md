@@ -20,12 +20,12 @@ title: "Cjum"
 ## Download
 You can download the latest version of Cjum from the link below:
 
-[Download Cjum](https://github.com/cutandjoin/Cjum/releases/download/mp3-editor/cjum_v1800e.zip)  
+[Download Cjum](https://github.com/cutandjoin/Cjum/releases/download/cjum1810/cjum_v1810e.zip)  
 
-**Version**: 1.8.0.0  
-**Release Date**: September 23, 2024  
+**Version**: 1.8.1.0  
+**Release Date**: October 1, 2024  
 **File Size**: 1.14 MB  
-**SHA-256**: 26b91d01b8df0cea204f9c051363dc4b49a37d5a5ab16228113e001083026205 
+**SHA-256**: 1e0b4776c2e00ccf5429009f4a6bf3c1f8f0f4b1f942a7e8d289ab3ad85e308c 
 
 ## Supported Devices
 Cjum requires a PC with the following software installed:
@@ -52,3 +52,6 @@ Cjum requires a PC with the following software installed:
 
 ### Version 1.8.0.0 - September 23, 2024
 - English version release
+ 
+### Version 1.8.1.0 - October 1, 2024
+- Bug fixes
