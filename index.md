@@ -20,7 +20,7 @@ title: "Cjum"
 ## Download
 You can download the latest version of Cjum from the link below:
 
-[Download Cjum](https://github.com/cutandjoin/Cjum/releases/download/cjum1810/cjum_v1810e.zip)  
+~~Download Cjum~~ Download link temporarily paused for updates.
 
 **Version**: 1.8.1.0  
 **Release Date**: October 1, 2024  
