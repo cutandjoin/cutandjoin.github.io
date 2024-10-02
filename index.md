@@ -20,12 +20,12 @@ title: "Cjum"
 ## Download
 You can download the latest version of Cjum from the link below:
 
-[Download Cjum](https://github.com/cutandjoin/Cjum/releases/download/cjum1820/cjum_v1820e.zip)  
+[Download Cjum](https://github.com/cutandjoin/Cjum/releases/download/cjum1830/cjum_v1830e.zip)  
 
-**Version**: 1.8.2.0  
-**Release Date**: October 1, 2024  
+**Version**: 1.8.3.0  
+**Release Date**: October 2, 2024  
 **File Size**: 1.14 MB  
-**SHA-256**: e19cc1b6b76d1506092fdb5a1ae39c329090f256f393f866b3b5fd1cda38e710 
+**SHA-256**: 87c4ce4edb7e6c218cfbb6c5509dbd9db96f414c2554bce5e9175fbf37ed6667 
 
 ## Supported Devices
 Cjum requires a PC with the following software installed:
@@ -52,10 +52,12 @@ Cjum requires a PC with the following software installed:
 
 ### Version 1.8.0.0 - September 23, 2024
 - English version release
- 
+
 ### Version 1.8.1.0 - September 30, 2024
 - Bug fixes
 
 ### Version 1.8.2.0 - October 1, 2024
 - Bug fixes
 
+### Version 1.8.3.0 - October 2, 2024
+- Bug fixes
