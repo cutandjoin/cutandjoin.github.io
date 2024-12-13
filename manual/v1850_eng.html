@@ -1,0 +1,141 @@
+---
+layout: default
+title: "Manual"
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Cjum Manual</title>
+<style>
+.manual-content{}
+.manual-content h1{padding-bottom:30px;border-bottom:1px solid;}
+.manual-content h2{margin:0;padding-bottom:10px;}
+.manual-content h3{margin:0;}
+.manual-content h4{margin:0;font-weight:normal;padding-bottom:5px;}
+.manual-content p{margin:0;}
+.manual-content span{font-weight:bold;}
+.manual-content ol{margin:0;padding-left:20px;}
+.manual-content ul{margin:0;padding-left:0;list-style-type:none;}
+.manual-content .nml{margin:0;padding-left:20px;list-style-type:disc;}
+.manual-content .itm{margin:0;padding-left:1em;list-style-type:none;}
+.manual-content .sitm{margin:0;padding-left:1em;list-style-type:none;}
+.manual-content .cts{border-bottom:1px solid;margin-bottom:1em;}
+.manual-content .blc{padding-bottom:2em;}
+.manual-content .tbl{max-width:100%;height:auto;background:none;}
+.manual-content .txt{max-width:100%;height:auto;background-color:#f6f6f6;border:1px solid #ddd;font-family:monospace,Courier;font-size:0.9em;padding:1em;overflow-wrap:break-word;}
+.manual-content .stbl{max-width:100%;height:auto;background:none;}
+.manual-content .stxt{max-width:100%;height:auto;background-color:#f6f6f6;border:1px solid #ddd;font-family:monospace,Courier;font-size:0.9em;padding:1em;overflow-wrap:break-word;}
+.manual-content .id1{padding-left:1em;}
+.manual-content .id2{padding-left:2em;}
+.manual-content .back-to-top{text-align:right;margin-top:20px;}
+@media (max-width: 768px) {
+.manual-content .tbl{width:100%;}
+.manual-content .txt {font-size:0.8em;
+.manual-content .stbl{width:100%;}
+.manual-content .stxt {font-size:0.8em;
+}
+</style>
+</head>
+<body>
+<div class="manual-content">
+    <h1>Cjum User Manual</h1>
+    <div class="cts" id="def-window">
+        <div class="blc">
+            <h4>[General 1 Tab]</h4>
+            <ul>
+                <li id="prm-ae">
+                    <span>Execute</span> (ae=0-1,0): Chooses how to start the execution.
+                    <ul class="itm">
+                        <li><span>Manual</span> (ae=0): Starts the execution by pressing the start button.</li>
+                        <li><span>Auto</span> (ae=1): Starts the execution automatically after importing Import MP3s.</li>
+                    </ul>
+                </li>
+                <li id="prm-ii">
+                    <span>Notify Non-executable Items</span> (ii=0-1,1): Chooses whether to notify about items that cannot be executed.
+                    <ul class="itm">
+                        <li><span>Not Notify</span> (ii=0): No notification will be given.</li>
+                        <li><span>Notify</span> (ii=1): Notification will be given.</li>
+                    </ul>
+                </li>
+                <li id="prm-eo">
+                    <span>Re-execution</span> (eo=0-1,1): Chooses whether to allow multiple executions of the same list.
+                    <ul class="itm">
+                        <li><span>Disallow</span> (eo=0): Allows execution only once.</li>
+                        <li><span>Allow</span> (eo=1): Allows multiple executions.</li>
+                    </ul>
+                </li>
+                <li id="prm-tp">
+                    <span>Quit after Execution</span> (tp=0-1,0): Chooses whether to terminate the program after execution.
+                    <ul class="itm">
+                        <li><span>Disallow</span> (tp=0): Does not terminate the program.</li>
+                        <li><span>Allow</span> (tp=1): Terminates the program after execution if there are no issues.</li>
+                    </ul>
+                </li>
+                <li id="prm-db">
+                    <span>Decoding Timing</span> (db=0-1,0): Chooses when to decode MP3 files.
+                    <ul class="itm">
+                        <li><span>At List Addition</span> (db=0): Decodes when adding MP3 files to the list.</li>
+                        <li><span>Pre Execution</span> (db=1): Decodes when starting execution.</li>
+                    </ul>
+                </li>
+                <li id="prm-pd"><span>Parallel Processing</span> (pd=1-6,1): Chooses the upper limit for parallel processing during decoding and exporting of MP3s.</li>
+                <li id="prm-pv">
+                    <span>Decoding Target</span> (pv=0-1,0): Chooses the type of MP3 files to decode.
+                    <ul class="itm">
+                        <li><span>CBR</span> (pv=0): Targets constant bit rate (CBR) MP3 files.</li>
+                        <li><span>CBR+VBR</span> (pv=1): Targets both constant bit rate (CBR) and variable bit rate (VBR) MP3 files.</li>
+                    </ul>
+                </li>
+                <li id="prm-da">
+                    <span>Decoding Acceleration</span> (da=0-2,1): Chooses whether to omit decoding of some frames to speed up the process.
+                    <ul class="itm">
+                        <li><span>Disallow</span> (da=0): Decodes all frames.</li>
+                        <li><span>Allow [Light]</span> (da=1): Omits decoding of high-volume frames to shorten processing time.</li>
+                        <li><span>Allow</span> (da=2): Omits decoding of high-volume frames to shorten processing time further than [Light]. However, some files may not be decoded correctly.</li>
+                    </ul>
+                </li>
+                <li id="prm-sv">
+                    <span>Screen View</span> (sv=0-1,0): Chooses the format of the main screen.
+                    <ul class="itm">
+                        <li><span>Default</span> (sv=0): Default screen format.</li>
+                        <li><span>Simple</span> (sv=1): Simplified screen format.</li>
+                    </ul>
+                </li>
+                <li id="prm-ac">
+                    <span>List Column Width</span> (ac=0-1,0): Chooses the column width in the list.
+                    <ul class="itm">
+                        <li><span>Long</span> (ac=0): Some columns move outside the screen and are displayed by horizontal scrolling.</li>
+                        <li><span>Short</span> (ac=1): All columns are displayed within the screen.</li>
+                    </ul>
+                </li>
+                <li id="prm-sc">
+                    <span>Scroll</span> (sc=0-2,0): Chooses whether to scroll the list to display the specified position after execution.
+                    <ul class="itm">
+                        <li><span>Disallow</span> (sc=0): No scrolling.</li>
+                        <li><span>Start</span> (sc=1): Displays the top of the execution result.</li>
+                        <li><span>End</span> (sc=2): Displays the bottom of the execution result.</li>
+                    </ul>
+                </li>
+                <li id="prm-cd">
+                    <span>Show Execution Result</span> (cd=0-1,1): Chooses whether to notify the result of execution at the end.
+                    <ul class="itm">
+                        <li><span>Not Notify</span> (cd=0): No notification of execution result.</li>
+                        <li><span>Notify</span> (cd=1): Notifies the execution result.</li>
+                    </ul>
+                </li>
+                <li id="prm-hr">
+                    <span>History</span> (hr=0-1,0): Chooses how to display execution history in the list.
+                    <ul class="itm">
+                        <li><span>Not Show</span> (hr=0): Does not keep execution history in the list.</li>
+                        <li><span>Show</span> (hr=1): Keeps execution history in the list.</li>
+                    </ul>
+                </li>
+                <li id="prm-uc"><span>Max Undo Count</span> (uc=0-10,3): Specifies the upper limit for the number of undo actions in the "Undo" menu in the menu bar.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
