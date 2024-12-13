@@ -18,14 +18,23 @@ title: "Cjum"
 - Save settings  
 
 ## Download
-You can download the latest version of Cjum from the link below:
+You can download the latest version of Cjum from the links below:
 
-[Download Cjum](https://github.com/cutandjoin/Cjum/releases/download/cjum1840/cjum_v1840e.zip)  
+### English Version
+[Download Cjum (English)](https://github.com/cutandjoin/Cjum/releases/download/cjum1850/cjum_v1850e.zip)
 
-**Version**: 1.8.4.0  
-**Release Date**: October 6, 2024  
-**File Size**: 1.14 MB  
-**SHA-256**: 638cb9cd5870ee4b78afcf2728e3164afe38cf66fd93d70aa5b6f6153a77153e 
+**Version**: 1.8.5.0  
+**Release Date**: December 14, 2024  
+**File Size**: 1.19 MB  
+**SHA-256**: 75f7a860a5f8d03060319463f6795b8e711b872c3267abc4fed6fbb518c5a1d2  
+
+### Japanese Version
+[Download Cjum (日本語)](https://github.com/cutandjoin/Cjum/releases/download/cjum1850j/cjum_v1850j.zip)
+
+**Version**: 1.8.5.0  
+**Release Date**: December 14, 2024  
+**File Size**: 1.19 MB  
+**SHA-256**: 19db7aec77ff4d3b20482ed53a4639b5686ecc603ad00990bb4e1c3d798d5567
 
 ## Supported Devices
 Cjum requires a PC with the following software installed:
@@ -63,4 +72,8 @@ Cjum requires a PC with the following software installed:
 - Bug fixes
 
 ### Version 1.8.4.0 - October 6, 2024
+- Bug fixes
+
+### Version 1.8.5.0 - December 14, 2024
+- New features added
 - Bug fixes
