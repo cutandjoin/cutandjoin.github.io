@@ -6,4 +6,4 @@ layout: default
 
 For general inquiries or issues regarding the software, contact via:
 
-**Email:** cjumapp[at]gmail.com
+**Email:** cutandjoinapp[at]gmail.com
