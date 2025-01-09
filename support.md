@@ -2,10 +2,10 @@
 layout: default
 ---
 
-# Support Cjum
+# Support Cjam
 
 
-If you enjoy using Cjum, consider supporting its development.   
+If you enjoy using Cjam, consider supporting its development.   
 Your contributions help fund updates and improvements!  
 
 
