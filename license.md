@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# License Agreement for Cjum
+# License Agreement for Cjam
 
 Cjam is freeware.  
 Do not copy or redistribute the software.  
