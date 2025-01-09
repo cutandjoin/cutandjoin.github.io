@@ -88,4 +88,3 @@ Cjam requires a PC with the following software installed:
 - Bug fixes
 - Program name change
 
-- Bug fixes
