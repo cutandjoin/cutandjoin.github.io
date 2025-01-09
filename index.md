@@ -1,12 +1,12 @@
 ---
 layout: default
-title: "Cjum"
+title: "Cjam"
 ---
-# Cjum
-<a href="img/ss00.png"><img src="img/ss00.png" alt="Cjum Screenshot" width="700px"></a>
+# Cjam
+<a href="img/ss00.png"><img src="img/ss00.png" alt="Cjam Screenshot" width="700px"></a>
 
 ## Overview
-**Cjum** (pronounced "see-jum") is a simple MP3 file editing software designed for Windows PCs. Files are imported by dragging and dropping them onto the interface, after which they can be processed and exported according to the specified settings. Operations can be defined using text input, allowing multiple independent actions to be executed sequentially. The software enables fast file editing without the need for decoding and re-encoding the audio.  
+**Cjam** (pronounced "see-jam") is a simple MP3 file editing software designed for Windows PCs. Files are imported by dragging and dropping them onto the interface, after which they can be processed and exported according to the specified settings. Operations can be defined using text input, allowing multiple independent actions to be executed sequentially. The software enables fast file editing without the need for decoding and re-encoding the audio.  
 
 ## Key Features  
 - Cut MP3 files  
@@ -18,26 +18,26 @@ title: "Cjum"
 - Save settings  
 
 ## Download
-You can download the latest version of Cjum from the links below:
+You can download the latest version of Cjam from the links below:
 
 ### English Version
-[Download Cjum (English)](https://github.com/cutandjoin/Cjum/releases/download/cjum1870e/cjum_v1870e.zip)
+[Download Cjam (English)](https://github.com/cutandjoin/Cjam/releases/download/v1900e/cjam_v1900e.zip)
 
-**Version**: 1.8.7.0  
-**Release Date**: December 22, 2024  
-**File Size**: 1.19 MB  
-**SHA-256**: 7c333618e227e974363dec6d2045bf5ffb417df655d41c6503e00bb38f89ef74  
+**Version**: 1.9.0.0  
+**Release Date**: January 09, 2025  
+**File Size**: 1.27 MB  
+**SHA-256**: 635d49f198668c976b9e0ae174268361e471645084b72832123070ba1cce2c67  
 
 ### Japanese Version
-[Download Cjum (日本語)](https://github.com/cutandjoin/Cjum/releases/download/cjum1870j/cjum_v1870j.zip)
+[Download Cjam (日本語)](https://github.com/cutandjoin/Cjam/releases/download/v1900j/cjam_v1900j.zip)
 
-**Version**: 1.8.7.0  
-**Release Date**: December 22, 2024  
-**File Size**: 1.19 MB  
-**SHA-256**: ace635184123058499124568f5a0feb74a7ac656c976308eacc7aeb23c9b46e1
+**Version**: 1.9.0.0  
+**Release Date**: January 09, 2025  
+**File Size**: 1.27 MB  
+**SHA-256**: a825e2d27ca011ac5b11b8ccdceeffc4894134577f9f95a09292fcc76f34e98e
 
 ## Supported Devices
-Cjum requires a PC with the following software installed:
+Cjam requires a PC with the following software installed:
 
 - Microsoft Windows 10 or later
 - Microsoft .NET 6.0 or later
@@ -46,13 +46,13 @@ Cjum requires a PC with the following software installed:
 - MP3 (*.mp3)
 - CUE (*.cue)
 - M3U (*.m3u)
-- CJUMC (*.cjc) - Cjum's custom format
-- CJUMJ (*.cjj) - Cjum's custom format
-- CJUM (*.cjm) - Cjum's custom format
+- CJAMC (*.cjc) - Cjam's custom format
+- CJAMJ (*.cjj) - Cjam's custom format
+- CJAM (*.cjm) - Cjam's custom format
 
 ## Installation and Execution
-1. Extract the ZIP file and place the "Cjum" folder on a drive with read/write access.
-2. Run "Cjum.exe" to start the software.
+1. Extract the ZIP file and place the "Cjam" folder on a drive with read/write access.
+2. Run "Cjam.exe" to start the software.
 
 ## Changelog
 
@@ -82,4 +82,10 @@ Cjum requires a PC with the following software installed:
 - Bug fixes
 
 ### Version 1.8.7.0 - December 22, 2024
+- Bug fixes
+
+### Version 1.9.0.0 - January 09, 2025
+- Bug fixes
+- Program name change
+
 - Bug fixes
