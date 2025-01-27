@@ -28,14 +28,6 @@ You can download the latest version of Cjam from the links below:
 **File Size**: 1.27 MB  
 **SHA-256**: 635d49f198668c976b9e0ae174268361e471645084b72832123070ba1cce2c67  
 
-### Japanese Version
-[Download Cjam (日本語)](https://github.com/cutandjoin/Cjam/releases/download/v1900j/cjam_v1900j.zip)
-
-**Version**: 1.9.0.0  
-**Release Date**: January 09, 2025  
-**File Size**: 1.27 MB  
-**SHA-256**: a825e2d27ca011ac5b11b8ccdceeffc4894134577f9f95a09292fcc76f34e98e
-
 ## Supported Devices
 Cjam requires a PC with the following software installed:
 
@@ -61,28 +53,6 @@ Cjam requires a PC with the following software installed:
 
 ### Version 1.8.0.0 - September 23, 2024
 - English version release
-
-### Version 1.8.1.0 - September 30, 2024
-- Bug fixes
-
-### Version 1.8.2.0 - October 1, 2024
-- Bug fixes
-
-### Version 1.8.3.0 - October 2, 2024
-- Bug fixes
-
-### Version 1.8.4.0 - October 6, 2024
-- Bug fixes
-
-### Version 1.8.5.0 - December 14, 2024
-- New features added
-- Bug fixes
-
-### Version 1.8.6.0 - December 15, 2024
-- Bug fixes
-
-### Version 1.8.7.0 - December 22, 2024
-- Bug fixes
 
 ### Version 1.9.0.0 - January 09, 2025
 - Bug fixes
