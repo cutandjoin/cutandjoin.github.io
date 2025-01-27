@@ -7,3 +7,5 @@ layout: default
 For general inquiries or issues regarding the software, contact via:
 
 **Email:** cutandjoinapp[at]gmail.com
+
+**Developer:** cutandjoin
