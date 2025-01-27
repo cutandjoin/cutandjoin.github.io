@@ -20,7 +20,6 @@ title: "Cjam"
 ## Download
 You can download the latest version of Cjam from the links below:
 
-### English Version
 [Download Cjam (English)](https://github.com/cutandjoin/Cjam/releases/download/v1900e/cjam_v1900e.zip)
 
 **Version**: 1.9.0.0  
