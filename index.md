@@ -20,12 +20,12 @@ title: "Cjam"
 ## Download
 You can download the latest version of Cjam from the link below:
 
-[Download Cjam (English)](https://github.com/cutandjoin/Cjam/releases/download/v1930e/cjam_v1930e.zip)
+[Download Cjam (English)](https://github.com/cutandjoin/Cjam/releases/download/v1940e/cjam_v1940e.zip)
 
-**Version**: 1.9.3.0  
-**Release Date**: March 16, 2025  
+**Version**: 1.9.4.0  
+**Release Date**: March 21, 2025  
 **File Size**: 1.26 MB  
-**SHA-256**: 777a451f2b35241f50e7488fd5af8dab1bc9c3e280b42c8ac80b8b2c52e69fa9  
+**SHA-256**: 075dcf4b51a975c87354dc74fe6f003b5c0b1fef17a458482d99873f70dbecca  
 
 ## Supported Devices
 Cjam requires a PC with the following software installed:
@@ -64,5 +64,8 @@ Cjam requires a PC with the following software installed:
 - Bug fixes
 
 ### Version 1.9.3.0 - March 16, 2025
+- Bug fixes
+
+### Version 1.9.4.0 - March 21, 2025
 - Bug fixes
 
