@@ -20,12 +20,12 @@ title: "Cjam"
 ## Download
 You can download the latest version of Cjam from the link below:
 
-[Download Cjam (English)](https://github.com/cutandjoin/Cjam/releases/download/v1960e/cjam_v1960en.zip)
+[Download Cjam (English)](https://github.com/cutandjoin/Cjam/releases/download/v1970e/cjam_v1970e.zip)
 
-**Version**: 1.9.6.0  
-**Release Date**: May 03, 2025  
+**Version**: 1.9.7.0  
+**Release Date**: May 25, 2025  
 **File Size**: 1.31 MB  
-**SHA-256**: d5e16391211b4b7f9d06ee78e7143c590b909c23fd1df1614fa68f94b05fc826  
+**SHA-256**: 6dd822c8056e4c88049af632f7963c13255fcb666e7b40fb52f98da004a3d203  
 
 ## Supported Devices
 Cjam requires a PC with the following software installed:
@@ -39,7 +39,7 @@ Cjam requires a PC with the following software installed:
 - M3U (*.m3u)
 - CJAMC (*.cjc) - Cjam's custom format
 - CJAMJ (*.cjj) - Cjam's custom format
-- <a href="https://cjmapp.net/manual/v1960_eng.html#txt-cjm">CJAM</a> (*.cjm) - Cjam's custom format
+- <a href="https://cjmapp.net/manual/v1970_eng.html#txt-cjm">CJAM</a> (*.cjm) - Cjam's custom format
 
 ## Installation and Execution
 1. Extract the ZIP file and place the "Cjam" folder on a drive with read/write access.
@@ -75,5 +75,9 @@ Cjam requires a PC with the following software installed:
 
 ### Version 1.9.6.0 - May 03, 2025
 - Bug fixes
+
+### Version 1.9.7.0 - May 25, 2025
+- Fixed a bug where the "lr" parameter was not functioning correctly
+- Other minor bug fixes
 
 
