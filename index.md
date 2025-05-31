@@ -20,12 +20,12 @@ title: "Cjam"
 ## Download
 You can download the latest version of Cjam from the link below:
 
-[Download Cjam (English)](https://github.com/cutandjoin/Cjam/releases/download/v1970e/cjam_v1970e.zip)
+[Download Cjam (English)](https://github.com/cutandjoin/Cjam/releases/download/v1980e/cjam_v1980e.zip)
 
-**Version**: 1.9.7.0  
-**Release Date**: May 25, 2025  
+**Version**: 1.9.8.0  
+**Release Date**: May 31, 2025  
 **File Size**: 1.31 MB  
-**SHA-256**: 6dd822c8056e4c88049af632f7963c13255fcb666e7b40fb52f98da004a3d203  
+**SHA-256**: cd0b87d602bc807681be35dd6f15ce47c3f0a21bdf93b3e69c14825237228051  
 
 ## Supported Devices
 Cjam requires a PC with the following software installed:
@@ -39,7 +39,7 @@ Cjam requires a PC with the following software installed:
 - M3U (*.m3u)
 - CJAMC (*.cjc) - Cjam's custom format
 - CJAMJ (*.cjj) - Cjam's custom format
-- <a href="https://cjmapp.net/manual/v1970_eng.html#txt-cjm">CJAM</a> (*.cjm) - Cjam's custom format
+- <a href="https://cjmapp.net/manual/v1980_eng.html#txt-cjm">CJAM</a> (*.cjm) - Cjam's custom format
 
 ## Installation and Execution
 1. Extract the ZIP file and place the "Cjam" folder on a drive with read/write access.
@@ -80,4 +80,7 @@ Cjam requires a PC with the following software installed:
 - Fixed a bug where the "lr" parameter was not functioning correctly
 - Other minor bug fixes
 
-
+### Version 1.9.8.0 - May 31, 2025
+- Fixed playback error at the end of the block on the main screen
+- Fixed editing error at the end of the block on the waveform screen
+- Other minor bug fixes
