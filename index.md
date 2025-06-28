@@ -20,12 +20,12 @@ title: "Cjam"
 ## Download
 You can download the latest version of Cjam from the link below:
 
-[Download Cjam (English)](https://github.com/cutandjoin/Cjam/releases/download/v1990e/cjam_v1990e.zip)
+[Download Cjam (English)](https://github.com/cutandjoin/Cjam/releases/download/v2000e/cjam_v2000e.zip)
 
-**Version**: 1.9.9.0  
-**Release Date**: June 15, 2025  
+**Version**: 2.0.0.0  
+**Release Date**: June 28, 2025  
 **File Size**: 1.31 MB  
-**SHA-256**: b146368bd1d87bbfb9e8b41d969149dadb6b7c1509b44d25eb3ec25bb0b4a01c  
+**SHA-256**: 0955ad760d44fb619cc6ae75f3c1ad1f2a5c5b42da318f0a1a7327c6638bfdaa  
 
 ## Supported Devices
 Cjam requires a PC with the following software installed:
@@ -39,7 +39,7 @@ Cjam requires a PC with the following software installed:
 - M3U (*.m3u)
 - CJAMC (*.cjc) - Cjam's custom format
 - CJAMJ (*.cjj) - Cjam's custom format
-- <a href="https://cjmapp.net/manual/v1990_eng.html#txt-cjm">CJAM</a> (*.cjm) - Cjam's custom format
+- <a href="https://cjmapp.net/manual/v2000_eng.html#txt-cjm">CJAM</a> (*.cjm) - Cjam's custom format
 
 ## Installation and Execution
 1. Extract the ZIP file and place the "Cjam" folder on a drive with read/write access.
@@ -87,3 +87,7 @@ Cjam requires a PC with the following software installed:
 
 ### Version 1.9.9.0 - June 15, 2025
 - Fixed a bug related to playback display on the main screen
+
+### Version 2.0.0.0 - June 28, 2025
+- Fixed a bug where the folder list was not updating on the vmp3 screen
+
