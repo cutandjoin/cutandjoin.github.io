@@ -20,12 +20,12 @@ title: "Cjam"
 ## Download
 You can download the latest version of Cjam from the link below:
 
-[Download Cjam (English)](https://github.com/cutandjoin/Cjam/releases/download/v2000e/cjam_v2000e.zip)
+[Download Cjam (English)](https://github.com/cutandjoin/Cjam/releases/download/v2010e/cjam_v2010e.zip)
 
-**Version**: 2.0.0.0  
-**Release Date**: June 28, 2025  
+**Version**: 2.0.1.0  
+**Release Date**: July 12, 2025  
 **File Size**: 1.31 MB  
-**SHA-256**: 0955ad760d44fb619cc6ae75f3c1ad1f2a5c5b42da318f0a1a7327c6638bfdaa  
+**SHA-256**: a49a89db891276ebd5577e62accf4612168b56b5a9e2ac30a2251d97b41fa18d  
 
 ## Supported Devices
 Cjam requires a PC with the following software installed:
@@ -39,7 +39,7 @@ Cjam requires a PC with the following software installed:
 - M3U (*.m3u)
 - CJAMC (*.cjc) - Cjam's custom format
 - CJAMJ (*.cjj) - Cjam's custom format
-- <a href="https://cjmapp.net/manual/v2000_eng.html#txt-cjm">CJAM</a> (*.cjm) - Cjam's custom format
+- <a href="https://cjmapp.net/manual/v2010_eng.html#txt-cjm">CJAM</a> (*.cjm) - Cjam's custom format
 
 ## Installation and Execution
 1. Extract the ZIP file and place the "Cjam" folder on a drive with read/write access.
@@ -91,3 +91,5 @@ Cjam requires a PC with the following software installed:
 ### Version 2.0.0.0 - June 28, 2025
 - Fixed a bug where the folder list was not updating on the vmp3 screen
 
+### Version 2.0.1.0 - July 12, 2025
+- Fixed a bug where the "qcs" parameter was not functioning correctly
