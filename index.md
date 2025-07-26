@@ -20,7 +20,7 @@ title: "Cjam"
 ## Download
 You can download the latest version of Cjam from the link below:
 
-[Download Cjam](https://github.com/cutandjoin/Cjam/releases/download/v2100e/cjam_v2100e.zip)
+Download Cjam
 
 **Version**: 2.1.0.0  
 **Release Date**: July 26, 2025  
