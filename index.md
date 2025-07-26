@@ -20,12 +20,12 @@ title: "Cjam"
 ## Download
 You can download the latest version of Cjam from the link below:
 
-Download Cjam
+[Download Cjam](https://github.com/cutandjoin/Cjam/releases/download/v2010e/cjam_v2010e.zip)
 
-**Version**: 2.1.0.0  
-**Release Date**: July 26, 2025  
-**File Size**: 1.34 MB  
-**SHA-256**: 015d97c2e2e3e3753684d15a33b141de28c2186619cc5253feb5cde2063b23a4  
+**Version**: 2.0.1.0  
+**Release Date**: July 12, 2025  
+**File Size**: 1.31 MB  
+**SHA-256**: sha256:a49a89db891276ebd5577e62accf4612168b56b5a9e2ac30a2251d97b41fa18d  
 
 ## Supported Devices
 Cjam requires a PC with the following software installed:
@@ -39,7 +39,7 @@ Cjam requires a PC with the following software installed:
 - M3U (*.m3u)
 - CJAMC (*.cjc) - Cjam's custom format
 - CJAMJ (*.cjj) - Cjam's custom format
-- <a href="https://cjmapp.net/manual/v2100_eng.html#txt-cjm">CJAM</a> (*.cjm) - Cjam's custom format
+- <a href="https://cjmapp.net/manual/v2010_eng.html#txt-cjm">CJAM</a> (*.cjm) - Cjam's custom format
 
 ## Installation and Execution
 1. Extract the ZIP file and place the "Cjam" folder on a drive with read/write access.
@@ -93,9 +93,3 @@ Cjam requires a PC with the following software installed:
 
 ### Version 2.0.1.0 - July 12, 2025
 - Fixed a bug where the "qcs" parameter was not functioning correctly
-
-### Version 2.1.0.0 - July 26, 2025
-- Added new command parameters (e.g., qfs, qss)
-- Added new command aliases (e.g., specifyarea, mapfade)
-- Improved the graph display on the waveform screen
-- Other feature enhancements and bug fixes
