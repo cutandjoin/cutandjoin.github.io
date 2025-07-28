@@ -20,12 +20,12 @@ title: "Cjam"
 ## Download
 You can download the latest version of Cjam from the link below:
 
-[Download Cjam](https://github.com/cutandjoin/Cjam/releases/download/v2010e/cjam_v2010e.zip)
+[Download Cjam](https://github.com/cutandjoin/Cjam/releases/download/v2110e/cjam_v2110e.zip)
 
-**Version**: 2.0.1.0  
-**Release Date**: July 12, 2025  
-**File Size**: 1.31 MB  
-**SHA-256**: sha256:a49a89db891276ebd5577e62accf4612168b56b5a9e2ac30a2251d97b41fa18d  
+**Version**: 2.1.1.0  
+**Release Date**: July 27, 2025  
+**File Size**: 1.33 MB  
+**SHA-256**: 95c61bab15037727b23c72defc5aba13001a4fb4981f8b3763aaa886539b2522  
 
 ## Supported Devices
 Cjam requires a PC with the following software installed:
@@ -93,3 +93,12 @@ Cjam requires a PC with the following software installed:
 
 ### Version 2.0.1.0 - July 12, 2025
 - Fixed a bug where the "qcs" parameter was not functioning correctly
+
+### Version 2.1.0.0 - July 26, 2025
+- Added new command parameters (e.g., qfs, qss)
+- Added new command aliases (e.g., specifyarea, mapfade)
+- Improved the graph display on the waveform screen
+- Other feature enhancements and bug fixes
+
+### Version 2.1.1.0 - July 27, 2025
+- Fixed a bug that occurred when splitting the block.
