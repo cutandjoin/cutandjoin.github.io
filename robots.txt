@@ -1,3 +1,7 @@
+User-agent: *
+Disallow: /manual/v*_*eng.html
+Allow: /manual/manual.html
+
 User-agent: ia_archiver
 Disallow: /
 
@@ -12,10 +16,3 @@ Disallow: /
 
 User-agent: InternetMemory
 Disallow: /
-
-User-agent: Yandex
-Disallow: /
-
-User-agent: *
-Disallow: /manual/v*_*eng.html
-Allow: /manual/manual.html
