@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: /manual/v*_*eng.html
 Allow: /manual/manual.html
 
 User-agent: ia_archiver
