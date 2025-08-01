@@ -53,4 +53,4 @@ Cjam requires a PC with the following software installed:
 ### June 28, 2025  
 - Version 2.0.0.0 released
 
-For detailed information, see the <a href="https://forum.cjmapp.net/viewforum.php?f=3">forum</a>.  
+For detailed update information, see the <a href="https://forum.cjmapp.net/viewforum.php?f=3">forum</a>.  
