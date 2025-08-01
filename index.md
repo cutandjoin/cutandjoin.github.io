@@ -47,58 +47,10 @@ Cjam requires a PC with the following software installed:
 
 ## Changelog
 
-### Version 1.0.0.0 - December 21, 2019
-- Initial release
+### December 21, 2019  
+- Version 1.0.0.0 released
 
-### Version 1.8.0.0 - September 23, 2024
-- English version release
+### June 28, 2025  
+- Version 2.0.0.0 released
 
-### Version 1.9.0.0 - January 09, 2025
-- Bug fixes
-- Program name change
-
-### Version 1.9.1.0 - February 05, 2025
-- Bug fixes
-
-### Version 1.9.2.0 - February 24, 2025
-- Bug fixes
-
-### Version 1.9.3.0 - March 16, 2025
-- Bug fixes
-
-### Version 1.9.4.0 - March 21, 2025
-- Bug fixes
-
-### Version 1.9.5.0 - May 02, 2025
-- Feature additions
-- Bug fixes
-
-### Version 1.9.6.0 - May 03, 2025
-- Bug fixes
-
-### Version 1.9.7.0 - May 25, 2025
-- Fixed a bug where the "lr" parameter was not functioning correctly
-- Other minor bug fixes
-
-### Version 1.9.8.0 - May 31, 2025
-- Fixed playback error at the end of the block on the main screen
-- Fixed editing error at the end of the block on the waveform screen
-- Other minor bug fixes
-
-### Version 1.9.9.0 - June 15, 2025
-- Fixed a bug related to playback display on the main screen
-
-### Version 2.0.0.0 - June 28, 2025
-- Fixed a bug where the folder list was not updating on the vmp3 screen
-
-### Version 2.0.1.0 - July 12, 2025
-- Fixed a bug where the "qcs" parameter was not functioning correctly
-
-### Version 2.1.0.0 - July 26, 2025
-- Added new command parameters (e.g., qfs, qss)
-- Added new command aliases (e.g., specifyarea, mapfade)
-- Improved the graph display on the waveform screen
-- Other feature enhancements and bug fixes
-
-### Version 2.1.1.0 - July 27, 2025
-- Fixed a bug that occurred when splitting the block.
+For detailed information, see the <a href="https://forum.cjmapp.net/viewforum.php?f=3">forum</a>.  
