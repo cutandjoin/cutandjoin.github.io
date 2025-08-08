@@ -26,6 +26,8 @@ You can download the latest version of Cjam from the link below:
 **Release Date**: August 08, 2025  
 **File Size**: 1.33 MB  
 **SHA-256**: 9e736e00f9bcb9b70b8b24a0f4c9f18db40987a1025fb06f65bd47387fc94c4b  
+  
+For more information, see the <a href="https://forum.cjmapp.net/index.php">forum</a>.  
 
 ## Supported Devices
 Cjam requires a PC with the following software installed:
@@ -53,4 +55,4 @@ Cjam requires a PC with the following software installed:
 ### June 28, 2025  
 - Version 2.0.0.0 released
 
-For detailed update information, see the <a href="https://forum.cjmapp.net/viewforum.php?f=3">forum</a>.  
+For detailed update informaon, see the <a href="https://forum.cjmapp.net/viewforum.php?f=3">full changelog</a>.  
