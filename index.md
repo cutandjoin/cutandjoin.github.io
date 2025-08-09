@@ -49,10 +49,12 @@ Cjam requires a PC with the following software installed:
 
 ## Changelog
 
-### December 21, 2019  
-- Version 1.0.0.0 released
-
-### June 28, 2025  
-- Version 2.0.0.0 released
-
+### Version 1.0.0.0 - December 21, 2019  
+### Version 2.0.0.0 - June 28, 2025  
+### Version 2.1.2.0 - August 08, 2025  
+- Changed the method for calculating the position parameters of sub-screens (e.g., wx, wy)
+- Fixed a bug that caused the screen to freeze when importing files in certain DPI environments
+- Fixed a layout issue that occurred in certain DPI environments
+- Fixed several minor bugs
+  
 For detailed update informaon, see the <a href="https://forum.cjmapp.net/viewforum.php?f=3">full changelog</a>.  
