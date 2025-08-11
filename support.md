@@ -5,9 +5,7 @@ layout: default
 # Support Cjam
 
 
-If you enjoy using Cjam, consider supporting its development.   
-Your contributions help fund updates and improvements!  
-
+If Cjam is useful to you, consider supporting its development.   
 
 <a href="https://buymeacoffee.com/cutandjoin" target="_blank">Buy Me a Coffee</a>  
   
