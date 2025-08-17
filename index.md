@@ -20,12 +20,12 @@ title: "Cjam"
 ## Download
 You can download the latest version of Cjam from the link below:
 
-[Download Cjam](https://github.com/cutandjoin/Cjam/releases/download/v2120e/cjam_v2120e.zip)
+[Download Cjam](https://github.com/cutandjoin/Cjam/releases/download/v2130e/cjam_v2130e.zip)
 
-**Version**: 2.1.2.0  
-**Release Date**: August 08, 2025  
+**Version**: 2.1.3.0  
+**Release Date**: August 17, 2025  
 **File Size**: 1.33 MB  
-**SHA-256**: 9e736e00f9bcb9b70b8b24a0f4c9f18db40987a1025fb06f65bd47387fc94c4b  
+**SHA-256**: 9eab8c7bb28266e869978ba5ea418232d1bc09ae090ce4d5779b09798345de33  
   
 For more information, see the <a href="https://forum.cjmapp.net/index.php">forum</a>.  
 
@@ -51,10 +51,8 @@ Cjam requires a PC with the following software installed:
 
 ### Version 1.0.0.0 - December 21, 2019  
 ### Version 2.0.0.0 - June 28, 2025  
-### Version 2.1.2.0 - August 08, 2025  
-- Changed the method for calculating the position parameters of sub-screens (e.g., wx, wy)
-- Fixed a bug that caused the screen to freeze when importing files in certain DPI environments
-- Fixed a layout issue that occurred in certain DPI environments
-- Fixed several minor bugs
+### Version 2.1.3.0 - August 17, 2025  
+- Fixed a bug where Cues shifted from the specified position during editing on the waveform screen.
+- Improved Undo/Redo functionality on the waveform screen.
   
 For detailed update informaon, see the <a href="https://forum.cjmapp.net/viewforum.php?f=3">full changelog</a>.  
