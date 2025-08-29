@@ -40,7 +40,7 @@ title: "Manual"
 </head>
 <body>
     <div class="manual-content">
-        <h1>Cjam User Manual (Version 2.1.3.0)</h1>
+      <h1>Cjam User Manual (Version 2.2.0.0)</h1>
         <a name="manual-top"></a>
         <div class="cts">
             <div class="blc">
@@ -1601,6 +1601,13 @@ title: "Manual"
                             <li><span>Not Selected Item</span> (qht=1): Uses unselected items in the list to determine the duplicate location.</li>
                         </ul>
                     </li>
+                    <li id="prm-qhc">
+                        <span>Adjust Cue Positions</span> (qhc=0-1,0): If "Operation Condition" is "Duplicate" (qd=1), specifies whether to adjust Cue positions.
+                        <ul class="itm">
+                            <li><span>Disallow</span> (qhc=0): Do not adjust Cue positions.</li>
+                            <li><span>Allow</span> (qhc=1): Adjust Cue positions while keeping their relative locations within each IMP3.</li>
+                        </ul>
+                    </li>
                     <li id="prm-qi">
                         <span>Duplicate Destination Origin [Block]</span> (qi=0-1,0): If "Operation Condition" is "Duplicate" (qd=1), specifies the starting point to determine the duplicate Block.
                         <ul class="itm">
@@ -1646,6 +1653,13 @@ title: "Manual"
                             <li><span>Ascending</span> (qp=0): Sorts in ascending order.</li>
                             <li><span>Descending</span> (qp=1): Sorts in descending order.</li>
                             <li><span>Shuffle</span> (qp=2): Sorts randomly.</li>
+                        </ul>
+                    </li>
+                    <li id="prm-qpc">
+                        <span>Adjust Cue Positions</span> (qpc=0-1,0): If "Operation Condition" is "Reorder" (qd=2), specifies whether to adjust Cue positions.
+                        <ul class="itm">
+                            <li><span>Disallow</span> (qpc=0): Do not adjust Cue positions.</li>
+                           <li><span>Allow</span> (qpc=1): Adjust Cue positions while keeping their relative locations within each IMP3.</li>
                         </ul>
                     </li>
                 </ul>
@@ -1739,6 +1753,13 @@ title: "Manual"
                             <li><span>Apply</span> (qcs=1): Applies fade and silence addition.</li>
                         </ul>
                     </li>
+                    <li id="prm-qcc">
+                        <span>Adjust Cue Positions</span> (qcc=0-1,0): If "Operation Condition" is "Comp/Decomp" (qd=8), specifies whether to adjust Cue positions.
+                        <ul class="itm">
+                            <li><span>Disallow</span> (qcc=0): Do not adjust Cue positions.</li>
+                            <li><span>Allow</span> (qcc=1): Adjust Cue positions while keeping their relative locations within each IMP3.</li>
+                        </ul>
+                    </li>
                     <li id="prm-qsl"><span>Stretch Value</span> (qsl=-10000.00-10000.00,0.00): If "Operation Condition" is "Stretch" (qd=9), specifies the number of seconds for stretching.</li>
                     <li id="prm-qsp">
                         <span>Stretch Position</span> (qsp=0-2,0): If "Operation Condition" is "Stretch" (qd=9), specifies the position to stretch.
@@ -1746,6 +1767,13 @@ title: "Manual"
                             <li><span>Both</span> (qsp=0): Stretches the beginning and end of the selected item.</li>
                             <li><span>Start</span> (qsp=1): Stretches the beginning of the selected item.</li>
                             <li><span>End</span> (qsp=2): Stretches the end of the selected item.</li>
+                        </ul>
+                    </li>
+                    <li id="prm-qsc">
+                        <span>Adjust Cue Positions</span> (qsc=0-1,0): If "Operation Condition" is "Stretch" (qd=9), specifies whether to adjust Cue positions.
+                        <ul class="itm">
+                            <li><span>Disallow</span> (qsc=0): Do not adjust Cue positions.</li>
+                            <li><span>Allow</span> (qsc=1): Adjust Cue positions while keeping their relative locations within each IMP3.</li>
                         </ul>
                     </li>
                     <li id="prm-qmt">
@@ -1848,6 +1876,13 @@ title: "Manual"
                             <li><span>Append</span> (qsq=1): Adds a silence interval at the end of each Import MP3.</li>
                             <li><span>Replace</span> (qsq=2): Replaces each Import MP3 with a silence interval.</li>
                             <li><span>Both</span> (qsq=3): Adds a silence interval at both the beginning and the end of each Import MP3.</li>
+                        </ul>
+                    </li>
+                    <li id="prm-qsb">
+                        <span>Adjust Cue Positions</span> (qsb=0-1,0): If "Operation Condition" is "Individual FS" (qd=10), specifies whether to adjust Cue positions.
+                        <ul class="itm">
+                            <li><span>Disallow</span> (qsb=0): Do not adjust Cue positions.</li>
+                            <li><span>Allow</span> (qsb=1): Adjust Cue positions while keeping their relative locations within each IMP3.</li>
                         </ul>
                     </li>
                 </ul>
@@ -2420,7 +2455,8 @@ title: "Manual"
                 <p>Access via [Right-Click on Main Screen List] > [Show Wave]</p>
                 <p>Note 1: Waveform displays on a Block basis. All Import MP3s within the Block are decoded and made available for display if the length is within 180 minutes.</p>
                 <p>Note 2: After pressing the Apply button, the fade/silence addition/Cue state for the corresponding Block will be changed to individual specification (qa=2,qd=10-11).</p>
-                <p>Note 3: Some parameters may have values that are not supported exclusively on the "Waveform" screen.</p>
+                <p>Note 3: The command applies only to the displayed Block. Other Blocks remain unchanged.</p>
+                <p>Note 4: Some parameters may have values that are not supported exclusively on the "Waveform" screen.</p>
             </div>
             <div class="blc">
                 <h4>[Shortcut Keys and Others]</h4>
