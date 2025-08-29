@@ -20,14 +20,14 @@ title: "Cjam"
 ## Download
 You can download the latest version of Cjam from the link below:
 
-[Download Cjam](https://github.com/cutandjoin/Cjam/releases/download/v2130e/cjam_v2130e.zip)
+[Download Cjam](https://github.com/cutandjoin/Cjam/releases/download/v2200/cjam_v2200e.zip)
 
-**Version**: 2.1.3.0  
-**Release Date**: August 17, 2025  
+**Version**: 2.2.0.0  
+**Release Date**: August 29, 2025  
 **File Size**: 1.33 MB  
-**SHA-256**: 9eab8c7bb28266e869978ba5ea418232d1bc09ae090ce4d5779b09798345de33  
+**SHA-256**: 285dd694ac086d82055e0a60dec10e71a4e79c178fba9bf6cf28bc7ce1da614b  
 
-If the latest version cannot be downloaded, the previous version is available [here](https://github.com/cutandjoin/Cjam/releases/download/v2120e/cjam_v2120e.zip).  
+If the latest version cannot be downloaded, the previous version is available [here](https://github.com/cutandjoin/Cjam/releases/download/v2130e/cjam_v2130e.zip).  
 For more information, see the <a href="https://forum.cjmapp.net/index.php">forum</a>.  
 
 ## Supported Devices
@@ -52,8 +52,10 @@ Cjam requires a PC with the following software installed:
 
 ### Version 1.0.0.0 - December 21, 2019  
 ### Version 2.0.0.0 - June 28, 2025  
-### Version 2.1.3.0 - August 17, 2025  
-- Fixed a bug where Cues shifted from the specified position during editing on the waveform screen.
-- Improved Undo/Redo functionality on the waveform screen.
+### Version 2.2.0.0 - August 29, 2025  
+- Added new command parameters (e.g., qhc, qpc)
+- Enabled additional command parameters on the waveform screen (e.g., la, qf)
+- Fixed a bug where the “qqt” parameter was not functioning correctly
+- Fixed several minor bugs
   
 For detailed update informaon, see the <a href="https://forum.cjmapp.net/viewforum.php?f=3">full changelog</a>.  
