@@ -2,11 +2,13 @@
 layout: default
 ---
 
-# License Agreement for Cjam
+# Cjam License (v2.2.1.0 and later)
 
 Cjam is freeware.  
-Do not copy or redistribute the software.  
+You are free to use and redistribute the original archive, provided that you keep it intact and unmodified.  
 The author assumes no liability for any direct or indirect damages resulting from the use of Cjam.  
+The source code is not publicly available.  
   
-**Use of Google Analytics**  
-This website uses Google Analytics to analyze traffic and improve user experience. Google Analytics may collect information such as your IP address, browser type, and pages visited. By using this website, you consent to the processing of data by Google as described in their [Privacy Policy](https://policies.google.com/privacy).
+Please use the latest version whenever possible.  
+Many thanks to all users.  
+  
