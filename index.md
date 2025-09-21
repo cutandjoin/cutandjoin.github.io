@@ -20,14 +20,14 @@ title: "Cjam"
 ## Download
 You can download the latest version of Cjam from the link below:
 
-[Download Cjam](https://github.com/cutandjoin/Cjam/releases/download/v2210/cjam_v2210e.zip)
+[Download Cjam](https://github.com/cutandjoin/Cjam/releases/download/v2220/cjam_v2220e.zip)
 
-**Version**: 2.2.1.0  
-**Release Date**: September 03, 2025  
+**Version**: 2.2.2.0  
+**Release Date**: Sep 21, 2025  
 **File Size**: 1.34 MB  
-**SHA-256**: 3f32e1fb0e91b60c73c74ddc4f388f89964a991b8112c3049bb6e0f21853785b  
+**SHA-256**: 1e791956f11eb2bc36c70297c4e49eeb6249a2d597ed0ebac0317d1efee41c41  
 
-If the latest version cannot be downloaded, the previous version is available [here](https://github.com/cutandjoin/Cjam/releases/download/v2200/cjam_v2200e.zip).  
+If the latest version cannot be downloaded, the previous version is available [here](https://github.com/cutandjoin/Cjam/releases/download/v2210/cjam_v2210e.zip).  
 For more information, see the <a href="https://forum.cjmapp.net/index.php">forum</a>.  
 
 ## Supported Devices
@@ -50,12 +50,12 @@ Cjam requires a PC with the following software installed:
 
 ## Changelog
 
-### Version 1.0.0.0 - December 21, 2019  
-### Version 2.0.0.0 - June 28, 2025  
-### Version 2.2.1.0 - September 03, 2025  
-- Fixed a bug where an error occurred when closing the waveform screen
-- Fixed a bug where the selection state was not updated on the waveform screen
-- Added new command aliases (duplicate, delete, rename)
+### Version 1.0.0.0 - Dec 21, 2019  
+### Version 2.0.0.0 - Jun 28, 2025  
+### Version 2.2.2.0 - Sep 21, 2025  
+- Improved the graph display on the waveform screen
+- Fixed several minor bugs
+
 
   
 For detailed update information, see the <a href="https://forum.cjmapp.net/viewforum.php?f=3">full changelog</a>.  
