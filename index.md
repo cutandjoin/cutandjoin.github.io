@@ -20,14 +20,14 @@ title: "Cjam"
 ## Download
 You can download the latest version of Cjam from the link below:
 
-[Download Cjam](https://github.com/cutandjoin/Cjam/releases/download/v2230/cjam_v2230e.zip)
+[Download Cjam](https://github.com/cutandjoin/Cjam/releases/download/v2240/cjam_v2240e.zip)
 
-**Version**: 2.2.3.0  
-**Release Date**: Oct 05, 2025  
+**Version**: 2.2.4.0  
+**Release Date**: Oct 20, 2025  
 **File Size**: 1.34 MB  
-**SHA-256**: 688337232e72c1d5c88c30bd195e8db6a4aa43cd6623c90c69e69273c5da3043  
+**SHA-256**: ee0a095021a98b8de36d682a25009d7ee0e7e570146b29805b27b4c7d2c0837a  
 
-If the latest version cannot be downloaded, the previous version is available [here](https://github.com/cutandjoin/Cjam/releases/download/v2220/cjam_v2220e.zip).  
+If the latest version cannot be downloaded, the previous version is available [here](https://github.com/cutandjoin/Cjam/releases/download/v2230/cjam_v2230e.zip).  
 For more information, see the <a href="https://forum.cjmapp.net/index.php">forum</a>.  
 
 ## Supported Devices
@@ -52,9 +52,10 @@ Cjam requires a PC with the following software installed:
 
 ### Version 1.0.0.0 - Dec 21, 2019  
 ### Version 2.0.0.0 - Jun 28, 2025  
-### Version 2.2.3.0 - Oct 05, 2025  
-- Improved the display on the main screen
+### Version 2.2.4.0 - Oct 20, 2025  
+- Improved the imp3 renaming process on the main screen
 - Improved the efficiency of several operations
+- Fixed several minor bugs
 
 
 
