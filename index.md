@@ -20,14 +20,14 @@ title: "Cjam"
 ## Download
 You can download the latest version of Cjam from the link below:
 
-[Download Cjam](https://github.com/cutandjoin/Cjam/releases/download/v2310/cjam_v2310e.zip)
+[Download Cjam](https://github.com/cutandjoin/Cjam/releases/download/v2320/cjam_v2320e.zip)
 
-**Version**: 2.3.1.0  
-**Release Date**: Nov 14, 2025  
+**Version**: 2.3.2.0  
+**Release Date**: Nov 22, 2025  
 **File Size**: 1.36 MB  
-**SHA-256**: 427fc3c0d2bf75d071334a7c078b0a024cc1186261b291974bb2edc1bf8e47d2  
+**SHA-256**: b722e93bf999f74dc17df98ba0170741e854bcd807786b8f6af9e8df89422fab  
 
-If the latest version cannot be downloaded, the previous version is available [here](https://github.com/cutandjoin/Cjam/releases/download/v2300/cjam_v2300e.zip).  
+If the latest version cannot be downloaded, the previous version is available [here](https://github.com/cutandjoin/Cjam/releases/download/v2310/cjam_v2310e.zip).  
 For more information, see the <a href="https://forum.cjmapp.net/index.php">forum</a>.  
 
 ## Supported Devices
@@ -52,10 +52,9 @@ Cjam requires a PC with the following software installed:
 
 ### Version 1.0.0.0 - Dec 21, 2019  
 ### Version 2.0.0.0 - Jun 28, 2025  
-### Version 2.3.1.0 - Nov 14, 2025  
-- Fixed a bug where some keys were not working (e.g. the Enter key on the waveform screen)
-- Fixed several other minor bugs
-
-
+### Version 2.3.2.0 - Nov 22, 2025  
+- Changed the behavior of the shortcut key (Ctrl+Alt+R on the main screen and waveform screen)
+- Improved shortcut key customization features
+- Fixed several minor bugs
   
 For detailed update information, see the <a href="https://forum.cjmapp.net/viewforum.php?f=3">full changelog</a>.  
