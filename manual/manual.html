@@ -350,7 +350,6 @@ title: "Manual"
                 <ul>
                     <li><span>[Ctrl]+[Shift]+[1]-[4]</span>: Displays parameters of the current execution profile in the command input box.</li>
                     <li><span>[Ctrl]+[Alt]+[1]-[6]</span>: Displays values for general settings such as "MP3 Folder Structure", "MP3 Folder Name", "VMP3 Folder Name", "Text Folder Name", "Add Tag", and "Verify Length" in the command input box.</li>
-                    <li><span>[Ctrl]+[NumPad 1]-[NumPad 9]</span>: Displays strings from the "Profiles [Key]" screen in the command input box.</li>
                     <li><span>[Ctrl]+[NumPad 0]</span>: Opens the "Profiles [Key]" screen.</li>
                     <li><span>[Ctrl]+[NumPad +]/[NumPad -]</span>: Changes the profile for shortcut key assignments.</li>
                     <li><span>[Ctrl]+[Shift]+[P]</span>: Converts command aliases in the command input box to parameter descriptions.</li>
@@ -374,7 +373,7 @@ title: "Manual"
                     <li><span>[Ctrl]+[Alt]+[-]</span>: Unfixes the fade (fd) and silence addition (sj) of the selected Import MP3s (CMDA:UNFIXFS).</li>
                     <li><span>[Ctrl]+[:]</span>: Fixes the Cues of the selected Blocks (CMDA:FIXCUE)</li>
                     <li><span>[Ctrl]+[Alt]+[:]</span>: Unfixes the Cues of the selected Blocks (CMDA:UNFIXCUE)</li>
-                    <li><span>[Ctrl]+[Alt]+[R]</span>: Opens the "Profiles [Command]" screen.</li>
+                    <li><span>[Ctrl]+[Alt]+[R]</span>: Changes the input method used when entering commands via shortcut keys. (Apply action for each key → Prepend and display → Replace and display → Append and display → Replace and run)</li>
                     <li><span>[Ctrl]+[Shift]+[M]</span>: Organizes the elements of the selected Import MP3s.</li>
                     <li><span>[Ctrl]+Dragging MP3 Files/VMP3s</span>: Adds the MP3s once as a Block to the list (ig=1).</li>
                     <li><span>TXT Files Drop</span>: Reads each line of the file as "Add Tag [General Settings]" (TAG) values and applies them to the metadata of the selected Import MP3s (Character Encoding: UTF-8 without BOM).</li>
@@ -2227,6 +2226,7 @@ title: "Manual"
             <div class="blc">
                 <h3>"Profiles [Key] " Screen</h3>
                 <p>Manages profiles for command input using shortcut keys.</p>
+                <p>User defined shortcut keys override the default shortcut keys.</p>
                 <p>Access via [Menu Bar] > [Settings] > [Manage Keys].</p>
             </div>
             <div class="blc">
@@ -2236,8 +2236,7 @@ title: "Manual"
                     <li><span>[Ctrl]+[Numpad 0]</span>: Discards changes.</li>
                     <li><span>[Ctrl]+[Enter]</span>: Applies changes.</li>
                     <li><span>[Ctrl]+[F5]</span>: Applies changes and updates the selected profile.</li>
-                    <li><span>[Ctrl]+[Numpad 1]-[Numpad 9]</span>: Applies changes, updates the selected profile, and displays the command corresponding to the key in the command input box.</li>
-                    <li><span>[Ctrl]+[Alt]+[Numpad 1]-[Numpad 9]</span>: Applies changes, updates the selected profile, displays the command corresponding to the key in the command input box, and runs it.</li>
+                    <li><span>[Ctrl]+[Shift]+[F5]</span>: Applies changes, updates the selected profile, and performs the action selected in the list.</li>
                 </ul>
             </div>
             <div class="blc">
@@ -2490,10 +2489,9 @@ title: "Manual"
                     <li><span>[Alt]+Mouse Right-Click</span>：Selects/Unselects Import MP3.</li>
                     <li><span>[Shift]+[Alt]+[Up]/[Down]</span>: Zooms in/out of the graph.</li>
                     <li><span>[Ctrl]+Mouse Wheel</span>: Zooms in/out of the graph.</li>
+                    <li><span>[Ctrl]+[Alt]+[R]</span>: Changes the input method used when entering commands via shortcut keys. (Apply action for each key → Prepend and display → Replace and display → Append and display → Replace and run)</li>
                     <li><span>[Ctrl]+[F5]</span>: Applies edits.</li>
                     <li><span>[Ctrl]+[W]</span>: Cancels edits.</li>
-                    <li><span>[Ctrl]+[Numpad 1]-[Numpad 9]</span>: Displays strings from the "Profiles [Key]" screen in the command input box.</li>
-                    <li><span>[Ctrl]+[Alt]+[Numpad 1]-[Numpad 9]</span>: Displays strings from the "Profiles [Key]" screen in the command input box and runs it.</li>
                     <li><span>[Ctrl]+[Shift]+[1]</span>: Displays applicable parameters in the command input box.</li>
                 </ul>
             </div>
