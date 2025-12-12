@@ -20,14 +20,14 @@ title: "Cjam"
 ## Download
 You can download the latest version of Cjam from the link below:
 
-[Download Cjam](https://github.com/cutandjoin/Cjam/releases/download/v2340/cjam_v2340e.zip)
+[Download Cjam](https://github.com/cutandjoin/Cjam/releases/download/v2350/cjam_v2350e.zip)
 
-**Version**: 2.3.4.0  
-**Release Date**: Dec 06, 2025  
+**Version**: 2.3.5.0  
+**Release Date**: Dec 12, 2025  
 **File Size**: 1.39 MB  
-**SHA-256**: 5a5fcb2d73fd945faabace58d71bac5a35883523e20f1ccebb672006e9f25079  
+**SHA-256**: 5f1cc5c02e905472ebe69dd994746643e80933eb8e16efca46b641208ae0ee10  
 
-If the latest version cannot be downloaded, the previous version is available [here](https://github.com/cutandjoin/Cjam/releases/download/v2330/cjam_v2330e.zip).  
+If the latest version cannot be downloaded, the previous version is available [here](https://github.com/cutandjoin/Cjam/releases/download/v2340/cjam_v2340e.zip).  
 For more information, see the <a href="https://forum.cjmapp.net/index.php">forum</a>.  
 
 ## Supported Devices
@@ -52,8 +52,8 @@ Cjam requires a PC with the following software installed:
 
 ### Version 1.0.0.0 - Dec 21, 2019  
 ### Version 2.0.0.0 - Jun 28, 2025  
-### Version 2.3.4.0 - Dec 06, 2025  
-- Added support for importing display strings from a text file
-- Fixed an issue where the Delete key did not work in some text boxes
+### Version 2.3.5.0 - Dec 12, 2025  
+- Fixed a bug where reframing during playback (fp=1) did not work correctly under certain conditions
+- Fixed several other minor bugs
   
 For detailed update information, see the <a href="https://forum.cjmapp.net/viewforum.php?f=3">full changelog</a>.  
