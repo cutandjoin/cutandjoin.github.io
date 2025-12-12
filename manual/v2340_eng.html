@@ -31,6 +31,7 @@ title: "Manual"
 .manual-content .id1{padding-left:1em;}
 .manual-content .id2{padding-left:2em;}
 .manual-content .back-to-top{text-align:right;margin-top:20px;}
+.manual-content .notice {margin:20px 0;padding:10px;background-color:#fff8dc;border:1px solid #e0c080;border-radius:4px;font-size:0.95em;}
 @media (max-width: 768px) {
 .manual-content .tbl{width:100%;}
 .manual-content .txt {font-size:0.8em;}
@@ -41,6 +42,7 @@ title: "Manual"
 </head>
 <body>
     <div class="manual-content">
+      <p class="notice">This is an older version of the manual. See the <a href="https://cjmapp.net/manual/manual.html">latest version</a>.</p>
       <h1>Cjam User Manual (Version 2.3.4.0)</h1>
         <a name="manual-top"></a>
         <div class="cts">
@@ -1973,7 +1975,15 @@ title: "Manual"
                         </ul>
                     </li>
                     <li id="prm-qto"><span>Shift [Time; individual]</span> (qto=-100.00-18000.00,0.00): Moves Cues forward or backward by the specified number of seconds.</li>
-                    <li id="prm-qbi">
+                </ul>
+            </div>
+            <div class="back-to-top">
+                <a href="#manual-top">Back to top</a>
+            </div>
+            <div class="blc">
+                <h4>[Operation 7 Tab]</h4>
+                <ul>
+                   <li id="prm-qbi">
                         <span>Add Cue [Item Boundary; individual]</span> (qbi=0-1,0): Chooses whether to allow adding Cues based on item boundaries.
                         <ul class="itm">
                             <li><span>Disallow</span> (qbi=0): Does not add Cues.</li>
@@ -1989,14 +1999,6 @@ title: "Manual"
                             <li><span>Elements of IMP3</span> (qix=2): Adds boundaries for elements of Import MP3s.</li>
                         </ul>
                     </li>
-                </ul>
-            </div>
-            <div class="back-to-top">
-                <a href="#manual-top">Back to top</a>
-            </div>
-            <div class="blc">
-                <h4>[Operation 7 Tab]</h4>
-                <ul>
                     <li id="prm-qbs">
                         <span>Add Cue [Silence Detection; individual]</span> (qbs=0-1,0): Chooses whether to allow adding Cues based on silence detection.
                         <ul class="itm">
