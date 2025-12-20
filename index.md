@@ -20,14 +20,14 @@ title: "Cjam"
 ## Download
 You can download the latest version of Cjam from the link below:
 
-[Download Cjam](https://github.com/cutandjoin/Cjam/releases/download/v2350/cjam_v2350e.zip)
+[Download Cjam](https://github.com/cutandjoin/Cjam/releases/download/v2400/cjam_v2400.zip)
 
-**Version**: 2.3.5.0  
-**Release Date**: Dec 12, 2025  
+**Version**: 2.4.0.0  
+**Release Date**: Dec 20, 2025  
 **File Size**: 1.39 MB  
-**SHA-256**: 5f1cc5c02e905472ebe69dd994746643e80933eb8e16efca46b641208ae0ee10  
+**SHA-256**: 392c21060e508aed041ba1157706517be83101f0654f8f628de999dccb83b8a4  
 
-If the latest version cannot be downloaded, the previous version is available [here](https://github.com/cutandjoin/Cjam/releases/download/v2340/cjam_v2340e.zip).  
+If the latest version cannot be downloaded, the previous version is available [here](https://github.com/cutandjoin/Cjam/releases/download/v2350/cjam_v2350e.zip).  
 For more information, see the <a href="https://forum.cjmapp.net/index.php">forum</a>.  
 
 ## Supported Devices
@@ -52,8 +52,10 @@ Cjam requires a PC with the following software installed:
 
 ### Version 1.0.0.0 - Dec 21, 2019  
 ### Version 2.0.0.0 - Jun 28, 2025  
-### Version 2.3.5.0 - Dec 12, 2025  
-- Fixed a bug where reframing during playback (fp=1) did not work correctly under certain conditions
+### Version 2.4.0.0 - Dec 20, 2025  
+- Improved performance and fixed issues related to navigation during playback
+- Added new entries to lang.txt (main_c117–main_c123)
+- Fixed a bug in the progress dialog
 - Fixed several other minor bugs
   
 For detailed update information, see the <a href="https://forum.cjmapp.net/viewforum.php?f=3">full changelog</a>.  
