@@ -20,14 +20,14 @@ title: "Cjam"
 ## Download
 You can download the latest version of Cjam from the link below:
 
-[Download Cjam](https://github.com/cutandjoin/Cjam/releases/download/v2410/cjam_v2410.zip)
+[Download Cjam](https://github.com/cutandjoin/Cjam/releases/download/v2420/cjam_v2420.zip)
 
-**Version**: 2.4.1.0  
-**Release Date**: Dec 27, 2025  
+**Version**: 2.4.2.0  
+**Release Date**: Jan 08, 2026  
 **File Size**: 1.40 MB  
-**SHA-256**: 4adf1148dff1aa46d9ad4cdbac6bc1c9e4f3a3bb2555bc950ec82feffafcbc77  
+**SHA-256**: 45867452b93197b573809d8e7d0785f87d9b2ee25aed03fb5b62d85f1a27f301  
 
-If the latest version cannot be downloaded, the previous version is available [here](https://github.com/cutandjoin/Cjam/releases/download/v2400/cjam_v2400.zip).  
+If the latest version cannot be downloaded, the previous version is available [here](https://github.com/cutandjoin/Cjam/releases/download/v2410/cjam_v2410.zip).  
 For more information, see the <a href="https://forum.cjmapp.net/index.php">forum</a>.  
 
 ## Supported Devices
@@ -52,10 +52,8 @@ Cjam requires a PC with the following software installed:
 
 ### Version 1.0.0.0 - Dec 21, 2019  
 ### Version 2.0.0.0 - Jun 28, 2025  
-### Version 2.4.1.0 - Dec 27, 2025  
-- Added display of the reframe state on the main screen and waveform screen
-- Added a right-click context menu to the text editor screen
-- Fixed a bug where files were not displayed in the Open File dialog
-- Fixed several bugs on the text editor screen
+### Version 2.4.2.0 - Jan 08, 2026  
+- Fixed several display text issues
+- Fixed several minor bugs
   
 For detailed update information, see the <a href="https://forum.cjmapp.net/viewforum.php?f=3">full changelog</a>.  
