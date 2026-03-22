@@ -20,14 +20,14 @@ title: "Cjam"
 ## Download
 You can download the latest version of Cjam from the link below:
 
-[Download Cjam](https://github.com/cutandjoin/Cjam/releases/download/v2430/cjam_v2430.zip)
+[Download Cjam](https://github.com/cutandjoin/Cjam/releases/download/v2440/cjam_v2440.zip)
 
-**Version**: 2.4.3.0  
-**Release Date**: Feb 15, 2026  
+**Version**: 2.4.4.0  
+**Release Date**: Mar 22, 2026  
 **File Size**: 1.40 MB  
-**SHA-256**: 69c3ceed616692a34afedc9f8baabf15f0f10bc35bc996dde615d27d37947f4d  
+**SHA-256**: 4fdef01f419671ec328b721bfebd4f23861ee2edf650f70dd86a291da6ff2898  
 
-If the latest version cannot be downloaded, the previous version is available [here](https://github.com/cutandjoin/Cjam/releases/download/v2420/cjam_v2420.zip).  
+If the latest version cannot be downloaded, the previous version is available [here](https://github.com/cutandjoin/Cjam/releases/download/v2430/cjam_v2430.zip).  
 For more information, see the <a href="https://forum.cjmapp.net/index.php">forum</a>.  
 
 ## Supported Devices
@@ -52,8 +52,8 @@ Cjam requires a PC with the following software installed:
 
 ### Version 1.0.0.0 - Dec 21, 2019  
 ### Version 2.0.0.0 - Jun 28, 2025  
-### Version 2.4.3.0 - Feb 15, 2026
-- Fixed a bug where the "Block Distribution on Import (up)" value was not applied correctly
-- Fixed several minor bugs
+### Version 2.4.4.0 - Mar 22, 2026
+- Fixed a bug where an error could occur under certain conditions during block transitions in playback  
+- Fixed a bug where the playback order did not follow the specified settings 
   
 For detailed update information, see the <a href="https://forum.cjmapp.net/viewforum.php?f=3">full changelog</a>.  
