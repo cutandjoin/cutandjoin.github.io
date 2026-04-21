@@ -20,14 +20,14 @@ title: "Cjam"
 ## Download
 You can download the latest version of Cjam from the link below:
 
-[Download Cjam](https://github.com/cutandjoin/Cjam/releases/download/v2440/cjam_v2440.zip)
+[Download Cjam](https://github.com/cutandjoin/Cjam/releases/download/v2450/cjam_v2450.zip)
 
-**Version**: 2.4.4.0  
-**Release Date**: Mar 22, 2026  
+**Version**: 2.4.5.0  
+**Release Date**: Apr 21, 2026  
 **File Size**: 1.40 MB  
-**SHA-256**: 4fdef01f419671ec328b721bfebd4f23861ee2edf650f70dd86a291da6ff2898  
+**SHA-256**: f5a93292c5af1bc0ce8ce6a3a57bf9b82c2a23cd8847e0cdba863d6b7cecde3c  
 
-If the latest version cannot be downloaded, the previous version is available [here](https://github.com/cutandjoin/Cjam/releases/download/v2430/cjam_v2430.zip).  
+If the latest version cannot be downloaded, the previous version is available [here](https://github.com/cutandjoin/Cjam/releases/download/v2440/cjam_v2440.zip).  
 For more information, see the <a href="https://forum.cjmapp.net/index.php">forum</a>.  
 
 ## Supported Devices
@@ -52,8 +52,8 @@ Cjam requires a PC with the following software installed:
 
 ### Version 1.0.0.0 - Dec 21, 2019  
 ### Version 2.0.0.0 - Jun 28, 2025  
-### Version 2.4.4.0 - Mar 22, 2026
-- Fixed a bug where an error could occur under certain conditions during block transitions in playback  
-- Fixed a bug where the playback order did not follow the specified settings 
+### Version 2.4.5.0 - Apr 21, 2026
+- Changed Individual FS/Cue (qd=10–11) operations to be skipped for non-executable blocks
+- Fixed a bug where the progress display was not counted correctly
   
 For detailed update information, see the <a href="https://forum.cjmapp.net/viewforum.php?f=3">full changelog</a>.  
