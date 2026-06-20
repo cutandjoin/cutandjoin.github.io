@@ -40,7 +40,7 @@ title: "Manual"
 </head>
 <body>
     <div class="manual-content">
-      <h1>Cjam User Manual (Version 2.4.6.0)</h1>
+      <h1>Cjam User Manual (Version 2.5.0.0)</h1>
         <a name="manual-top"></a>
         <div class="cts">
             <div class="blc">
@@ -360,6 +360,7 @@ title: "Manual"
                     <li><span>[Ctrl]+[X]</span>: Cuts the selected Import MP3s from the list.</li>
                     <li><span>[Ctrl]+[C]</span>: Copies the selected Import MP3s from the list.</li>
                     <li><span>[Ctrl]+[V]</span>: Pastes the most recently cut/copied Import MP3s/Virtual MP3s just below the most recently selected position in the list.</li>
+                    <li><span>[Ctrl]+[Shift]+[V]</span>: Pastes the most recently cut/copied items in mp3DirectCut just below the most recently selected position in the list.</li>
                     <li><span>[Insert]</span>: Pastes the cut/copied Import MP3s at the most recently right-clicked position.</li>
                     <li><span>[Ctrl]+[Insert]</span>: Pastes the cut/copied Virtual MP3s from the "VMP3" screen at the most recently right-clicked position.</li>
                     <li><span>[Ctrl]+[Alt]+[I]</span>: Adjusts the Cues of the selected Blocks and splits them (CMDA:SPLITC)</li>
@@ -385,6 +386,7 @@ title: "Manual"
                     <li><span>[Alt]+Dragging Selected Items in the List</span>: Reorders the Import MP3s.</li>
                     <li><span>[Ctrl]+[Alt]+Dragging Selected Items in the List</span>: Reorders the Blocks.</li>
                     <li><span>[Shift]+Selecting from execution profile list</span>: Changes the profile while retaining the list.</li>
+                    <li><span>[Shift]+Reset Button</span>: Clears all items in the list and the undo/redo history.</li>
                     <li><span>[F3]</span>: Displays the execution profile list.</li>
                     <li><span>[F4]</span>: Displays the command input box history.</li>
                     <li><span>[Ctrl]+[Shift]+[F2]</span>: Resets.</li>
@@ -3292,6 +3294,13 @@ title: "Manual"
                     <li id="prm-sg"><span>Adjust Silence Addition Interval Length [Increasing]</span> (sg=-30.00-30.00,0.00): Adjusts the length of each added silence interval (sj) by the specified number of seconds. Adds values for each Block's Import MP3 and then applies. The parameter value reverts to the default after Cjam ends. (Example: for sg=10, the adjustment seconds for each Block's 1st, 2nd, 3rd, nth Import MP3 are 0, 10, 20, (n-1) x 10)</li>
                     <li id="prm-cr"><span>Ratio for Cue Position in Silence Detection</span> (cr=0-100,50): Specifies the position during silence detection (cl=3). The parameter value reverts to the default after Cjam ends.</li>
                     <li id="prm-se"><span>Silence Interval Notation String</span> (se="string","_s"): Specifies the string to be added to the silence file if "Export Silence" is "Allow [Express]" (es=2). The parameter value reverts to the default after Cjam ends.</li>
+                    <li id="prm-qcp">
+                        <span>Name Priority for Comp/Decomp</span> (qcp=0-1,0): If "Operation Condition" is "Comp/Decomp" (qd=8), specifies whether Import MP3 names or element names are given priority during compression/decompression. The parameter value reverts to the default after reading the text.
+                        <ul class="itm">
+                            <li><span>Prioritize Element</span> (qcp=0): During compression (qcw=0), element names are preserved. During decompression (qcw=1), each Import MP3 uses the name of its element.</li>
+                            <li><span>Prioritize Import MP3</span> (qcp=1): During compression (qcw=0), all element names are changed to the Import MP3 name before compression. During decompression (qcw=1), each Import MP3 keeps its original name.</li>
+                        </ul>
+                    </li>
                     <li id="prm-vr">
                         <span>Virtual MP3 Deletion</span> (vr=0-2,0): Deletes the exported Virtual MP3s. The parameter value reverts to the default after the attempt to delete.
                         <ul class="itm">
