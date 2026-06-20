@@ -20,14 +20,14 @@ title: "Cjam"
 ## Download
 You can download the latest version of Cjam from the link below:
 
-[Download Cjam](https://github.com/cutandjoin/Cjam/releases/download/v2460/cjam_v2460.zip)
+[Download Cjam](https://github.com/cutandjoin/Cjam/releases/download/v2500/cjam_v2500.zip)
 
-**Version**: 2.4.6.0  
-**Release Date**: May 22, 2026  
-**File Size**: 1.40 MB  
-**SHA-256**: 13414e5b32128f7e81047aef46890bc2064adfd707fccd520f61b6bf07907c9d  
+**Version**: 2.5.0.0  
+**Release Date**: Jun 20, 2026  
+**File Size**: 1.41 MB  
+**SHA-256**: 40f6795fe8aa8427744a39627f9eee412482e3327f554f79382985232d21f9a1  
 
-If the latest version cannot be downloaded, the previous version is available [here](https://github.com/cutandjoin/Cjam/releases/download/v2450/cjam_v2450.zip).  
+If the latest version cannot be downloaded, the previous version is available [here](https://github.com/cutandjoin/Cjam/releases/download/v2460/cjam_v2460.zip).  
 For more information, see the <a href="https://forum.cjmapp.net/index.php">forum</a>.  
 
 ## Supported Devices
@@ -52,8 +52,14 @@ Cjam requires a PC with the following software installed:
 
 ### Version 1.0.0.0 - Dec 21, 2019  
 ### Version 2.0.0.0 - Jun 28, 2025  
-### Version 2.4.6.0 - May 22, 2026
-- Added an option to always display the playback position in the list during playback
-- Fixed several minor bugs
+### Version 2.5.0.0 - Jun 20, 2026
+- Added clipboard-based import/export support for mp3DirectCut
+- Added clipboard-based export support for REAPER
+- Added support for naming IMP3 elements
+- Changed the Reset behavior to preserve Undo/Redo history; use Shift key + Reset button to clear it
+- Added a new command parameter (qcp)
+- Added 8 new entries to lang.txt (main_c124-126, main_d150-151, main_m082, vme_c014, vme_d005)
+- Fixed a bug where the il parameter was incorrectly applied when pasting VMP3s into the main list
+- Fixed several other minor bugs
   
 For detailed update information, see the <a href="https://forum.cjmapp.net/viewforum.php?f=3">full changelog</a>.  
