@@ -17,6 +17,8 @@ title: "Cjam"
 - Operate using text commands  
 - Save settings  
 
+Examples of scripting are available on the [forum](https://forum.cjmapp.net/) and [YouTube](https://www.youtube.com/@cutnjoin/videos).
+
 ## Download
 You can download the latest version of Cjam from the link below:
 
