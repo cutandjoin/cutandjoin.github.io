@@ -17,19 +17,17 @@ title: "Cjam"
 - Operate using text commands  
 - Save settings  
 
-Examples of scripting are available on the [forum](https://forum.cjmapp.net/) and [YouTube](https://www.youtube.com/@cutnjoin/videos).
-
 ## Download
 You can download the latest version of Cjam from the link below:
 
-[Download Cjam](https://github.com/cutandjoin/Cjam/releases/download/v2500/cjam_v2500.zip)
+[Download Cjam](https://github.com/cutandjoin/Cjam/releases/download/v2510/cjam_v2510.zip)
 
-**Version**: 2.5.0.0  
-**Release Date**: Jun 20, 2026  
-**File Size**: 1.41 MB  
-**SHA-256**: 40f6795fe8aa8427744a39627f9eee412482e3327f554f79382985232d21f9a1  
+**Version**: 2.5.1.0  
+**Release Date**: Jul 05, 2026  
+**File Size**: 1.42 MB  
+**SHA-256**: 94859deda7f5b5767b7dcb0f22468f3fe1877435cc40d2c2d0e2bd30a83f8929  
 
-If the latest version cannot be downloaded, the previous version is available [here](https://github.com/cutandjoin/Cjam/releases/download/v2460/cjam_v2460.zip).  
+If the latest version cannot be downloaded, the previous version is available [here](https://github.com/cutandjoin/Cjam/releases/download/v2500/cjam_v2500.zip).  
 For more information, see the <a href="https://forum.cjmapp.net/index.php">forum</a>.  
 
 ## Supported Devices
@@ -54,14 +52,8 @@ Cjam requires a PC with the following software installed:
 
 ### Version 1.0.0.0 - Dec 21, 2019  
 ### Version 2.0.0.0 - Jun 28, 2025  
-### Version 2.5.0.0 - Jun 20, 2026
-- Added clipboard-based import/export support for mp3DirectCut
-- Added clipboard-based export support for REAPER
-- Added support for naming IMP3 elements
-- Changed the Reset behavior to preserve Undo/Redo history; use Shift key + Reset button to clear it
-- Added a new command parameter (qcp)
-- Added 8 new entries to lang.txt (main_c124-126, main_d150-151, main_m082, vme_c014, vme_d005)
-- Fixed a bug where the il parameter was incorrectly applied when pasting VMP3s into the main list
-- Fixed several other minor bugs
+### Version 2.5.1.0 - Jul 05, 2026
+- Added clipboard-based import support for REAPER
+- Fixed several minor bugs
   
 For detailed update information, see the <a href="https://forum.cjmapp.net/viewforum.php?f=3">full changelog</a>.  
