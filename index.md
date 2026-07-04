@@ -23,7 +23,7 @@ You can download the latest version of Cjam from the link below:
 [Download Cjam](https://github.com/cutandjoin/Cjam/releases/download/v2510/cjam_v2510.zip)
 
 **Version**: 2.5.1.0  
-**Release Date**: Jul 05, 2026  
+**Release Date**: Jul 04, 2026  
 **File Size**: 1.42 MB  
 **SHA-256**: 94859deda7f5b5767b7dcb0f22468f3fe1877435cc40d2c2d0e2bd30a83f8929  
 
@@ -52,7 +52,7 @@ Cjam requires a PC with the following software installed:
 
 ### Version 1.0.0.0 - Dec 21, 2019  
 ### Version 2.0.0.0 - Jun 28, 2025  
-### Version 2.5.1.0 - Jul 05, 2026
+### Version 2.5.1.0 - Jul 04, 2026
 - Added clipboard-based import support for REAPER
 - Fixed several minor bugs
   
