@@ -40,7 +40,7 @@ title: "Manual"
 </head>
 <body>
     <div class="manual-content">
-      <h1>Cjam User Manual (Version 2.5.1.0)</h1>
+      <h1>Cjam User Manual (Version 2.6.0.0)</h1>
         <a name="manual-top"></a>
         <div class="cts">
             <div class="blc">
@@ -61,10 +61,10 @@ title: "Manual"
         <div class="cts" id="def-overview">
             <div class="blc">
                 <h2>Overview</h2>
-                <p>Cjam is a simple MP3 file editing software designed for Windows PCs.</p>
+                <p>Cjam is non-destructive MP3 editing software designed for Windows PCs.</p>
                 <p>Files are imported by dragging and dropping them onto the interface, after which they can be processed and exported according to the specified settings.</p>
                 <p>Operations can be defined using text input, allowing multiple independent actions to be executed sequentially.</p>
-                <p>The software enables fast file editing without the need for decoding and re-encoding the audio.</p>
+                <p>The software enables fast editing without the need for decoding and re-encoding the audio.</p>        </div>
             </div>
             <div class="blc">
                 <h4>[Main Features]</h4>
@@ -85,10 +85,8 @@ title: "Manual"
             <div class="blc">
                 <h2>System Requirements</h2>
                 <h4>[Supported Devices]</h4>
-                <p>PC with the following software installed:</p>
                 <ul class="nml">
                     <li>Microsoft Windows 10 or later</li>
-                    <li>Microsoft .NET 6.0 or later</li>
                 </ul>
             </div>
             <div class="blc">
@@ -100,6 +98,7 @@ title: "Manual"
                     <li>CJAMC(*.cjc)</li>
                     <li>CJAMJ(*.cjj)</li>
                     <li>CJAM(*.cjm)</li>
+                    <li>TEXT(*.txt)</li>
                 </ul>
             </div>
             <div class="blc">
@@ -116,7 +115,7 @@ title: "Manual"
                 <h2>Unique Terminology</h2>
                 <ul>
                     <li><span>Block (BLK)</span>: A "Block" is the basic unit of processing in Cjam. It consists of one or more Import MP3s and holds Cues. Blocks are numbered sequentially ([1], [2], [3],...) in the list on the main screen, with their execution status shown in the status column.</li>
-                    <li><span>Import MP3 (IMP3/IM)</span>: MP3 files or Virtual MP3s that form the components of Blocks are called "Import MP3s".</li>
+                    <li><span>Import MP3 (IMP3/IM)</span>: MP3 files or Virtual MP3s that make up Blocks are called "Import MP3s".</li>
                     <li><span>Cue (CUE)</span>: A "Cue" is a marker placed within Blocks to define specific positions. During export, a separate MP3 is created for each Cue.</li>
                     <li><span>Export MP3 (EMP3/EM)</span>: MP3 files or Virtual MP3s generated after exports based on the specified settings are referred to as "Export MP3s".</li>
                     <li><span>Virtual MP3 (VMP3/VM)</span>: Virtual representations of MP3 data, used as import or export sources in Cjam, are called "Virtual MP3s". These are created during export or by virtualizing Import MP3s. They can be added to the list by dragging from the "VMP3" screen or by specifying them in text.</li>
@@ -354,13 +353,12 @@ title: "Manual"
                     <li><span>[Ctrl]+[NumPad +]/[NumPad -]</span>: Changes the profile for shortcut key assignments.</li>
                     <li><span>[Ctrl]+[Shift]+[P]</span>: Converts command aliases in the command input box to parameter descriptions.</li>
                     <li><span>[Ctrl]+[Shift]+[T]</span>: Displays the string from the command input box in the "Text Editor" screen.</li>
-                    <li><span>[Ctrl]+[Alt]+[P]</span>: If the command alias in the command input box includes the path of a text file, displays the file location in the Explorer.</li>
+                    <li><span>[Ctrl]+[Alt]+[P]</span>: If the command input box contains a file path, displays the location in Explorer.</li>
                     <li><span>[Ctrl]+[F]</span>: Prepares a profile for searching Import MP3 names (la=1,lc=1,ld=4) and displays the "Profiles [List]" screen.</li>
                     <li><span>[Ctrl]+[Shift]+[F]</span>: Prepares a profile for filtering Import MP3 names (la=1,ld=4) and displays the "Profiles [List]" screen.</li>
                     <li><span>[Ctrl]+[X]</span>: Cuts the selected Import MP3s from the list.</li>
                     <li><span>[Ctrl]+[C]</span>: Copies the selected Import MP3s from the list.</li>
-                    <li><span>[Ctrl]+[V]</span>: Pastes the most recently cut/copied Import MP3s/Virtual MP3s just below the most recently selected position in the list.</li>
-                    <li><span>[Ctrl]+[Shift]+[V]</span>: Pastes the most recently cut/copied items in mp3DirectCut/REAPER just below the most recently selected position in the list.</li>
+                    <li><span>[Ctrl]+[V]</span>: Pastes the current clipboard contents just below the most recently selected position in the list. Supports Import MP3s/Virtual MP3s copied in Cjam, TEXT-format descriptions, files copied in Explorer, and items copied in mp3DirectCut/REAPER.</li>
                     <li><span>[Insert]</span>: Pastes the cut/copied Import MP3s at the most recently right-clicked position.</li>
                     <li><span>[Ctrl]+[Insert]</span>: Pastes the cut/copied Virtual MP3s from the "VMP3" screen at the most recently right-clicked position.</li>
                     <li><span>[Ctrl]+[Alt]+[I]</span>: Adjusts the Cues of the selected Blocks and splits them (CMDA:SPLITC)</li>
@@ -376,15 +374,11 @@ title: "Manual"
                     <li><span>[Ctrl]+[Alt]+[:]</span>: Unfixes the Cues of the selected Blocks (CMDA:UNFIXCUE)</li>
                     <li><span>[Ctrl]+[Alt]+[R]</span>: Changes the input method used when entering commands via shortcut keys. (Apply action for each key → Prepend and display → Replace and display → Append and display → Replace and run)</li>
                     <li><span>[Ctrl]+[Shift]+[M]</span>: Organizes the elements of the selected Import MP3s.</li>
-                    <li><span>[Ctrl]+Dragging MP3 Files/VMP3s</span>: Adds the MP3s once as a Block to the list (ig=1).</li>
-                    <li><span>TXT Files Drop</span>: Reads each line of the file as "Add Tag [General Settings]" (TAG) values and applies them to the metadata of the selected Import MP3s (Character Encoding: UTF-8 without BOM).</li>
-                    <li><span>[Ctrl]+TXT Files Drop</span>: Reads each line of the file as absolute paths of image files and applies them to the metadata of the selected Import MP3s (Character Encoding: UTF-8 without BOM).</li>
-                    <li><span>[Shift]+TXT Files Drop</span>: Reads each line of the file as lyrics and applies them to the metadata of the selected Import MP3s (Character Encoding: UTF-8 without BOM).</li>
-                    <li><span>[Alt]+TXT Files Drop</span>: Reads each line of the file as "Add Tag [General Settings]" (TAG) values and applies them randomly to the metadata of the selected Import MP3s (Character Encoding: UTF-8 without BOM).</li>
-                    <li><span>JPG/PNG/GIF Files Drop</span>: Applies image files to the metadata of the selected Import MP3s.</li>
-                    <li><span>[Alt]+JPG/PNG/GIF Files Drop</span>: Applies image files randomly to the metadata of the selected Import MP3s.</li>
-                    <li><span>[Alt]+Dragging Selected Items in the List</span>: Reorders the Import MP3s.</li>
-                    <li><span>[Ctrl]+[Alt]+Dragging Selected Items in the List</span>: Reorders the Blocks.</li>
+                    <li><span>[Ctrl]+Drop MP3 Files/VMP3s</span>: Adds the MP3s once as a Block to the list (ig=1).</li>
+                    <li><span>Drop JPG/PNG/GIF Files</span>: Applies image files to the metadata of the selected Import MP3s.</li>
+                    <li><span>[Alt]+Drop JPG/PNG/GIF/TXT Files</span>: Applies image files and TXT metadata descriptions randomly to the metadata of the selected Import MP3s.</li>
+                    <li><span>[Alt]+Drag Selected Items in the List</span>: Reorders the Import MP3s.</li>
+                    <li><span>[Ctrl]+[Alt]+Drag Selected Items in the List</span>: Reorders the Blocks.</li>
                     <li><span>[Shift]+Selecting from execution profile list</span>: Changes the profile while retaining the list.</li>
                     <li><span>[Shift]+Reset Button</span>: Clears all items in the list and the undo/redo history.</li>
                     <li><span>[F3]</span>: Displays the execution profile list.</li>
@@ -395,7 +389,7 @@ title: "Manual"
                     <li><span>[Shift]+Right-Click on List</span>: Displays the context menu while retaining the selection state.</li>
                     <li><span>[Ctrl]+Right-Click on List</span>: Right-clicks without displaying the context menu.</li>
                     <li><span>[Shift]+[-]</span>: Changes the display format of the time in the list.</li>
-                    <li><span>Dragging the First Column (# Column) of the List</span>: Selects multiple items at once.</li>
+                    <li><span>Drag the First Column (# Column) of the List</span>: Selects multiple items at once.</li>
                     <li><span>[F8]</span>: Displays the playback order list.</li>
                     <li><span>[Ctrl]+[F8]</span>: Changes playback order.</li>
                     <li><span>[Ctrl]+[Alt]+[F8]</span>: Allows/disallows random selection of the destination when switching playback Blocks.</li>
@@ -638,10 +632,10 @@ title: "Manual"
                     <li id="prm-ie">
                         <span>Text Encoding</span> (ie=0-3,2): Chooses the character encoding for reading text files.
                         <ul class="itm">
-                            <li><span>SJIS</span> (ie=0): Uses Shift_JIS.</li>
-                            <li><span>EUC</span> (ie=1): Uses EUC.</li>
+                            <li><span>System Default</span> (ie=0): Uses the system's default encoding.</li>
+                            <li><span>UTF-8 (BOM)</span> (ie=1): Uses UTF-8 with BOM.</li>
                             <li><span>UTF-8</span> (ie=2): Uses UTF-8 without BOM.</li>
-                            <li><span>Unicode</span> (ie=3): Uses Unicode without BOM.</li>
+                            <li><span>Unicode</span> (ie=3): Uses UTF-16 without BOM.</li>
                         </ul>
                     </li>
                     <li id="prm-tt">
@@ -758,7 +752,7 @@ title: "Manual"
                         </ul>
                     </li>
                     <li id="prm-ml">
-                        <span>Match Definition [Multi]</span> (ml=0-4,0): If "Reassign Condition [Multi]" is "Name" (mc=1), chooses the method for name verification.
+                        <span>Match Definition [Multi]</span> (ml=0-4,1): If "Reassign Condition [Multi]" is "Name" (mc=1), chooses the method for name verification.
                         <ul class="itm">
                             <li><span>Any</span> (ml=0): Specifies any MP3 file/Virtual MP3.</li>
                             <li><span>Exact</span> (ml=1): Specifies MP3 files/Virtual MP3s that exactly match the name of the Import MP3.</li>
@@ -911,7 +905,7 @@ title: "Manual"
                         <ul class="itm">
                             <li><span>None</span> (bn=0): Does not add sequential number.</li>
                             <li><span>Add</span> (bn=1): Adds sequential number.</li>
-                            <li><span>Auto</span> (bn=2): If Block name (fn="string") is specified and there are two or more Blocks, adds sequential number. Specifying the Block name as sequential number only is applicable (fn="&lt;N&gt;").</li>
+                            <li><span>Auto</span> (bn=2): If Block name (fn="string") is specified and there are two or more Blocks, adds sequential number. Specifying the Block name as a sequential number only is allowed (fn="&lt;N&gt;").</li>
                         </ul>
                     </li>
                     <li id="prm-bp">
@@ -973,10 +967,10 @@ title: "Manual"
                     <li id="prm-ee">
                         <span>Text Encoding</span> (ee=0-3,2): Chooses the character encoding for text file export.
                         <ul class="itm">
-                            <li><span>SJIS</span> (ee=0): Uses Shift_JIS.</li>
-                            <li><span>EUC</span> (ee=1): Uses EUC.</li>
+                            <li><span>System Default</span> (ee=0): Uses the system's default encoding</li>
+                            <li><span>UTF-8 (BOM)</span> (ee=1): Uses UTF-8 with BOM.</li>
                             <li><span>UTF-8</span> (ee=2): Uses UTF-8 without BOM.</li>
-                            <li><span>Unicode</span> (ee=3): Uses Unicode without BOM.</li>
+                            <li><span>Unicode</span> (ee=3): Uses UTF-16 without BOM.</li>
                         </ul>
                     </li>
                     <li id="prm-te">
@@ -1177,7 +1171,7 @@ title: "Manual"
                             <li><span>None</span> (cl=0): Does not add Cues.</li>
                             <li><span>All</span> (cl=1): Add Cues at both the start and end of the silence intervals.</li>
                             <li><span>Start of Silence</span> (cl=2): Adds Cues at the start of the silence intervals.</li>
-                            <li><span>Middle of Silence</span> (cl=3): Adds Cues at the middle of the silence intervals. "Cue Position Ratio" (cr) is enabled.</li>
+                            <li><span>Middle of Silence</span> (cl=3): Adds Cues at the middle of the silence intervals. "Cue Position Ratio" (cr) is available.</li>
                             <li><span>End of Silence</span> (cl=4): Adds Cues at the end of the silence intervals.</li>
                         </ul>
                     </li>
@@ -1983,7 +1977,7 @@ title: "Manual"
             <div class="blc">
                 <h4>[Operation 7 Tab]</h4>
                 <ul>
-                    <li id="prm-qbi">
+                   <li id="prm-qbi">
                         <span>Add Cue [Item Boundary; individual]</span> (qbi=0-1,0): Chooses whether to allow adding Cues based on item boundaries.
                         <ul class="itm">
                             <li><span>Disallow</span> (qbi=0): Does not add Cues.</li>
@@ -2017,7 +2011,7 @@ title: "Manual"
                             <li><span>None</span> (qcl=0): Does not add Cues.</li>
                             <li><span>All</span> (qcl=1): Add Cues at both the start and end of the silence intervals.</li>
                             <li><span>Start of Silence</span> (qcl=2): Adds Cues at the start of the silence intervals.</li>
-                            <li><span>Middle of Silence</span> (qcl=3): Adds Cues at the middle of the silence intervals. "Cue Position Ratio" (qcr) is enabled.</li>
+                            <li><span>Middle of Silence</span> (qcl=3): Adds Cues at the middle of the silence intervals. "Cue Position Ratio" (qcr) is available.</li>
                             <li><span>End of Silence</span> (qcl=4): Adds Cues at the end of the silence intervals.</li>
                         </ul>
                     </li>
@@ -2183,7 +2177,7 @@ title: "Manual"
                         </ul>
                     </li>
                     <li>
-                        <span>MP3 Folder Structure [General Settings]</span>: Specifies the folder structure created during MP3 files export. Represents each folder with half-width numbers (from '1' to '300') and hierarchies with "\". Multiple structures can be specified, separated by commas (,).
+                        <span>MP3 Folder Structure [General Settings]</span>: Specifies the folder structure created during MP3 files export. Represents each folder with numbers (from '1' to '300') and hierarchies with "\". Multiple structures can be specified, separated by commas (,).
                     </li>
                     <li>
                         <span>MP3 Folder Name [General Settings]</span>: Specifies the folder name created during MP3 files export. Writes each folder name in any string enclosed by double quotes ("), and separates each with a comma (,). The n-th description separated by commas becomes the name of the folder number n in the MP3 Folder Structure.
@@ -2244,13 +2238,30 @@ title: "Manual"
             </div>
             <div class="blc">
                 <h3>"Text Editor" Screen</h3>
-                <p>Writes content in CUE/M3U/CJAMC/CJAMJ/CJAM formats, runs commands, and adds items to list.</p>
+                <p>Writes content in CUE/M3U/CJAMC/CJAMJ/CJAM/TEXT formats, runs commands, and adds items to list.</p>
                 <p>Access via [Menu Bar] > [File] > [Show Text Editor].</p>
-                <p>Dropping CUE/M3U/CJC/CJJ/CJM files onto the screen will read and display the contents using the import character encoding (ie=0-3) of the currently applied profile. Dropping MP3 files will display the absolute paths.</p>
+                <p>Dropping CUE/M3U/CJC/CJJ/CJM/TEXT files onto the screen will read and display the contents using the import character encoding (ie=0-3) of the currently applied profile. Dropping MP3 files will display the absolute paths.</p>
             </div>
             <div class="blc">
                 <h4>[Shortcut Keys]</h4>
                 <ul>
+                    <li><span>Paste IMP3s with [Ctrl]+[V]</span>: Displays the IMP3s in the vmp3.txt format.</li>
+                    <li><span>Paste VMP3s with [Ctrl]+[V]</span>: Displays the VMP3s in the vmp3.txt format.</li>
+                    <li><span>Paste Files with [Ctrl]+[V]</span>: Displays the file paths.</li>
+                    <li><span>Paste IMP3s with [Ctrl]+[Alt]+[V]</span>: Displays the IMP3 metadata.</li>
+                    <li><span>Paste VMP3s with [Ctrl]+[Alt]+[V]</span>: Displays the VMP3 metadata.</li>
+                    <li><span>[Ctrl]+Drop IMP3s from the Main Screen</span>: Displays the IMP3s in the vmp3.txt format.</li>
+                    <li><span>[Alt]+Drop IMP3s from the Main Screen</span>: Displays the IMP3 metadata.</li>
+                    <li><span>Drop VMP3s from the "VMP3" Screen</span>: Displays the VMP3 paths.</li>
+                    <li><span>[Ctrl]+Drop VMP3s from the "VMP3" Screen</span>: Displays the VMP3s in the vmp3.txt format.</li>
+                    <li><span>[Alt]+Drop VMP3s from the "VMP3" Screen</span>: Displays the VMP3 metadata.</li>
+                    <li><span>Drop Files from Explorer</span>: Displays the file paths.</li>
+                    <li><span>[F8]</span>: Displays the text format list.</li>
+                    <li><span>[Ctrl]+[F8]</span>: Changes text format.</li>
+                    <li><span>[Ctrl]+[Alt]+[F8]</span>: Changes the text format to TEXT and toggles the TEXT header line.</li>
+                    <li><span>[Ctrl]+[Shift]+[I]</span>: Changes the text format to TEXT and sets the header line for import.</li>
+                    <li><span>[Ctrl]+[Shift]+[R]</span>: Changes the text format to TEXT and sets the header line for reassign.</li>
+                    <li><span>[Ctrl]+[Shift]+[M]</span>: Changes the text format to TEXT and sets the header line for metadata.</li>
                     <li><span>[Ctrl]+[Space]</span>: Focuses on the list in the main screen.</li>
                     <li><span>[Ctrl]+[R]</span>: Focuses on the command input box in the main screen.</li>
                     <li><span>[Ctrl]+[Shift]+[Alt]+[Up]/[Down]/[Left]/[Right]/[Space]</span>: Changes the screen position.</li>
@@ -2313,7 +2324,7 @@ title: "Manual"
                         </ul>
                     </li>
                     <li><span>Replace String</span>: Specifies the string to replace with.</li>
-                    <li><span>Apply as Regular Expression</span>: Applies the replace string as a regular expression. Control characters "\n" and "\t" will be effective.</li>
+                    <li><span>Apply as Regular Expression</span>: Applies the replace string as a regular expression. Control characters "\n" and "\t" are supported.</li>
                     <li><span>Apply Multiple Strings</span>: Separates replacement strings with commas (,) to specify a different replacement string for each match of the search string.</li>
                 </ul>
             </div>
@@ -2344,7 +2355,7 @@ title: "Manual"
                             <li><span>End</span>: Adds sequential numbers after the string.</li>
                         </ul>
                     </li>
-                    <li><span>Numbering Delimiter</span>: Specifies the string to use as a delimiter for sequential numbers. Control characters "\n" and "\t" are effective.</li>
+                    <li><span>Numbering Delimiter</span>: Specifies the string to use as a delimiter for sequential numbers. Control characters "\n" and "\t" are supported.</li>
                     <li><span>Numbering Digits</span>: Specifies the number of digits in the sequential numbers.</li>
                     <li><span>Numbering Initial Value</span>: Specifies the initial number for the sequential numbers.</li>
                     <li><span>Numbering Increment</span>: Specifies the width to determine the next number in the sequence after adding sequential numbers.</li>
@@ -2374,11 +2385,8 @@ title: "Manual"
                     <li><span>Select VMP3→Drag and Drop to the Folder List</span>: Moves Virtual MP3s.</li>
                     <li><span>Select VMP3→[Ctrl]+Drag and Drop to Folder List</span>: Duplicates Virtual MP3s.</li>
                     <li><span>Drag First Column (# Column) in the Virtual MP3 List</span>: Selects multiple Virtual MP3s at once.</li>
-                    <li><span>Drop TXT Files onto Virtual MP3 List</span>: Reads each line of the file as a description for "Add Tag [General Settings]" (TAG) values and applies as metadata for selected Virtual MP3s (Character Encoding: UTF-8 without BOM).</li>
-                    <li><span>[Ctrl]+Drop TXT Files onto the Virtual MP3 List</span>: Reads each line of the file as an absolute path for image files and applies as metadata for selected Virtual MP3s (Character Encoding: UTF-8 without BOM).</li>
-                    <li><span>[Shift]+Drop TXT Files onto the Virtual MP3 List</span>: Reads each line of the file as lyrics and applies as metadata for selected Virtual MP3s (Character Encoding: UTF-8 without BOM).</li>
-                    <li><span>[Alt]+Drop TXT Files onto the Virtual MP3 List</span>: Reads each line of the file as "Add Tag [General Settings]" (TAG) values and applies randomly as metadata for selected Virtual MP3s (Character Encoding: UTF-8 without BOM).</li>
-                    <li><span>Drop JPG/PNG/GIF Files onto the Virtual MP3 List</span>: Applies image files as metadata for selected Virtual MP3s.</li>
+                    <li><span>Drop TXT Files onto Virtual MP3 List</span>: Applies metadata from text.</li>
+                    <li><span>[Alt]+Drop JPG/PNG/GIF/TXT Files onto Virtual MP3 List</span>: Applies image files and TXT metadata descriptions randomly as metadata for selected Virtual MP3s.</li>
                     <li><span>[Alt]+Drop JPG/PNG/GIF Files onto Virtual MP3 List</span>: Applies image files randomly as metadata for selected Virtual MP3s.</li>
                     <li><span>Right-Click on the List</span>: Displays the context menu.</li>
                     <li><span>[Shift]+Right-Click on the List</span>: Displays the context menu while retaining the selection state.</li>
@@ -2543,7 +2551,7 @@ title: "Manual"
         <div class="cts" id="def-text">
             <div class="blc">
                 <h2>How to Use Text</h2>
-                <p>Text files in CUE, M3U, CJAMC, CJAMJ, and CJAM formats can be used to specify execution procedures and export results.</p>
+                <p>Text files in CUE, M3U, CJAMC, CJAMJ, CJAM, and TEXT formats can be used to specify import sources, execution procedures, and export results.</p>
                 <p>All formats are written in plain text and can be viewed or edited with general text editors.</p>
             </div>
             <div class="blc">
@@ -2998,7 +3006,7 @@ title: "Manual"
                 </div>
                 <div class="blc">
                     <h4>[MP3 Path Description Methods]</h4>
-                    <p>CJAM format allows the following three types of path descriptions:</p>
+                    <p>CJAM format supports the following three types of path descriptions:</p>
                 </div>
                 <div class="blc">
                     <ul>
@@ -3129,16 +3137,16 @@ title: "Manual"
             <div class="blc">
                 <ul>
                     <li id="prm-st">
-                        <span>Command Target [Profile List]</span> (st=0-2,1): Specifies the list of profiles to which the profile command will apply. The parameter value reverts to the default after reading the text.
+                        <span>Command Target [Profile List]</span> (st=0-2,1): Specifies the list of profiles to which the profile command will apply. The parameter value is reset to the default after reading the text.
                         <ul class="itm">
                             <li><span>No Target</span> (st=0): The description is not applied.</li>
                             <li><span>Execution</span> (st=1): Applies to the profile list on the "Profiles [Execution]" screen.</li>
                             <li><span>List Operation</span> (st=2): Applies to the profile list on the "Profiles [List]" screen.</li>
                         </ul>
                     </li>
-                    <li id="prm-si"><span>Command Target [Profile]</span> (si=-1-300,-1): Specifies the profile number to which the profile command will apply. A value of '-1' applies to the currently selected profile, while '0' applies to a temporary profile. The parameter value reverts to the default after reading the text.</li>
+                    <li id="prm-si"><span>Command Target [Profile]</span> (si=-1-300,-1): Specifies the profile number to which the profile command will apply. A value of '-1' applies to the currently selected profile, while '0' applies to a temporary profile. The parameter value is reset to the default after reading the text.</li>
                     <li id="prm-sp">
-                        <span>Command Application Way</span> (sp=0-4,1): Specifies how the profile command is applied. The parameter value reverts to the default after reading the text.
+                        <span>Command Application Way</span> (sp=0-4,1): Specifies how the profile command is applied. The parameter value is reset to the default after reading the text.
                         <ul class="itm">
                             <li><span>Not Apply</span> (sp=0): The description is not applied.</li>
                             <li><span>Update Specified Parameter</span> (sp=1): Changes the specified parameter of the profile selected in the "Command Target" (st,si).</li>
@@ -3148,7 +3156,7 @@ title: "Manual"
                         </ul>
                     </li>
                     <li id="prm-sa">
-                        <span>Change Profile</span> (sa=0-2,1): Specifies whether to change the profile being used. The parameter value reverts to the default after reading the text.
+                        <span>Change Profile</span> (sa=0-2,1): Specifies whether to change the profile being used. The parameter value is reset to the default after reading the text.
                         <ul class="itm">
                             <li><span>Not Change</span> (sa=0): Continues using the currently selected profile.</li>
                             <li><span>Change</span> (sa=1): Switches to the profile selected in the "Command Target" (st,si).</li>
@@ -3156,14 +3164,14 @@ title: "Manual"
                         </ul>
                     </li>
                     <li id="prm-oa">
-                        <span>Text Reading Range</span> (oa=0-1,0): Specifies the range of text to be read. The parameter value reverts to the default after reading the text.
+                        <span>Text Reading Range</span> (oa=0-1,0): Specifies the range of text to be read. The parameter value is reset to the default after reading the text.
                         <ul class="itm">
                             <li><span>All Descriptions</span> (oa=0): Reads all descriptions, including profile commands.</li>
                             <li><span>Profile Commands Only</span> (oa=1): Reads only profile commands.</li>
                         </ul>
                     </li>
                     <li id="prm-ec">
-                        <span>Execution Condition</span> (ec=0-2,2): Specifies the condition for allowing export execution. The parameter value reverts to the default after Cjam ends.
+                        <span>Execution Condition</span> (ec=0-2,2): Specifies the condition for allowing export execution. The parameter value is reset to the default when Cjam exits.
                         <ul class="itm">
                             <li><span>Disallow</span> (ec=0): Execution is disallowed.</li>
                             <li><span>All Blocks Executable</span> (ec=1): Execution is allowed if all Blocks in the list are executable.</li>
@@ -3171,14 +3179,14 @@ title: "Manual"
                         </ul>
                     </li>
                     <li id="prm-cp">
-                        <span>Execution of Files with Copyright Flags</span> (cp=0-1,0): Specifies whether files with copyright flags are allowed to be executed. The parameter value reverts to the default after Cjam ends.
+                        <span>Execution of Files with Copyright Flags</span> (cp=0-1,0): Specifies whether files with copyright flags are allowed to be executed. The parameter value is reset to the default when Cjam exits.
                         <ul class="itm">
                             <li><span>Disallow</span> (cp=0): Files with copyright flags are disallowed to be executed.</li>
                             <li><span>Allow</span> (cp=1): Files with copyright flags are allowed to be executed.</li>
                         </ul>
                     </li>
                     <li id="prm-sr">
-                        <span>Sequential Run Transition</span> (sr=0-4,4): Specifies the transition conditions for sequential run. The parameter value reverts to the default after Cjam ends.
+                        <span>Sequential Run Transition</span> (sr=0-4,4): Specifies the transition conditions for sequential run. The parameter value is reset to the default when Cjam exits.
                         <ul class="itm">
                             <li><span>No Condition</span> (sr=0): Moves to the next run if sequential run is specified.</li>
                             <li><span>After Export of All Blocks</span> (sr=1): Moves to the next run after all Blocks have been exported.</li>
@@ -3188,19 +3196,20 @@ title: "Manual"
                         </ul>
                     </li>
                     <li id="prm-srv">
-                        <span>Sequential Run Transition [Empty List]</span> (srv=0-1,1): Specifies whether to allow transitions when the list is empty. The parameter value reverts to the default after Cjam ends.
+                        <span>Sequential Run Transition [Empty List]</span> (srv=0-1,1): Specifies whether to allow transitions when the list is empty. The parameter value is reset to the default when Cjam exits.
                         <ul class="itm">
                             <li><span>Disallow</span> (srv=0): Transitions are disallowed.</li>
                             <li><span>Allow</span> (srv=1): Moves to the next run.</li>
                         </ul>
                     </li>
-                    <li id="prm-sb"><span>Item Addition Position [Block]</span> (sb=-1-3000,-1): Specifies the position in the list where the Block/Import MP3/time specification Cue will be added using the Block number. A value of '0' adds the item at the top of the list. The parameter value reverts to the default after reading the text.</li>
-                    <li id="prm-ss"><span>Item Addition Position [IMP3]</span> (ss=-1-1500,-1): Specifies the position in the list where the Block/Import MP3/time specification Cue will be added using the Import MP3 number. A value of '0' adds the item at the top of the Block. The parameter value reverts to the default after reading the text.</li>
-                    <li id="prm-up"><span>Block Distribution on Import</span> (up=0-3000,0): Specifies the number of Blocks to distribute when adding to the list. The parameter value reverts to the default after reading the text.</li>
-                    <li id="prm-ap"><span>Relative Path Conversion Folder Path</span> (ap="folder absolute path",""): Specifies the folder path for creating an absolute path from the relative path. The parameter value reverts to the default after Cjam ends.</li>
-                    <li id="prm-rp"><span>Reassign Source Folder Path</span> (rp="folder absolute path",""): Specifies the folder path containing the MP3 files or Virtual MP3s for reassigning Import MP3s. The parameter value reverts to the default after the attempt to reassign.</li>
+                    <li id="prm-sb"><span>Item Addition Position [Block]</span> (sb=-1-3000,-1): Specifies the position in the list where the Block/Import MP3/time specification Cue will be added using the Block number. A value of '0' adds the item at the top of the list. The parameter value is reset to the default after reading the text.</li>
+                    <li id="prm-ss"><span>Item Addition Position [IMP3]</span> (ss=-1-1500,-1): Specifies the position in the list where the Block/Import MP3/time specification Cue will be added using the Import MP3 number. A value of '0' adds the item at the top of the Block. The parameter value is reset to the default after reading the text.</li>
+                    <li id="prm-at"><span>Reference Text File Path</span> (at="txt file path",""): Specifies the text file to reference. The parameter value is reset to the default after reading the text.</li>
+                    <li id="prm-up"><span>Block Distribution on Import</span> (up=0-3000,0): Specifies the number of Blocks to distribute when adding to the list. The parameter value is reset to the default after reading the text.</li>
+                    <li id="prm-ap"><span>Relative Path Conversion Folder Path</span> (ap="folder absolute path",""): Specifies the folder path for creating an absolute path from the relative path. The parameter value is reset to the default when Cjam exits.</li>
+                    <li id="prm-rp"><span>Reassign Source Folder Path</span> (rp="folder absolute path",""): Specifies the folder path containing the MP3 files or Virtual MP3s for reassigning Import MP3s. The parameter value is reset to the default after the attempt to reassign.</li>
                     <li id="prm-sd">
-                        <span>Folder Path Storage</span> (sd=0-4,0): Specifies whether to save the path of the specified folder until the program ends. The path is stored in the special value 'SavedDir' and can be applied to other parameters such as export directory (ed). The parameter value reverts to the default after the attempt to save.
+                        <span>Folder Path Storage</span> (sd=0-4,0): Specifies whether to save the path of the specified folder until the program ends. The path is stored in the special value 'SavedDir' and can be applied to other parameters such as export directory (ed). The parameter value is reset to the default after the attempt to save.
                         <ul class="itm">
                             <li><span>Not Save</span> (sd=0): The folder path is not saved.</li>
                             <li><span>Save Folder with Text File</span> (sd=1): Saves the path of the folder containing the text if the first Block of the list is imported by a text file.</li>
@@ -3209,33 +3218,33 @@ title: "Manual"
                             <li><span>Save VMP3 Folder</span> (sd=4): Saves the path of the Virtual MP3 folder where the most recent Virtual MP3 was exported.</li>
                         </ul>
                     </li>
-                    <li id="prm-di"><span>Default Export Folder [General]</span> (di=-1-300,-1): Specifies the export folder number if the specified export folder is not listed in "MP3 Folder Structure [General Settings/Profile]". Number ranges from '1' to '300'. A value of '0' means no export. A value of '-1' sets the default export folder to the number listed at the top of "MP3 Folder Structure [General Settings/Profile]". The parameter value reverts to the default after Cjam ends.</li>
-                    <li id="prm-ji"><span>Default Export Folder [Block]</span> (ji=-1-300,-1): Specifies the default export folder for Blocks. The number ranges from '1' to '300'. A value of '0' means no export. A value of '-1' applies the value of the "Default Export Folder [General]" (di). The parameter value reverts to the default after Cjam ends.</li>
-                    <li id="prm-ci"><span>Default Export Folder [Cue]</span> (ci=-1-300,-1): Specifies the default export folder for the Cues. The number ranges from '1' to '300'. A value of '0' means no export. A value of '-1' applies the value of the "Default Export Folder [Block]" (ji). The parameter value reverts to the default after Cjam ends.</li>
+                    <li id="prm-di"><span>Default Export Folder [General]</span> (di=-1-300,-1): Specifies the export folder number if the specified export folder is not listed in "MP3 Folder Structure [General Settings/Profile]". Number ranges from '1' to '300'. A value of '0' means no export. A value of '-1' sets the default export folder to the number listed at the top of "MP3 Folder Structure [General Settings/Profile]". The parameter value is reset to the default when Cjam exits.</li>
+                    <li id="prm-ji"><span>Default Export Folder [Block]</span> (ji=-1-300,-1): Specifies the default export folder for Blocks. The number ranges from '1' to '300'. A value of '0' means no export. A value of '-1' applies the value of the "Default Export Folder [General]" (di). The parameter value is reset to the default when Cjam exits.</li>
+                    <li id="prm-ci"><span>Default Export Folder [Cue]</span> (ci=-1-300,-1): Specifies the default export folder for the Cues. The number ranges from '1' to '300'. A value of '0' means no export. A value of '-1' applies the value of the "Default Export Folder [Block]" (ji). The parameter value is reset to the default when Cjam exits.</li>
                     <li id="prm-np">
-                        <span>Export MP3 Name Specification Priority</span> (np=0-1,0): Selects the priority for specifying the Export MP3 name if multiple methods are used. The parameter value reverts to the default after Cjam ends.
+                        <span>Export MP3 Name Specification Priority</span> (np=0-1,0): Selects the priority for specifying the Export MP3 name if multiple methods are used. The parameter value is reset to the default when Cjam exits.
                         <ul class="itm">
                             <li><span>Prioritize Text Specification</span> (np=0): Prioritizes text specification.</li>
                             <li><span>Prioritize Parameter Specification</span> (np=1): Prioritizes the Block name specification (fn).</li>
                         </ul>
                     </li>
                     <li id="prm-ut">
-                        <span>Export Text Tag Specification Way</span> (ut=0-1,0): Selects the method for specifying tags during text export (et=1). The parameter value reverts to the default after Cjam ends.
+                        <span>Export Text Tag Specification Way</span> (ut=0-1,0): Selects the method for specifying tags during text export (et=1). The parameter value is reset to the default when Cjam exits.
                         <ul class="itm">
                             <li><span>Match Import Text Location</span> (ut=0): Specifies tags in the same location as the imported text.</li>
                             <li><span>Specify for Each Export MP3</span> (ut=1): Specifies all tags added for each Export MP3.</li>
                         </ul>
                     </li>
                     <li id="prm-mx">
-                        <span>Mix Export</span> (mx=0-1,0): Mixes audio from multiple Blocks and re-encodes to create Export MP3s. Blocks labeled with the string "MIX" are separated and export as different files. Cue specifications apply to muting certain sections (mute export for number '0', and export others). Export is possible if all Block lengths are within 15 minutes.  The parameter value reverts to the default after Cjam ends.
+                        <span>Mix Export</span> (mx=0-1,0): Mixes audio from multiple Blocks and re-encodes to create Export MP3s. Blocks labeled with the string "MIX" are separated and export as different files. Cue specifications apply to muting certain sections (mute export for number '0', and export others). Export is possible if all Block lengths are within 15 minutes.  The parameter value is reset to the default when Cjam exits.
                         <ul class="itm">
                             <li><span>Not Mix</span> (mx=0): Does not execute mix export.</li>
                             <li><span>Mix</span> (mx=1): Executes mix export.</li>
                         </ul>
                     </li>
-                    <li id="prm-mm"><span>Max Count of Blocks for Mix Export</span> (mm=1-24,24): Specifies the upper limit on the number of Blocks for which mix export can be executed. The parameter value reverts to the default after Cjam ends.</li>
+                    <li id="prm-mm"><span>Max Count of Blocks for Mix Export</span> (mm=1-24,24): Specifies the upper limit on the number of Blocks for which mix export can be executed. The parameter value is reset to the default when Cjam exits.</li>
                     <li id="prm-mq">
-                        <span>Mix Export File Parameters</span> (mq="specified string","128S"): Specifies the bit rate, sample rate, and channel mode for files created during mix export. The parameter value reverts to the default after Cjam ends.
+                        <span>Mix Export File Parameters</span> (mq="specified string","128S"): Specifies the bit rate, sample rate, and channel mode for files created during mix export. The parameter value is reset to the default when Cjam exits.
                         <ul class="itm">
                             <li><span>CBR 128kbps, 44.1kHz, Stereo</span> (mq="128S"):</li>
                             <li><span>CBR 128kbps, 44.1kHz, Joint Stereo</span> (mq="128J"):</li>
@@ -3245,38 +3254,38 @@ title: "Manual"
                             <li><span>CBR &nbsp; 96kbps, 44.1kHz, Mono</span> (mq="96M"):</li>
                         </ul>
                     </li>
-                    <li id="prm-io"><span>Fade-In Offset</span> (io=0.00-10000.00,0.00): Specifies the position in seconds from the beginning of the Import MP3 where fade-in starts during fade (fd) application. The parameter value reverts to the default after Cjam ends.</li>
-                    <li id="prm-oo"><span>Fade-Out Offset</span> (oo=0.00-10000.00,0.00): Specifies the position in seconds from the end of the Import MP3 where fade-out ends during fade (fd) application. The parameter value reverts to the default after Cjam ends.</li>
-                    <li id="prm-iri"><span>Fade-In Shape Restriction [Start Position]</span>(iri=0.00-10000.00,0.00): The fade-in shape, defined by duration and volume (is, ib, ic), can be restricted using the start position (iri) and length (irc) during fade (fd) application. The start position is specified as an offset in seconds from the beginning of the fade-in. The parameter value reverts to the default after Cjam ends.</li>
-                    <li id="prm-irc"><span>Fade-In Shape Restriction [Length]</span>(irc=0.00-10000.00,0.00): The length is specified in seconds from the start position (iri). The parameter value reverts to the default after Cjam ends.</li>
+                    <li id="prm-io"><span>Fade-In Offset</span> (io=0.00-10000.00,0.00): Specifies the position in seconds from the beginning of the Import MP3 where fade-in starts during fade (fd) application. The parameter value is reset to the default when Cjam exits.</li>
+                    <li id="prm-oo"><span>Fade-Out Offset</span> (oo=0.00-10000.00,0.00): Specifies the position in seconds from the end of the Import MP3 where fade-out ends during fade (fd) application. The parameter value is reset to the default when Cjam exits.</li>
+                    <li id="prm-iri"><span>Fade-In Shape Restriction [Start Position]</span>(iri=0.00-10000.00,0.00): The fade-in shape, defined by duration and volume (is, ib, ic), can be restricted using the start position (iri) and length (irc) during fade (fd) application. The start position is specified as an offset in seconds from the beginning of the fade-in. The parameter value is reset to the default when Cjam exits.</li>
+                    <li id="prm-irc"><span>Fade-In Shape Restriction [Length]</span>(irc=0.00-10000.00,0.00): The length is specified in seconds from the start position (iri). The parameter value is reset to the default when Cjam exits.</li>
                     <li id="prm-fl">
-                        <span>Fade Application Range</span> (fl=0-1,1): Specifies the range of application for fade (fd) within the Import MP3. The parameter value reverts to the default after Cjam ends.
+                        <span>Fade Application Range</span> (fl=0-1,1): Specifies the range of application for fade (fd) within the Import MP3. The parameter value is reset to the default when Cjam exits.
                         <ul class="itm">
                             <li><span>No Limitation</span> (fl=0): Applies fade at any position within the Import MP3.</li>
                             <li><span>Until Midpoint</span> (fl=1): Applies fade-in from the beginning to the midpoint of the Import MP3, and fade-out from the end to the midpoint.</li>
                         </ul>
                     </li>
                     <li id="prm-fm">
-                        <span>Stereo Fade</span> (fm=0-2,0): Selects which channel to apply fade (fd) to if the Import MP3 is stereo. The parameter value reverts to the default after Cjam ends.
+                        <span>Stereo Fade</span> (fm=0-2,0): Selects which channel to apply fade (fd) to if the Import MP3 is stereo. The parameter value is reset to the default when Cjam exits.
                         <ul class="itm">
                             <li><span>Both</span> (fm=0): Changes the volume of both left and right channels.</li>
                             <li><span>Left</span> (fm=1): Changes the volume of the left channel.</li>
                             <li><span>Right</span> (fm=2): Changes the volume of the right channel.</li>
                         </ul>
                     </li>
-                    <li id="prm-qio"><span>Individual Fade-In Offset</span> (qio=0.00-10000.00,0.00): Specifies the position in seconds from the beginning of the Import MP3 where fade-in starts during fade (qmt) application. The parameter value reverts to the default after reading the text.</li>
-                    <li id="prm-qoo"><span>Individual Fade-Out Offset</span> (qoo=0.00-10000.00,0.00): Specifies the position in seconds from the end of the Import MP3 where fade-out ends during fade (qmt) application. The parameter value reverts to the default after reading the text.</li>
-                    <li id="prm-qii"><span>Individual Fade-In Shape Restriction [Start Position]</span>(qii=0.00-10000.00,0.00): The fade-in shape, defined by duration and volume (qis, qib, qic), can be restricted using the start position (qii) and length (qid) during fade (qmt) application. The start position is specified as an offset in seconds from the beginning of the fade-in. The parameter value reverts to the default after reading the text.</li>
-                    <li id="prm-qid"><span>Individual Fade-In Shape Restriction [Length]</span>(qid=0.00-10000.00,0.00): The length is specified in seconds from the start position (qii). The parameter value reverts to the default after reading the text.</li>
+                    <li id="prm-qio"><span>Individual Fade-In Offset</span> (qio=0.00-10000.00,0.00): Specifies the position in seconds from the beginning of the Import MP3 where fade-in starts during fade (qmt) application. The parameter value is reset to the default after reading the text.</li>
+                    <li id="prm-qoo"><span>Individual Fade-Out Offset</span> (qoo=0.00-10000.00,0.00): Specifies the position in seconds from the end of the Import MP3 where fade-out ends during fade (qmt) application. The parameter value is reset to the default after reading the text.</li>
+                    <li id="prm-qii"><span>Individual Fade-In Shape Restriction [Start Position]</span>(qii=0.00-10000.00,0.00): The fade-in shape, defined by duration and volume (qis, qib, qic), can be restricted using the start position (qii) and length (qid) during fade (qmt) application. The start position is specified as an offset in seconds from the beginning of the fade-in. The parameter value is reset to the default after reading the text.</li>
+                    <li id="prm-qid"><span>Individual Fade-In Shape Restriction [Length]</span>(qid=0.00-10000.00,0.00): The length is specified in seconds from the start position (qii). The parameter value is reset to the default after reading the text.</li>
                     <li id="prm-qfl">
-                        <span>Individual Fade Application Range</span> (qfl=0-1,1): Specifies the range of application for fade (qmt). The parameter value reverts to the default after reading the text.
+                        <span>Individual Fade Application Range</span> (qfl=0-1,1): Specifies the range of application for fade (qmt). The parameter value is reset to the default after reading the text.
                         <ul class="itm">
                             <li><span>No Limitation</span> (qfl=0): Applies fade at any position.</li>
                             <li><span>Until Midpoint</span> (qfl=1): Applies fade-in from the beginning to the midpoint, and fade-out from the end to the midpoint.</li>
                         </ul>
                     </li>
                     <li id="prm-qfm">
-                        <span>Individual Stereo Fade</span> (qfm=0-2,0): Selects which channel to apply fade (qmt) to if the Import MP3 is stereo. The parameter value reverts to the default after reading the text.
+                        <span>Individual Stereo Fade</span> (qfm=0-2,0): Selects which channel to apply fade (qmt) to if the Import MP3 is stereo. The parameter value is reset to the default after reading the text.
                         <ul class="itm">
                             <li><span>Both</span> (qfm=0): Changes the volume of both left and right channels.</li>
                             <li><span>Left</span> (qfm=1): Changes the volume of the left channel.</li>
@@ -3284,35 +3293,35 @@ title: "Manual"
                         </ul>
                     </li>
                     <li id="prm-so">
-                        <span>Source for Calculating Silence Addiotion Interval</span> (so=0-1,0): Specifies the reference length for calculating silence intervals if "Silence Value Unit" is "Times" (su=1). The parameter value reverts to the default after Cjam ends.
+                        <span>Source for Calculating Silence Addiotion Interval</span> (so=0-1,0): Specifies the reference length for calculating silence intervals if "Silence Value Unit" is "Times" (su=1). The parameter value is reset to the default when Cjam exits.
                         <ul class="itm">
                             <li><span>Length of Import MP3</span> (so=0): Uses the length of each Import MP3 as the basis.</li>
                             <li><span>Length from Block start</span> (so=1): Uses the length from the start of the Block to the start of each Import MP3 as the basis.</li>
                         </ul>
                     </li>
-                    <li id="prm-sx"><span>Adjust Silence Addition Interval Length [Fixed]</span> (sx=-30.00-30.00,0.00): Adjusts the length of each added silence interval (sj) by the specified number of seconds. Applies the same value to all Import MP3s. The parameter value reverts to the default after Cjam ends.</li>
-                    <li id="prm-sg"><span>Adjust Silence Addition Interval Length [Increasing]</span> (sg=-30.00-30.00,0.00): Adjusts the length of each added silence interval (sj) by the specified number of seconds. Adds values for each Block's Import MP3 and then applies. The parameter value reverts to the default after Cjam ends. (Example: for sg=10, the adjustment seconds for each Block's 1st, 2nd, 3rd, nth Import MP3 are 0, 10, 20, (n-1) x 10)</li>
-                    <li id="prm-cr"><span>Ratio for Cue Position in Silence Detection</span> (cr=0-100,50): Specifies the position during silence detection (cl=3). The parameter value reverts to the default after Cjam ends.</li>
-                    <li id="prm-se"><span>Silence Interval Notation String</span> (se="string","_s"): Specifies the string to be added to the silence file if "Export Silence" is "Allow [Express]" (es=2). The parameter value reverts to the default after Cjam ends.</li>
+                    <li id="prm-sx"><span>Adjust Silence Addition Interval Length [Fixed]</span> (sx=-30.00-30.00,0.00): Adjusts the length of each added silence interval (sj) by the specified number of seconds. Applies the same value to all Import MP3s. The parameter value is reset to the default when Cjam exits.</li>
+                    <li id="prm-sg"><span>Adjust Silence Addition Interval Length [Increasing]</span> (sg=-30.00-30.00,0.00): Adjusts the length of each added silence interval (sj) by the specified number of seconds. Adds values for each Block's Import MP3 and then applies. The parameter value is reset to the default when Cjam exits. (Example: for sg=10, the adjustment seconds for each Block's 1st, 2nd, 3rd, nth Import MP3 are 0, 10, 20, (n-1) x 10)</li>
+                    <li id="prm-cr"><span>Ratio for Cue Position in Silence Detection</span> (cr=0-100,50): Specifies the position during silence detection (cl=3). The parameter value is reset to the default when Cjam exits.</li>
+                    <li id="prm-se"><span>Silence Interval Notation String</span> (se="string","_s"): Specifies the string to be added to the silence file if "Export Silence" is "Allow [Express]" (es=2). The parameter value is reset to the default when Cjam exits.</li>
                     <li id="prm-qcp">
-                        <span>Name Priority for Comp/Decomp</span> (qcp=0-1,0): If "Operation Condition" is "Comp/Decomp" (qd=8), specifies whether Import MP3 names or element names are given priority during compression/decompression. The parameter value reverts to the default after reading the text.
+                        <span>Name Priority for Comp/Decomp</span> (qcp=0-1,0): If "Operation Condition" is "Comp/Decomp" (qd=8), specifies whether Import MP3 names or element names are given priority during compression/decompression. The parameter value is reset to the default after reading the text.
                         <ul class="itm">
                             <li><span>Prioritize Element</span> (qcp=0): During compression (qcw=0), element names are preserved. During decompression (qcw=1), each Import MP3 uses the name of its element.</li>
                             <li><span>Prioritize Import MP3</span> (qcp=1): During compression (qcw=0), all element names are changed to the Import MP3 name before compression. During decompression (qcw=1), each Import MP3 keeps its original name.</li>
                         </ul>
                     </li>
                     <li id="prm-vr">
-                        <span>Virtual MP3 Deletion</span> (vr=0-2,0): Deletes the exported Virtual MP3s. The parameter value reverts to the default after the attempt to delete.
+                        <span>Virtual MP3 Deletion</span> (vr=0-2,0): Deletes the exported Virtual MP3s. The parameter value is reset to the default after the attempt to delete.
                         <ul class="itm">
                             <li><span>Not Delete</span> (vr=0): Does not delete.</li>
                             <li><span>Delete All</span> (vr=1): Deletes all exported Virtual MP3s (ev=1-2).</li>
                             <li><span>Delete Temporary</span> (vr=2): Deletes temporary exported Virtual MP3s (ev=2).</li>
                         </ul>
                     </li>
-                    <li id="prm-rh"><span>Virtual MP3 Export Label</span> (rh="string",""): Specifies the label to be added to the folder when exporting Virtual MP3s. The label is displayed on the "VMP3" screen. The parameter value reverts to the default after Cjam ends.</li>
-                    <li id="prm-ra"><span>Virtual MP3 Export Comment</span> (ra="string",""): Specifies a comment about the export of Virtual MP3s. The comment is displayed on the "VMP3" screen. The parameter value reverts to the default after Cjam ends.</li>
+                    <li id="prm-rh"><span>Virtual MP3 Export Label</span> (rh="string",""): Specifies the label to be added to the folder when exporting Virtual MP3s. The label is displayed on the "VMP3" screen. The parameter value is reset to the default when Cjam exits.</li>
+                    <li id="prm-ra"><span>Virtual MP3 Export Comment</span> (ra="string",""): Specifies a comment about the export of Virtual MP3s. The comment is displayed on the "VMP3" screen. The parameter value is reset to the default when Cjam exits.</li>
                     <li id="prm-va">
-                        <span>Limiting the Range of Virtual MP3 Specification by Text 1 [Folder Attribute]</span> (va=0-2,0): Limits the range of Virtual MP3 specification by text (it=1,tt=2-3) based on folder attributes. The parameter value reverts to the default after Cjam ends.
+                        <span>Limiting the Range of Virtual MP3 Specification by Text 1 [Folder Attribute]</span> (va=0-2,0): Limits the range of Virtual MP3 specification by text (it=1,tt=2-3) based on folder attributes. The parameter value is reset to the default when Cjam exits.
                         <ul class="itm">
                             <li><span>No Limitation</span> (va=0): Targets all Virtual MP3s that are exported (ev=1-2).</li>
                             <li><span>Regular VMP3</span> (va=1): Targets regular exported Virtual MP3s (ev=1).</li>
@@ -3320,28 +3329,28 @@ title: "Manual"
                         </ul>
                     </li>
                     <li id="prm-vf">
-                        <span>Limiting the Range of Virtual MP3 Specification by Text 2-1 [Folder Number]</span> (vf=-100-100,0): Refines the range of specification from Limitation 1 (va) by specifying folder "Number" (vf) and "Count" (vc) of Virtual MP3 folders. The "Number" (vf) specifies any folder from the topmost '1' to the bottommost 'n' folder in the list on the "VMP3" screen. A negative value in the number will reverse the starting point, making the bottommost folder '1' and the topmost folder 'n'. The parameter value reverts to the default after Cjam ends.
+                        <span>Limiting the Range of Virtual MP3 Specification by Text 2-1 [Folder Number]</span> (vf=-100-100,0): Refines the range of specification from Limitation 1 (va) by specifying folder "Number" (vf) and "Count" (vc) of Virtual MP3 folders. The "Number" (vf) specifies any folder from the topmost '1' to the bottommost 'n' folder in the list on the "VMP3" screen. A negative value in the number will reverse the starting point, making the bottommost folder '1' and the topmost folder 'n'. The parameter value is reset to the default when Cjam exits.
                     </li>
-                    <li id="prm-vc"><span>Limiting the Range of Virtual MP3 Specification by Text 2-2 [Folder Count]</span> (vc=1-100,1): Specifies multiple consecutive folders starting from the folder designated by "Number" (vf). The parameter value reverts to the default after Cjam ends.</li>
-                    <li id="prm-vn"><span>Limiting the Range of Virtual MP3 Specification by Text 3 [Folder Label]</span> (vn="string",""): Refines the range of specification from Limitation 1 and 2 (va,vf,vc) based on the labels of Virtual MP3 folders. The parameter value reverts to the default after Cjam ends.</li>
-                    <li id="prm-vl"><span>Limiting the Range of Virtual MP3 Specification by Text 4 [VMP3 Label]</span> (vl="string",""): Refines the range of specification from Limitation 1, 2, and 3 (va,vf,vc,vn) based on the labels of Virtual MP3s. The parameter value reverts to the default after Cjam ends.</li>
-                    <li id="prm-ddi"><span>MP3 Folder Structure [Profile]</span> (ddi="string",""): Specifies the structure of the MP3 folder. This specification takes precedence over "MP3 Folder Structure [General Settings]". The parameter value reverts to the default after Cjam ends.</li>
-                    <li id="prm-ddn"><span>MP3 Folder Name [Profile]</span> (ddn="string",""): Specifies the name of the MP3 folder. This specification takes precedence over "MP3 Folder Name [General Settings]". The parameter value reverts to the default after Cjam ends.</li>
-                    <li id="prm-dvn"><span>VMP3 Folder Name [Profile]</span> (dvn="string",""): Specifies the name of the Virtual MP3 folder name. This specification takes precedence over "VMP3 Folder Name [General Settings]". The parameter value reverts to the default after Cjam ends.</li>
-                    <li id="prm-dtn"><span>Text Folder Name [Profile]</span> (dtn="string",""): Specifies the name of the text folder name. This specification takes precedence over "Text Folder Name [General Settings]". The parameter value reverts to the default after Cjam ends.</li>
-                    <li id="prm-dtg"><span>Add Tag [Profile]</span> (dtg="string",""): Specifies the ID3 tags to add to MP3s. This specification takes precedence over "Add Tag [General Settings]". The parameter value reverts to the default after Cjam ends.</li>
-                    <li id="prm-dln"><span>Verify Length [Profile]</span> (dln="string",""): Specifies the length of Blocks for which MP3 export is allowed. This specification takes precedence over "Verify Length [General Settings]". The parameter value reverts to the default after Cjam ends.</li>
+                    <li id="prm-vc"><span>Limiting the Range of Virtual MP3 Specification by Text 2-2 [Folder Count]</span> (vc=1-100,1): Specifies multiple consecutive folders starting from the folder designated by "Number" (vf). The parameter value is reset to the default when Cjam exits.</li>
+                    <li id="prm-vn"><span>Limiting the Range of Virtual MP3 Specification by Text 3 [Folder Label]</span> (vn="string",""): Refines the range of specification from Limitation 1 and 2 (va,vf,vc) based on the labels of Virtual MP3 folders. The parameter value is reset to the default when Cjam exits.</li>
+                    <li id="prm-vl"><span>Limiting the Range of Virtual MP3 Specification by Text 4 [VMP3 Label]</span> (vl="string",""): Refines the range of specification from Limitation 1, 2, and 3 (va,vf,vc,vn) based on the labels of Virtual MP3s. The parameter value is reset to the default when Cjam exits.</li>
+                    <li id="prm-ddi"><span>MP3 Folder Structure [Profile]</span> (ddi="string",""): Specifies the structure of the MP3 folder. This specification takes precedence over "MP3 Folder Structure [General Settings]". The parameter value is reset to the default when Cjam exits.</li>
+                    <li id="prm-ddn"><span>MP3 Folder Name [Profile]</span> (ddn="string",""): Specifies the name of the MP3 folder. This specification takes precedence over "MP3 Folder Name [General Settings]". The parameter value is reset to the default when Cjam exits.</li>
+                    <li id="prm-dvn"><span>VMP3 Folder Name [Profile]</span> (dvn="string",""): Specifies the name of the Virtual MP3 folder name. This specification takes precedence over "VMP3 Folder Name [General Settings]". The parameter value is reset to the default when Cjam exits.</li>
+                    <li id="prm-dtn"><span>Text Folder Name [Profile]</span> (dtn="string",""): Specifies the name of the text folder name. This specification takes precedence over "Text Folder Name [General Settings]". The parameter value is reset to the default when Cjam exits.</li>
+                    <li id="prm-dtg"><span>Add Tag [Profile]</span> (dtg="string",""): Specifies the ID3 tags to add to MP3s. This specification takes precedence over "Add Tag [General Settings]". The parameter value is reset to the default when Cjam exits.</li>
+                    <li id="prm-dln"><span>Verify Length [Profile]</span> (dln="string",""): Specifies the length of Blocks for which MP3 export is allowed. This specification takes precedence over "Verify Length [General Settings]". The parameter value is reset to the default when Cjam exits.</li>
                     <li id="prm-dg">
-                        <span>Disabling of Settings like "MP3 Folder Structure [General Settings]"</span> (dg=0-1,0): Specifies whether to disable the six values in "General Settings," including "MP3 Folder Structure", "MP3 Folder Name", "VMP3 Folder Name", "Text Folder Name", "Add Tag", and "Verify Length". The parameter value reverts to the default after Cjam ends.
+                        <span>Disabling of Settings like "MP3 Folder Structure [General Settings]"</span> (dg=0-1,0): Specifies whether to disable the six values in "General Settings," including "MP3 Folder Structure", "MP3 Folder Name", "VMP3 Folder Name", "Text Folder Name", "Add Tag", and "Verify Length". The parameter value is reset to the default when Cjam exits.
                         <ul class="itm">
-                            <li><span>Not Disable</span> (dg=0): All values are active.</li>
+                            <li><span>Not Disable</span> (dg=0): All values are valid.</li>
                             <li><span>Disable</span> (dg=1): Each value defaults to standard values, with "MP3 Folder Structure" as "1", "MP3 Folder Name" as "MP3", "VMP3 Folder Name" as "VM", "Text Folder Name" as "Text", and "Add Tag" and "Verify Length" being empty.</li>
                         </ul>
                     </li>
-                    <li id="prm-pl"><span>Playback</span> (pl="0-3000" or pl="0-3000:0-1500",""): Specifies the Block to play using "Block Number" or "Block Number and IMP3 Number". Specifying value "0" will select items randomly. If sequential run is specified, the parameter specification is discarded. The parameter value reverts to the default after the attempt to playback.</li>
-                    <li id="prm-pe"><span>Audio Output Destination</span> (pe="Name of Output Device",""): Specifies the audio output destination by device name. The parameter value reverts to the default after Cjam ends.</li>
+                    <li id="prm-pl"><span>Playback</span> (pl="0-3000" or pl="0-3000:0-1500",""): Specifies the Block to play using "Block Number" or "Block Number and IMP3 Number". Specifying value "0" will select items randomly. If sequential run is specified, the parameter specification is discarded. The parameter value is reset to the default after the attempt to playback.</li>
+                    <li id="prm-pe"><span>Audio Output Destination</span> (pe="Name of Output Device",""): Specifies the audio output destination by device name. The parameter value is reset to the default when Cjam exits.</li>
                     <li id="prm-po">
-                        <span>Playback Order</span> (po=-1-6,-1): Selects the playback order. The parameter value reverts to the default after selection.
+                        <span>Playback Order</span> (po=-1-6,-1): Selects the playback order. The parameter value is reset to the default after selection.
                         <ul class="itm">
                             <li><span>Retain</span> (po=-1): Does not change the playback order.</li>
                             <li><span>Default</span> (po=0): Plays Blocks in the order of the list numbers.</li>
@@ -3354,14 +3363,14 @@ title: "Manual"
                         </ul>
                     </li>
                     <li id="prm-mp">
-                        <span>Metadata Display Priority on Playback</span> (mp=0-1,0): Selects the priority of the display target in the "Metadata" screen during playback. The parameter value reverts to the default after Cjam ends.
+                    <span>Metadata Display Priority on Playback</span> (mp=0-1,0): Selects the priority for displaying metadata on the "Metadata" screen during playback. The parameter value is reset to the default when Cjam exits.
                         <ul class="itm">
-                            <li><span>Text Specification Priority</span> (mp=0): Displays specified images/text if specified in the text; otherwise, displays images/text stored in ID3 tags.</li>
-                            <li><span>ID3 Tag Specification Priority</span> (mp=1): : Disables text-based specification and displays images/text stored in ID3 tags.</li>
+                            <li><span>Prioritize Text Specification</span> (mp=0): Displays images/text specified in the text if available; otherwise, displays images/text stored in the ID3 tags.</li>
+                            <li><span>Prioritize ID3 Tag Specification</span> (mp=1): Displays images/text stored in the ID3 tags, ignoring text-based specification.</li>
                         </ul>
                     </li>
                     <li id="prm-wt">
-                        <span>Sub-screen for Changing State</span> (wt=0-3,1): Specifies the sub-screen for changing state. The parameter value reverts to the default after the attempt to change.
+                        <span>Sub-screen for Changing State</span> (wt=0-3,1): Specifies the sub-screen for changing state. The parameter value is reset to the default after the attempt to change.
                         <ul class="itm">
                             <li><span>None</span> (wt=0): Does not change the state of the sub-screen.</li>
                             <li><span>VMP3</span> (wt=1): Changes the "VMP3" screen.</li>
@@ -3370,20 +3379,20 @@ title: "Manual"
                         </ul>
                     </li>
                     <li id="prm-ws">
-                        <span>Sub-screen State</span> (ws=-1-1,-1): Changes the state of the sub-screen. The parameter value reverts to the default after the attempt to change.
+                        <span>Sub-screen State</span> (ws=-1-1,-1): Changes the state of the sub-screen. The parameter value is reset to the default after the attempt to change.
                         <ul class="itm">
                             <li><span>Retain</span> (ws=-1): Does not change the state.</li>
                             <li><span>End Display</span> (ws=0): Closes the sub-screen.</li>
                             <li><span>Start Display</span> (ws=1): Opens the sub-screen.</li>
                         </ul>
                     </li>
-                    <li id="prm-wx"><span>Sub-screen Position X</span> (wx=-1-computer screen width,-1): Specifies the horizontal position of the sub-screen from the top-left of the computer screen as base value '0'. The parameter value reverts to the default after the attempt to specify.</li>
-                    <li id="prm-wy"><span>Sub-screen Position Y</span> (wy=-1-computer screen height,-1): Specifies the vertical position of the sub-screen from the top-left of the computer screen as base value '0'. The parameter value reverts to the default after the attempt to specify.</li>
-                    <li id="prm-ww"><span>Sub-screen Width</span> (ww=-1-computer screen width,-1): Specifies the width of the sub-screen. The parameter value reverts to the default after the attempt to specify.</li>
-                    <li id="prm-wh"><span>Sub-screen Height</span> (wh=-1-computer screen height,-1): Specifies the height of the sub-screen. The parameter value reverts to the default after the attempt to specify.</li>
-                    <li id="prm-wms"><span>Sub-screen Item Width</span> (wms=-1-sub screen width,-1): Specifies the width of the folder list on the "Virtual MP3" screen or the image on the "Metadata" screen. The parameter value reverts to the default after the attempt to specify.</li>
+                    <li id="prm-wx"><span>Sub-screen Position X</span> (wx=-1-computer screen width,-1): Specifies the horizontal position of the sub-screen from the top-left of the computer screen as base value '0'. The parameter value is reset to the default after the attempt to specify.</li>
+                    <li id="prm-wy"><span>Sub-screen Position Y</span> (wy=-1-computer screen height,-1): Specifies the vertical position of the sub-screen from the top-left of the computer screen as base value '0'. The parameter value is reset to the default after the attempt to specify.</li>
+                    <li id="prm-ww"><span>Sub-screen Width</span> (ww=-1-computer screen width,-1): Specifies the width of the sub-screen. The parameter value is reset to the default after the attempt to specify.</li>
+                    <li id="prm-wh"><span>Sub-screen Height</span> (wh=-1-computer screen height,-1): Specifies the height of the sub-screen. The parameter value is reset to the default after the attempt to specify.</li>
+                    <li id="prm-wms"><span>Sub-screen Item Width</span> (wms=-1-sub screen width,-1): Specifies the width of the folder list on the "Virtual MP3" screen or the image on the "Metadata" screen. The parameter value is reset to the default after the attempt to specify.</li>
                     <li id="prm-wml">
-                        <span>Sub-screen Item Layout</span> (wml=-1-3,-1): Specifies the layout of folders and Virtual MP3s on the "Virtual MP3" screen, or image and text on the "Metadata" screen. The parameter value reverts to the default after the attempt to specify.
+                        <span>Sub-screen Item Layout</span> (wml=-1-3,-1): Specifies the layout of folders and Virtual MP3s on the "Virtual MP3" screen, or image and text on the "Metadata" screen. The parameter value is reset to the default after the attempt to specify.
                         <ul class="itm">
                             <li><span>Retain</span> (wml=-1): Does not change the state.</li>
                             <li><span>Left to Right</span> (wml=0): Displays the folder list on the left and the Virtual MP3 list on the right on the "Virtual MP3" screen, or the image on the left and text on the right on the "Metadata" screen.</li>
@@ -3392,8 +3401,8 @@ title: "Manual"
                             <li><span>Bottom to Top</span> (wml=3): Displays the folder list on the bottom and the Virtual MP3 list on the top on the "Virtual MP3" screen, or the image on the bottom and text on the top on the "Metadata" screen.</li>
                         </ul>
                     </li>
-                    <li id="prm-rq"><span>Clear Text Editor</span> (rq=0-1,0): Clears the text in the "Text Editor" screen. The parameter value reverts to the default after clearing.</li>
-                    <li id="prm-rplcr"><span>String Replacement Parameters</span> ($1-$9="string:digit"): Replaces occurrences of "$1" to "$9" in file name specifications with "specified string + sequential number". If "$1" to "$9" appear multiple times, a series of numbers will be assigned in the order of all Blocks with occurrences → all Import MP3s with occurrences → all Cues with occurrences. The parameter values revert to their defaults after reading the text, and the replacement settings remain effective until the program ends.</li>
+                    <li id="prm-rq"><span>Clear Text Editor</span> (rq=0-1,0): Clears the text in the "Text Editor" screen. The parameter value is reset to the default after clearing.</li>
+                    <li id="prm-rplcr"><span>String Replacement Parameters</span> ($1-$9="string:digit"): Replaces occurrences of "$1" to "$9" in file name specifications with "specified string + sequential number". If "$1" to "$9" appear multiple times, a series of numbers will be assigned in the order of all Blocks with occurrences → all Import MP3s with occurrences → all Cues with occurrences. The parameter values are reset to their defaults after reading the text, and the replacement settings remain in effect until the program ends.</li>
                 </ul>
             </div>
             <div class="blc">
@@ -3453,7 +3462,7 @@ title: "Manual"
             <div class="blc">
                 <ul>
                     <li>
-                        <p><span>DIRINDEX and ddi</span>: Both use half-width numbers ( '1' to '300') to represent created folders and use backslashes (\) to indicate hierarchy, separated by commas (,) for multiple items. `ddi` encloses the entire value in double quotes (").</p>
+                        <p><span>DIRINDEX and ddi</span>: Both use numbers ( '1' to '300') to represent created folders and use backslashes (\) to indicate hierarchy, separated by commas (,) for multiple items. `ddi` encloses the entire value in double quotes (").</p>
                         <p>DIRINDEX example: DIRINDEX 1\2, 1\3</p>
                         <p>ddi example: ddi="1\2, 1\3"</p>
                     </li>
@@ -3473,7 +3482,7 @@ title: "Manual"
                         <p>dtn example: dtn="Text01"</p>
                     </li>
                     <li>
-                        <p><span>TAG and dtg</span>: TAG encloses each item's value in double quotes ("), while `dtg` encloses the entire value in double quotes ("). When using a double quote within the value, represent it as an escaped quote (\").</p>
+                        <p><span>TAG and dtg</span>: TAG encloses each item's value in double quotes ("), while `dtg` encloses the entire value in double quotes ("). When using a double quote within the value, represent it as an escaped quote (\"). Relative paths specified in the APIC field of TAG are resolved relative to the Desktop folder, while relative paths in `dtg` are resolved relative to the folder containing the text file.</p>
                         <p>TAG example: TAG APIC="D:\Data\image.jpg", USLT="She said, \"Hi\""</p>
                         <p>dtg example: dtg="APIC=D:\Data\image.jpg, USLT=She said, \"Hi\""</p>
                     </li>
@@ -3483,6 +3492,262 @@ title: "Manual"
                         <p>dln example: dln="3:30, 03:40:50, 03:50:750"</p>
                     </li>
                 </ul>
+            </div>
+            <div class="blc" id="txt-txt">
+                <h3>TXT</h3>
+                <p>TEXT (*.txt) files support several types of data.</p>
+                <p>TEXT files can be imported using the menu bar, drag and drop, the "Reference Text File Path" (at) parameter, or by pasting descriptions from the clipboard with [Ctrl]+[V].</p>
+            </div>
+            <div class="blc">
+                <div class="blc">
+                    <h4>[Import (CJAM)]</h4>
+                    <p>Write "[Cjam Import CJM]" on the first line, followed by data in CJAM format.</p>
+                    <br>
+                    <p>The following header options are available:</p>
+                    <p>"Forward"/"Reverse"/"Random": Specifies the import order. If omitted, "Forward" is used.</p>
+                    <p>Example: "[Cjam Import CJM Random]".</p>
+                    <br>
+                    <p>Relative MP3 paths are resolved relative to the "Relative Path Conversion Folder Path" (ap). If it is not specified, they are resolved relative to the folder containing the text file.</p>
+                    <p>Only Block/MP3/Cue entries are processed; Command entries are ignored.</p>
+                    <table>
+                        <tr>
+                            <td class="tbl">
+                                <div class="txt">
+                                    <p>[Cjam Import CJM]</p>
+                                    <p>#2:"T01-02"</p>
+                                    <p>Track01.mp3</p>
+                                    <p>Track02.mp3</p>
+                                    <p>#3:"T03-04":TIT2="file02"</p>
+                                    <p>D:\Data\Track03.mp3</p>
+                                    <p>D:\Data\Track04.mp3</p>
+                                    <p>00:00:00 1:"T03-04-1"</p>
+                                    <p>01:30:00 1:"T03-04-2"</p>
+                                    <p>03:30:00 1:"T03-04-3"</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="blc">
+                    <h4>[Import (MP3)]</h4>
+                    <p>Write "[Cjam Import MP3]" on the first line, followed by the paths to MP3s or folders.</p>
+                    <br>
+                    <p>The following header options are available:</p>
+                    <p>"Forward"/"Reverse"/"Random": Specifies the import order. If omitted, "Forward" is used.</p>
+                    <p>Example: "[Cjam Import MP3 Random]".</p>
+                    <br>
+                    <p>Relative MP3 paths are resolved relative to the "Relative Path Conversion Folder Path" (ap). If it is not specified, they are resolved relative to the folder containing the text file.</p>
+                    <p>Relative folder paths are not supported.</p>
+                    <table>
+                        <tr>
+                            <td class="tbl">
+                                <div class="txt">
+                                    <p>[Cjam Import MP3]</p>
+                                    <p>file.mp3</p>
+                                    <p>D:\Data\file2.mp3</p>
+                                    <p>D:\Data\Folder</p>
+                                    <p>V:\Vmfolder\vm.mp3</p>
+                                    <p>V:\Vmfolder</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="blc">
+                    <h4>[Import (Virtual MP3)]</h4>
+                    <p>Write "[Cjam Import VMP3]" on the first line, followed by the contents of the vmp3.txt file.</p>
+                    <br>
+                    <p>The following header options are available:</p>
+                    <p>"Forward"/"Reverse"/"Random": Specifies the import order. If omitted, "Forward" is used.</p>
+                    <p>Example: "[Cjam Import VMP3 Random]".</p>
+                    <table>
+                        <tr>
+                            <td class="tbl">
+                                <div class="txt">
+                                    <p>[Cjam Import VMP3]</p>
+                                    <p>&lt;sv&gt;</p>
+                                    <p>im01.mp3</p>
+                                    <p>D:\Data\source01.mp3,0,10000,0,</p>
+                                    <p>im02.mp3</p>
+                                    <p>D:\Data\source02.mp3,0,15000,0,</p>
+                                    <p>&lt;/sv&gt;</p>
+                                    <p>&lt;sv&gt;</p>
+                                    <p>im03.mp3</p>
+                                    <p>APIC="D:\Data\image.jpg",USLT="lyric"</p>
+                                    <p>VLBL="label1","label2"</p>
+                                    <p>D:\Data\source02.mp3,0,1000,0,</p>
+                                    <p>D:\Data\source02.mp3,0,0,1000,</p>
+                                    <p>D:\Data\source02.mp3,2000,13000,0,</p>
+                                    <p>&lt;/sv&gt;</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="blc">
+                    <h4>[Reassign (CJAM)]</h4>
+                    <p>Write "[Cjam Reassign CJM]" on the first line, followed by data in CJAM format.</p>
+                    <br>
+                    <p>The following header options are available:</p>
+                    <p>"All"/"Selected"/"Parameter": Specifies the target items for reassignment. "Parameter" follows the current parameter setting. If omitted, "All" is used.</p>
+                    <p>"Forward"/"Reverse"/"Random": Specifies the reassignment order. If omitted, "Forward" is used.</p>
+                    <p>Example: "[Cjam Reassign CJM Selected Random]".</p>
+                    <br>
+                    <p>Relative MP3 paths are resolved relative to the "Relative Path Conversion Folder Path" (ap). If it is not specified, they are resolved relative to the folder containing the text file.</p>
+                    <p>Only MP3 entries are processed; Block/Cue/Command entries are ignored.</p>
+                    <table>
+                        <tr>
+                            <td class="tbl">
+                                <div class="txt">
+                                    <p>[Cjam Reassign CJM]</p>
+                                    <p>Track01.mp3</p>
+                                    <p>Track02.mp3</p>
+                                    <p>D:\Data\Track03.mp3</p>
+                                    <p>D:\Data\Track04.mp3</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="blc">
+                    <h4>[Reassign (MP3)]</h4>
+                    <p>Write "[Cjam Reassign MP3]" on the first line, followed by the paths to MP3s or folders.</p>
+                    <br>
+                    <p>The following header options are available:</p>
+                    <p>"All"/"Selected"/"Parameter": Specifies the target items for reassignment. "Parameter" follows the current parameter setting. If omitted, "All" is used.</p>
+                    <p>"Forward"/"Reverse"/"Random": Specifies the reassignment order. If omitted, "Forward" is used.</p>
+                    <p>Example: "[Cjam Reassign MP3 Selected Random]".</p>
+                    <br>
+                    <p>Relative MP3 paths are resolved relative to the "Relative Path Conversion Folder Path" (ap). If it is not specified, they are resolved relative to the folder containing the text file.</p>
+                    <p>Relative folder paths are not supported.</p>
+                    <table>
+                        <tr>
+                            <td class="tbl">
+                                <div class="txt">
+                                    <p>[Cjam Reassign MP3]</p>
+                                    <p>file.mp3</p>
+                                    <p>D:\Data\file2.mp3</p>
+                                    <p>D:\Data\Folder</p>
+                                    <p>V:\Vmfolder\vm.mp3</p>
+                                    <p>V:\Vmfolder</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="blc">
+                    <h4>[Reassign (Virtual MP3)]</h4>
+                    <p>Write "[Cjam Reassign VMP3]" on the first line, followed by the contents of the vmp3.txt file.</p>
+                    <br>
+                    <p>The following header options are available:</p>
+                    <p>"All"/"Selected"/"Parameter": Specifies the target items for reassignment. "Parameter" follows the current parameter setting. If omitted, "All" is used.</p>
+                    <p>"Forward"/"Reverse"/"Random": Specifies the reassignment order. If omitted, "Forward" is used.</p>
+                    <p>Example: "[Cjam Reassign VMP3 Selected Random]".</p>
+                    <table>
+                        <tr>
+                            <td class="tbl">
+                                <div class="txt">
+                                    <p>[Cjam Reassign VMP3]</p>
+                                    <p>&lt;sv&gt;</p>
+                                    <p>im01.mp3</p>
+                                    <p>D:\Data\source01.mp3,0,10000,0,</p>
+                                    <p>im02.mp3</p>
+                                    <p>D:\Data\source02.mp3,0,15000,0,</p>
+                                    <p>&lt;/sv&gt;</p>
+                                    <p>&lt;sv&gt;</p>
+                                    <p>im03.mp3</p>
+                                    <p>APIC="D:\Data\image.jpg",USLT="lyric"</p>
+                                    <p>VLBL="label1","label2"</p>
+                                    <p>D:\Data\source02.mp3,0,1000,0,</p>
+                                    <p>D:\Data\source02.mp3,0,0,1000,</p>
+                                    <p>D:\Data\source02.mp3,2000,13000,0,</p>
+                                    <p>&lt;/sv&gt;</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="blc">
+                    <h4>[Metadata (Tags)]</h4>
+                    <p>Write "[Cjam Metadata TAG]" on the first line, followed by one "Add Tag [General Settings]" (TAG) value per line.</p>
+                    <br>
+                    <p>The following header options are available:</p>
+                    <p>"All"/"Selected": Specifies the target items. If omitted, "All" is used.</p>
+                    <p>"Forward"/"Reverse"/"Random": Specifies the processing order. If omitted, "Forward" is used.</p>
+                    <p>Example: "[Cjam Metadata TAG Selected Random]".</p>
+                    <br>
+                    <p>Relative image paths in the APIC field are resolved relative to the folder containing the text file.</p>
+                    <table>
+                        <tr>
+                            <td class="tbl">
+                                <div class="txt">
+                                    <p>[Cjam Metadata TAG]</p>
+                                    <p>APIC="D:\Data\image.jpg"</p>
+                                    <p>USLT="lyric01", TIT2="file01"</p>
+                                    <p>APIC="image.png", USLT="lyric01"</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="blc">
+                    <h4>[Metadata (Images)]</h4>
+                    <p>Write "[Cjam Metadata Image]" on the first line, followed by the paths to image files or folders.</p>
+                    <br>
+                    <p>The following header options are available:</p>
+                    <p>"All"/"Selected": Specifies the target items. If omitted, "All" is used.</p>
+                    <p>"Forward"/"Reverse"/"Random": Specifies the processing order. If omitted, "Forward" is used.</p>
+                    <p>Example: "[Cjam Metadata Image Selected Random]".</p>
+                    <br>
+                    <p>Relative image paths are resolved relative to the "Relative Path Conversion Folder Path" (ap). If it is not specified, they are resolved relative to the folder containing the text file.</p>
+                    <p>Relative folder paths are not supported.</p>
+                    <table>
+                        <tr>
+                            <td class="tbl">
+                                <div class="txt">
+                                    <p>[Cjam Metadata Image]</p>
+                                    <p>image.jpg</p>
+                                    <p>D:\Data\image.png</p>
+                                    <p>D:\Data\image.gif</p>
+                                    <p>D:\Data\Folder</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="blc">
+                    <h4>[Metadata (Lyrics)]</h4>
+                    <p>Write "[Cjam Metadata Lyric]" on the first line, followed by one lyric entry per line.</p>
+                    <br>
+                    <p>The following header options are available:</p>
+                    <p>"All"/"Selected": Specifies the target items. If omitted, "All" is used.</p>
+                    <p>"Forward"/"Reverse"/"Random": Specifies the processing order. If omitted, "Forward" is used.</p>
+                    <p>Example: "[Cjam Metadata Lyric Selected Random]".</p>
+                    <table>
+                        <tr>
+                            <td class="tbl">
+                                <div class="txt">
+                                    <p>[Cjam Metadata Lyric]</p>
+                                    <p>lyric01</p>
+                                    <p>lyric02</p>
+                                    <p>lyric03</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="blc">
+                    <h4>[Header Omission]</h4>
+                    <p>TEXT files must begin with a header string. If the header is omitted, the file cannot be imported.</p>
+                    <p>The following formats are exceptions and can be imported without a header:</p>
+                </div>
+                <div class="blc">
+                    <ul>
+                        <li><span>vmp3.txt contents</span>: Imported as "[Cjam Import VMP3]".</li>
+                        <li><span>TAG descriptions</span>: Imported as "[Cjam Metadata TAG Selected]".</li>
+                        <li><span>Descriptions beginning with an MP3 path</span>: Imported as "[Cjam Import MP3]".</li>
+                        <li><span>Descriptions beginning with an image path</span>: Imported as "[Cjam Metadata Image Selected]".</li>
+                    </ul>
+                </div>
             </div>
             <div class="back-to-top">
                 <a href="#manual-top">Back to top</a>
@@ -3598,6 +3863,7 @@ title: "Manual"
                     <li><span>NAMEBNUM</span> (bn,bp,bf,ba): bn=2,bp=1,bf=2,ba=1</li>
                     <li><span>NAMEEMNUM</span> (en,ep,ef,ea): en=2,ep=1,ef=2,ea=0</li>
                     <li><span>SEQUENCE</span> (sr,srv): sr=4,srv=1</li>
+                    <li><span>LOAD</span> (at): at=""</li>
                     <li><span>SELECTALL</span>: la=1,lc=1,ly=1,in="SELECTALL"</li>
                     <li><span>SELECTNONE</span>: la=1,lc=1,le=1,ly=1,in="SELECTNONE"</li>
                     <li><span>UNSELECTALL</span>: la=1,lc=1,le=1,ly=1,in="UNSELECTALL"</li>
