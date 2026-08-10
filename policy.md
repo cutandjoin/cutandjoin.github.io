@@ -13,5 +13,5 @@ This website uses Google AdSense to display advertisements. AdSense uses cookies
 **Contact**  
 For general inquiries or issues regarding the software, contact via:  
 Email: cutandjoinapp[at]gmail.com  
-Developer: cutandjoin  
+Developer: Cjam Apps  
   
