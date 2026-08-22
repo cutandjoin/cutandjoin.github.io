@@ -40,7 +40,7 @@ title: "Manual"
 </head>
 <body>
     <div class="manual-content">
-      <h1>Cjam User Manual (Version 2.6.0.0)</h1>
+      <h1>Cjam User Manual (Version 2.6.1.0)</h1>
         <a name="manual-top"></a>
         <div class="cts">
             <div class="blc">
@@ -1548,7 +1548,7 @@ title: "Manual"
                         </ul>
                     </li>
                     <li id="prm-qd">
-                        <span>Operation Condition</span> (qd=0-13,0): Specifies the condition for operation.
+                        <span>Operation Condition</span> (qd=0-14,0): Specifies the condition for operation.
                         <ul class="itm">
                             <li><span>None</span> (qd=0): Does not perform any operation.</li>
                             <li><span>Duplicate</span> (qd=1): Duplicates the selected items.</li>
@@ -1564,6 +1564,7 @@ title: "Manual"
                             <li><span>Individual Cue</span> (qd=11): Individually specifies Cues for selected items. Individual specifications take precedence over parameters (bt,bi,bs,be).</li>
                             <li><span>Virtualize</span> (qd=12): Exports the selected items to the "VMP3" screen.</li>
                             <li><span>Rename</span> (qd=13): Renames the selected items.</li>
+                            <li><span>Reference Tag</span> (qd=14): Applies tags from a reference file to the selected Import MP3s.</li>
                         </ul>
                     </li>
                 </ul>
@@ -2189,13 +2190,20 @@ title: "Manual"
                         <span>Text Folder Name [General Settings]</span>: Specifies the folder names created during text files export. Encloses any string in double quotes (").
                     </li>
                     <li>
-                        <span>Add Tag [General Settings]</span>: Specifies ID3v2.3 tags to be added to Export MP3s. Any of the following five items can be specified, separated by commas (,):
+                        <span>Add Tag [General Settings]</span>: Specifies ID3v2.3 tags to be added to Export MP3s. Any of the following items can be specified, separated by commas (,):
                         <ul class="itm">
                             <li><span>Title</span>: TIT2="string", "&lt;filename&gt;" to store the name of each Export MP3</li>
                             <li><span>Artist Name</span>: TPE1="string"</li>
                             <li><span>Album Name</span>: TALB="string"</li>
                             <li><span>Image</span>: APIC=JPEG/PNG/GIF file's "absolute path" or "relative path from the desktop"</li>
                             <li><span>Text</span>: USLT="string", specifies line breaks with "&lt;br&gt;"</li>
+                            <li><span>Album Artist</span>: TPE2="string"</li>
+                            <li><span>Track Number</span>: TRCK="string"</li>
+                            <li><span>Disc Number</span>: TPOS="string"</li>
+                            <li><span>Year</span>: TYER="string"</li>
+                            <li><span>Genre</span>: TCON="string"</li>
+                            <li><span>Composer</span>: TCOM="string"</li>
+                            <li><span>Comment</span>: COMM="string", specifies line breaks with "&lt;br&gt;"</li>
                         </ul>
                     </li>
                     <li>
@@ -3310,6 +3318,14 @@ title: "Manual"
                             <li><span>Prioritize Import MP3</span> (qcp=1): During compression (qcw=0), all element names are changed to the Import MP3 name before compression. During decompression (qcw=1), each Import MP3 keeps its original name.</li>
                         </ul>
                     </li>
+                    <li id="prm-qti">
+                        <span>Tag Image Reference</span> (qti=0-1,0): If "Operation Condition" is "Reference Tag" (qd=14), specifies how to handle images in the tags of the reference file. The parameter value is reset to the default after reading the text.
+                        <ul class="itm">
+                            <li><span>None</span> (qti=0): Does not reference images in the reference file.</li>
+                            <li><span>Reference</span> (qti=1): Exports the image file to the folder containing the reference file and includes the image reference in the tag.</li>
+                        </ul>
+                    </li>
+                    <li id="prm-qte"><span>Tag Encoding</span> (qte="ANSI code page number",""): If "Operation Condition" is "Reference Tag" (qd=14), specifies the ANSI code page used to decode ID3 tag text. The parameter value is reset to the default after reading the text.</li>
                     <li id="prm-vr">
                         <span>Virtual MP3 Deletion</span> (vr=0-2,0): Deletes the exported Virtual MP3s. The parameter value is reset to the default after the attempt to delete.
                         <ul class="itm">
@@ -3971,6 +3987,7 @@ title: "Manual"
                     <li><span>VIRTUALIZEC</span> (qvs): qa=1,qd=12,qvs=0,in="VIRTUALIZEC"</li>
                     <li><span>CHANGENAME</span> (qnw,qnp,qns,qnn,qnl,qnd,qni): qa=1,qd=13,qnw=1,qnp=2,qns="",qnn=2,qnl=1,qnd=2,qni=1,in="CHANGENAME"</li>
                     <li><span>RENAME</span> (qnw,qnp,qns,qnn,qnl,qnd,qni): qa=1,qd=13,qnw=1,qnp=2,qns="",qnn=2,qnl=1,qnd=2,qni=1,in="RENAME"</li>
+                    <li><span>REFTAG</span> (qti,qte): qa=1,qd=14,qti=0,qte="",in="REFTAG"</li>
                     <li><span>QUERYUNIT</span> (qa,qb,qc): qa=1,qb=0,qc=1</li>
                     <li><span>SELECTNONEPQ</span>: qv=0</li>
                     <li><span>REFRAME</span> (fp,fe): fp=1,fe=1</li>
