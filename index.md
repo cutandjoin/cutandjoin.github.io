@@ -19,16 +19,16 @@ title: "Cjam"
 
 ## Download
 
-### [Download Cjam](https://github.com/cutandjoin/Cjam/releases/download/v2600/cjam_v2600.zip)
+### [Download Cjam](https://github.com/cutandjoin/Cjam/releases/download/v2610/cjam_v2610.zip)
 
-**Version**: 2.6.0.0  
-**Release Date**: Aug 10, 2026  
+**Version**: 2.6.1.0  
+**Release Date**: Aug 22, 2026  
 **File Size**: 53.8 MB  
-**SHA-256**: c274614c62eae124caa5efc1f9ac13fcf75a9e496a8472702dc299940792f63c
+**SHA-256**: 6c9ecdb6c68e8838a99a5100d48f19eff837aead1b3b3c8d77b2fa0d0d6b348d
 
 Includes the .NET 8 runtime. No additional software is required.
 
-If the latest version cannot be downloaded, the previous version is available [here](https://github.com/cutandjoin/Cjam/releases/download/v2510/cjam_v2510.zip).
+If the latest version cannot be downloaded, the previous version is available [here](https://github.com/cutandjoin/Cjam/releases/download/v2600/cjam_v2600.zip).
 
 For more information, see the <a href="https://forum.cjmapp.net/index.php">forum</a>.
 
@@ -38,19 +38,19 @@ For more information, see the <a href="https://forum.cjmapp.net/index.php">forum
 
 Requires Microsoft .NET 8 Runtime.
 
-[Download](https://github.com/cutandjoin/Cjam/releases/download/v2600/cjam_v2600_net8.zip)
+[Download](https://github.com/cutandjoin/Cjam/releases/download/v2610/cjam_v2610_net8.zip)
 
-**File Size**: 1.46 MB  
-**SHA-256**: ee00d26c7d8f9fbffaaa0831a57b1db7332cc60ae51fc6046fde00838b3771e6
+**File Size**: 1.47 MB  
+**SHA-256**: 7997fadb5dfa003bf4d3039a2aec293b3b21a7dbd4c550565d8a20adb139e84d
 
 ### Framework-dependent (.NET 6)
 
 Requires Microsoft .NET 6 Runtime.
 
-[Download](https://github.com/cutandjoin/Cjam/releases/download/v2600/cjam_v2600_net6.zip)
+[Download](https://github.com/cutandjoin/Cjam/releases/download/v2610/cjam_v2610_net6.zip)
 
-**File Size**: 1.46 MB  
-**SHA-256**: c2296b2d84862e08335cafe2bcca2888aca05511697eacfeba530f6ec1dcde39
+**File Size**: 1.47 MB  
+**SHA-256**: 1e5b691edbc7c5bf3171c9fb97e1e457c89af79eae82edd977bd5034065466e3
 
 ## Supported Devices
 
@@ -78,23 +78,14 @@ Requires Microsoft .NET 6 Runtime.
 
 ### Version 2.0.0.0 - Jun 28, 2025
 
-### Version 2.6.0.0 - Aug 10, 2026
-- Added support for .txt files
-- Added a new command parameter (at)
-- Added a new command alias (load)
-- Changed the values of the command parameters (ie, ee)
-- Removed the "Ctrl/Shift/Alt + Drop TXT Files" feature
-- Unified paste operations in the main window under Ctrl+V and removed Ctrl+Shift+V
-- Changed how command parameters (cb, ip, ar, up) are applied to paste operations in the main window
-- Fixed an issue with incorrect paste positions in the main window
-- Improved waveform rendering performance
-- Added lang.txt entries (stf_c001-c007, stf_d001-d002)
-- Updated a lang.txt entry (txt_c006)
-- Removed lang.txt entries (prn_c102–prn_c105, prn_c261–prn_c264)
-- Changed the author name
-- Updated the distribution packages (Self-contained and Framework-dependent builds)
-- Updated the system requirements (the primary download no longer requires the .NET Runtime)
-- Fixed minor bugs
+### Version 2.6.1.0 - Aug 22, 2026
+- Added a new value to the command parameter (qd)
+- Added new command parameters (qti, qte)
+- Added a new command alias (reftag)
+- Added support for new ID3 tag fields (e.g., Album Artist, Track Number)
+- Added Undo/Redo menus to the vmp3 screen
+- Fixed a bug where the ri parameter was incorrectly applied when reassigning
+- Added lang.txt entries (vmp_m030-vmp_m055, pli_c471)
 
 
 For detailed update information, see the <a href="https://forum.cjmapp.net/viewforum.php?f=3">full changelog</a>.
