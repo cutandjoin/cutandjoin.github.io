@@ -40,7 +40,7 @@ title: "Manual"
 </head>
 <body>
     <div class="manual-content">
-      <h1>Cjam User Manual (Version 2.6.1.0)</h1>
+      <h1>Cjam User Manual (Version 2.7.0.0)</h1>
         <a name="manual-top"></a>
         <div class="cts">
             <div class="blc">
@@ -98,6 +98,7 @@ title: "Manual"
                     <li>CJAMC(*.cjc)</li>
                     <li>CJAMJ(*.cjj)</li>
                     <li>CJAM(*.cjm)</li>
+                    <li>CJAMT(*.cjt)</li>
                     <li>TEXT(*.txt)</li>
                 </ul>
             </div>
@@ -358,7 +359,7 @@ title: "Manual"
                     <li><span>[Ctrl]+[Shift]+[F]</span>: Prepares a profile for filtering Import MP3 names (la=1,ld=4) and displays the "Profiles [List]" screen.</li>
                     <li><span>[Ctrl]+[X]</span>: Cuts the selected Import MP3s from the list.</li>
                     <li><span>[Ctrl]+[C]</span>: Copies the selected Import MP3s from the list.</li>
-                    <li><span>[Ctrl]+[V]</span>: Pastes the current clipboard contents just below the most recently selected position in the list. Supports Import MP3s/Virtual MP3s copied in Cjam, TEXT-format descriptions, files copied in Explorer, and items copied in mp3DirectCut/REAPER.</li>
+                    <li><span>[Ctrl]+[V]</span>: Pastes the current clipboard contents just below the most recently selected position in the list. Supports Import MP3s/Virtual MP3s copied in Cjam, CJAMT/TEXT-format descriptions, files copied in Explorer, and items copied in mp3DirectCut/REAPER.</li>
                     <li><span>[Insert]</span>: Pastes the cut/copied Import MP3s at the most recently right-clicked position.</li>
                     <li><span>[Ctrl]+[Insert]</span>: Pastes the cut/copied Virtual MP3s from the "VMP3" screen at the most recently right-clicked position.</li>
                     <li><span>[Ctrl]+[Alt]+[I]</span>: Adjusts the Cues of the selected Blocks and splits them (CMDA:SPLITC)</li>
@@ -376,7 +377,7 @@ title: "Manual"
                     <li><span>[Ctrl]+[Shift]+[M]</span>: Organizes the elements of the selected Import MP3s.</li>
                     <li><span>[Ctrl]+Drop MP3 Files/VMP3s</span>: Adds the MP3s once as a Block to the list (ig=1).</li>
                     <li><span>Drop JPG/PNG/GIF Files</span>: Applies image files to the metadata of the selected Import MP3s.</li>
-                    <li><span>[Alt]+Drop JPG/PNG/GIF/TXT Files</span>: Applies image files and TXT metadata descriptions randomly to the metadata of the selected Import MP3s.</li>
+                    <li><span>[Alt]+Drop JPG/PNG/GIF/CJT/TXT Files</span>: Applies image files and CJT/TXT metadata descriptions randomly to the metadata of the selected Import MP3s.</li>
                     <li><span>[Alt]+Drag Selected Items in the List</span>: Reorders the Import MP3s.</li>
                     <li><span>[Ctrl]+[Alt]+Drag Selected Items in the List</span>: Reorders the Blocks.</li>
                     <li><span>[Shift]+Selecting from execution profile list</span>: Changes the profile while retaining the list.</li>
@@ -2246,9 +2247,9 @@ title: "Manual"
             </div>
             <div class="blc">
                 <h3>"Text Editor" Screen</h3>
-                <p>Writes content in CUE/M3U/CJAMC/CJAMJ/CJAM/TEXT formats, runs commands, and adds items to list.</p>
+                <p>Writes content in CUE/M3U/CJAMC/CJAMJ/CJAM/CJAMT/TEXT formats, runs commands, and adds items to list.</p>
                 <p>Access via [Menu Bar] > [File] > [Show Text Editor].</p>
-                <p>Dropping CUE/M3U/CJC/CJJ/CJM/TEXT files onto the screen will read and display the contents using the import character encoding (ie=0-3) of the currently applied profile. Dropping MP3 files will display the absolute paths.</p>
+                <p>Dropping CUE/M3U/CJC/CJJ/CJM/CJT/TXT files onto the screen will read and display the contents using the import character encoding (ie=0-3) of the currently applied profile. Dropping MP3 files will display the absolute paths.</p>
             </div>
             <div class="blc">
                 <h4>[Shortcut Keys]</h4>
@@ -2393,9 +2394,9 @@ title: "Manual"
                     <li><span>Select VMP3→Drag and Drop to the Folder List</span>: Moves Virtual MP3s.</li>
                     <li><span>Select VMP3→[Ctrl]+Drag and Drop to Folder List</span>: Duplicates Virtual MP3s.</li>
                     <li><span>Drag First Column (# Column) in the Virtual MP3 List</span>: Selects multiple Virtual MP3s at once.</li>
-                    <li><span>Drop TXT Files onto Virtual MP3 List</span>: Applies metadata from text.</li>
-                    <li><span>[Alt]+Drop JPG/PNG/GIF/TXT Files onto Virtual MP3 List</span>: Applies image files and TXT metadata descriptions randomly as metadata for selected Virtual MP3s.</li>
-                    <li><span>[Alt]+Drop JPG/PNG/GIF Files onto Virtual MP3 List</span>: Applies image files randomly as metadata for selected Virtual MP3s.</li>
+                    <li><span>Drop CJT/TXT Files onto Virtual MP3 List</span>: Applies metadata from text.</li>
+                    <li><span>Drop JPG/PNG/GIF Files onto the Virtual MP3 List</span>: Applies image files as metadata for selected Virtual MP3s.</li>
+                    <li><span>[Alt]+Drop JPG/PNG/GIF/CJT/TXT Files onto Virtual MP3 List</span>: Applies image files and CJT/TXT metadata descriptions randomly as metadata for selected Virtual MP3s.</li>
                     <li><span>Right-Click on the List</span>: Displays the context menu.</li>
                     <li><span>[Shift]+Right-Click on the List</span>: Displays the context menu while retaining the selection state.</li>
                     <li><span>[Ctrl]+Right-Click on the List</span>: Right-clicks without displaying the context menu.</li>
@@ -2559,7 +2560,7 @@ title: "Manual"
         <div class="cts" id="def-text">
             <div class="blc">
                 <h2>How to Use Text</h2>
-                <p>Text files in CUE, M3U, CJAMC, CJAMJ, CJAM, and TEXT formats can be used to specify import sources, execution procedures, and export results.</p>
+                <p>Text files in CUE, M3U, CJAMC, CJAMJ, CJAM, CJAMT, and TEXT formats can be used to specify import sources, execution procedures, and export results.</p>
                 <p>All formats are written in plain text and can be viewed or edited with general text editors.</p>
             </div>
             <div class="blc">
@@ -3212,7 +3213,7 @@ title: "Manual"
                     </li>
                     <li id="prm-sb"><span>Item Addition Position [Block]</span> (sb=-1-3000,-1): Specifies the position in the list where the Block/Import MP3/time specification Cue will be added using the Block number. A value of '0' adds the item at the top of the list. The parameter value is reset to the default after reading the text.</li>
                     <li id="prm-ss"><span>Item Addition Position [IMP3]</span> (ss=-1-1500,-1): Specifies the position in the list where the Block/Import MP3/time specification Cue will be added using the Import MP3 number. A value of '0' adds the item at the top of the Block. The parameter value is reset to the default after reading the text.</li>
-                    <li id="prm-at"><span>Reference Text File Path</span> (at="txt file path",""): Specifies the text file to reference. The parameter value is reset to the default after reading the text.</li>
+                    <li id="prm-at"><span>Reference Text File Path</span> (at="text file path",""): Specifies the text file to reference. The parameter value is reset to the default after reading the text.</li>
                     <li id="prm-up"><span>Block Distribution on Import</span> (up=0-3000,0): Specifies the number of Blocks to distribute when adding to the list. The parameter value is reset to the default after reading the text.</li>
                     <li id="prm-ap"><span>Relative Path Conversion Folder Path</span> (ap="folder absolute path",""): Specifies the folder path for creating an absolute path from the relative path. The parameter value is reset to the default when Cjam exits.</li>
                     <li id="prm-rp"><span>Reassign Source Folder Path</span> (rp="folder absolute path",""): Specifies the folder path containing the MP3 files or Virtual MP3s for reassigning Import MP3s. The parameter value is reset to the default after the attempt to reassign.</li>
@@ -3454,6 +3455,9 @@ title: "Manual"
                         <p><span>MyMusic</span>: Stores the path to My Music. This value can be used for the "Specify Export Path" (ed), "Relative Path Conversion Folder Path" (ap), or "Reassign Source Folder Path" (rp).</p>
                     </li>
                     <li>
+                        <p><span>Application</span>: Stores the path to the folder containing the application executable. This value can be used for the "Specify Export Path" (ed), "Relative Path Conversion Folder Path" (ap), or "Reassign Source Folder Path" (rp).</p>
+                    </li>
+                    <li>
                         <p><span>SavedDir</span>: Stores the path saved by the "Folder Path Storage" (sd). This value can be used for the "Specify Export Path" (ed), "Relative Path Conversion Folder Path" (ap), or "Reassign Source Folder Path" (rp).</p>
                     </li>
                 </ul>
@@ -3509,22 +3513,23 @@ title: "Manual"
                     </li>
                 </ul>
             </div>
-            <div class="blc" id="txt-txt">
-                <h3>TXT</h3>
-                <p>TEXT (*.txt) files support several types of data.</p>
-                <p>TEXT files can be imported using the menu bar, drag and drop, the "Reference Text File Path" (at) parameter, or by pasting descriptions from the clipboard with [Ctrl]+[V].</p>
+            <div class="blc" id="txt-cjt">
+                <h3>CJAMT</h3>
+                <p>CJAMT (*.cjt) files support several types of content, including CJAMC, CJAMJ, and CJAM descriptions.</p>
+                <p>CJAMT files can be imported using the menu bar, drag and drop, the "Reference Text File Path" (at) parameter, or by pasting descriptions from the clipboard with [Ctrl]+[V].</p>
+                <p>TEXT (*.txt) files can contain the same content as CJAMT files.</p>
             </div>
             <div class="blc">
-                <div class="blc">
+                    <div class="blc">
                     <h4>[Import (CJAM)]</h4>
                     <p>Write "[Cjam Import CJM]" on the first line, followed by data in CJAM format.</p>
                     <br>
                     <p>The following header options are available:</p>
+                    <p>"Full"/"NoCommand": Specifies the content to import. "NoCommand" skips Command entries. If omitted, "Full" is used.</p>
                     <p>"Forward"/"Reverse"/"Random": Specifies the import order. If omitted, "Forward" is used.</p>
                     <p>Example: "[Cjam Import CJM Random]".</p>
                     <br>
                     <p>Relative MP3 paths are resolved relative to the "Relative Path Conversion Folder Path" (ap). If it is not specified, they are resolved relative to the folder containing the text file.</p>
-                    <p>Only Block/MP3/Cue entries are processed; Command entries are ignored.</p>
                     <table>
                         <tr>
                             <td class="tbl">
@@ -3752,14 +3757,183 @@ title: "Manual"
                     </table>
                 </div>
                 <div class="blc">
+                    <h4>[Commands]</h4>
+                    <p>Write "[Cjam Command]" on the first line, followed by one or more Commands in CJAM format.</p>
+                    <p>If the same Command is specified multiple times in the section, only the last entry is valid.</p>
+                    <p>Profile Commands can omit the header string and specify only the values.</p>
+                    <table>
+                        <tr>
+                            <td class="tbl">
+                                <div class="txt">
+                                    <p>[Cjam Command]</p>
+                                    <p>CJM Join</p>
+                                    <p>DIRINDEX 1</p>
+                                    <p>DIRNAME "Folder01"</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="blc">
+                    <h4>[Configurations]</h4>
+                    <p>Write "[Cjam Config]" on the first line, followed by the contents of the cjam.ini file.</p>
+                    <p>Updates the settings for the specified items. Some settings cannot be changed.</p>
+                    <br>
+                    <p>The following header options are available:</p>
+                    <p>"Reset"/"Retain": Specifies whether to reset or retain the current main list state. If omitted, "Reset" is used.</p>
+                    <p>"Backup"/"NoBackup": Specifies whether to create a backup file of the current configuration before applying the changes. If omitted, "Backup" is used.</p>
+                    <p>Example: "[Cjam Config Retain NoBackup]".</p>
+                    <table>
+                        <tr>
+                            <td class="tbl">
+                                <div class="txt">
+                                    <p>[Cjam Config]</p>
+                                    <p>&lt;settings&gt;</p>
+                                    <p>&nbsp;&nbsp;&lt;setting&gt;st=1,si=300,sp=3,sa=0,sn="Run"&lt;/setting&gt;</p>
+                                    <p>&nbsp;&nbsp;&lt;setting&gt;st=2,si=300,sp=3,sa=0,in="List"&lt;/setting&gt;</p>
+                                    <p>&lt;/settings&gt;</p>
+                                    <p>&lt;commands&gt;</p>
+                                    <p>&nbsp;&nbsp;&lt;command&gt;selectall&lt;/command&gt;</p>
+                                    <p>&nbsp;&nbsp;&lt;command&gt;selectall, convert&lt;/command&gt;</p>
+                                    <p>&lt;/commands&gt;</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="blc">
+                    <h4>[Sub-screen (Virtual MP3)]</h4>
+                    <p>Write "[Cjam Subscreen VMP3]" on the first line, followed by the contents of the vmp3.txt file.</p>
+                    <p>Replaces all items in the "VMP3" screen.</p>
+                    <br>
+                    <p>The following header options are available:</p>
+                    <p>"Backup"/"NoBackup": Specifies whether to create a backup file of the current VMP3 list before applying the changes. If omitted, "Backup" is used.</p>
+                    <p>Example: "[Cjam Subscreen VMP3 NoBackup]".</p>
+                    <table>
+                        <tr>
+                            <td class="tbl">
+                                <div class="txt">
+                                    <p>[Cjam Subscreen VMP3]</p>
+                                    <p>&lt;sv&gt;</p>
+                                    <p>im01.mp3</p>
+                                    <p>D:\Data\source01.mp3,0,10000,0,</p>
+                                    <p>im02.mp3</p>
+                                    <p>D:\Data\source02.mp3,0,15000,0,</p>
+                                    <p>&lt;/sv&gt;</p>
+                                    <p>&lt;sv&gt;</p>
+                                    <p>im03.mp3</p>
+                                    <p>APIC="D:\Data\image.jpg",USLT="lyric"</p>
+                                    <p>VLBL="label1","label2"</p>
+                                    <p>D:\Data\source02.mp3,0,1000,0,</p>
+                                    <p>D:\Data\source02.mp3,0,0,1000,</p>
+                                    <p>D:\Data\source02.mp3,2000,13000,0,</p>
+                                    <p>&lt;/sv&gt;</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="blc">
+                    <h4>[Process Text (Placeholder)]</h4>
+                    <p>Write "[Cjam Process Placeholder]" on the first line, followed by placeholder replacement specifications.</p> 
+                    <p>Replace the placeholders "{1}", "{2}", "{3}", "{n}" in the text with the specified strings.</p>
+                    <br>
+                    <p>The following header options are available:</p>
+                    <p>"Forward"/"Reverse"/"Random": Specifies the order of values assigned to each placeholder. If omitted, "Forward" is used.</p>
+                    <p>Example: "[Cjam Process Placeholder Random]".</p>
+                    <table>
+                        <tr>
+                            <td class="tbl">
+                                <div class="txt">
+                                    <p>[Cjam Process Placeholder]</p>
+                                    <p>{1}=firststring</p>
+                                    <p>{2}=secondstring</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="blc">
+                    <h4>[Process Text (Lua)]</h4>
+                    <p>Write "[Cjam Process Lua]" on the first line, followed by Lua code.</p> 
+                    <p>Replaces the contents of the section with the text generated by the Lua code.</p>
+                    <p>The Lua code can only be used to generate text. Access to files or other programs is blocked.</p>
+                    <p>Lua code can only be read when processing is allowed on the "General Settings" screen.</p>
+                    <br>
+                    <p>The following header options are available:</p>
+                    <p>"Backup"/"NoBackup": Specifies whether to create a backup file of the generated text. If omitted, "NoBackup" is used.</p>
+                    <p>Example: "[Cjam Process Lua Backup]".</p>
+                    <table>
+                        <tr>
+                            <td class="tbl">
+                                <div class="txt">
+                                    <p>[Cjam Process Lua]</p>
+                                    <p>local folder = [[D:\Data]]</p> 
+                                    <p>local text = "[Cjam Import MP3]\n"</p> 
+                                    <p>&nbsp;</p> 
+                                    <p>for i = 1, 5 do</p> 
+                                    <p>&nbsp;local filename = string.format("%02d.mp3", i)</p> 
+                                    <p>&nbsp;text = text .. folder .. "\\" .. filename .. "\n"</p>
+                                    <p>end</p> 
+                                    <p>&nbsp;</p> 
+                                    <p>return text</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="blc">
+                    <h4>[Note]</h4>
+                    <p>Write "[Cjam Note]" on the first line, followed by any free-form text.</p>
+                    <p>The content of this section is ignored when the text is read.</p>
+                    <table>
+                        <tr>
+                            <td class="tbl">
+                                <div class="txt">
+                                    <p>[Cjam Note]</p>
+                                    <p>Any description.</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="blc">
+                    <h4>[Multiple Descriptions]</h4>
+                    <p>A single CJAMT file can contain multiple descriptions. Each description must start with its own header line.</p>
+                    <table>
+                        <tr>
+                            <td class="tbl">
+                                <div class="txt">
+                                    <p>[Cjam Process Placeholder]</p>
+                                    <p>{1}=D:\Data\</p>
+                                    <p>&nbsp;</p>
+                                    <p>[Cjam Command]</p>
+                                    <p>Join</p>
+                                    <p>&nbsp;</p>
+                                    <p>[Cjam Import MP3]</p>
+                                    <p>D:\Data\Track01.mp3</p>
+                                    <p>{1}Track02.mp3</p>
+                                    <p>&nbsp;</p>
+                                    <p>[Cjam Command]</p>
+                                    <p>SelectAll, Convert</p>
+                                    <p>&nbsp;</p>
+                                    <p>[Cjam Metadata TAG]</p>
+                                    <p>TIT2="Title01"</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="blc">
                     <h4>[Header Omission]</h4>
-                    <p>TEXT files must begin with a header string. If the header is omitted, the file cannot be imported.</p>
-                    <p>The following formats are exceptions and can be imported without a header:</p>
+                    <p>CJAMT files must begin with a header string. If the header is omitted, the file cannot be imported.</p>
+                    <p>The following formats are exceptions and can omit the header string at the beginning of the file, provided that the file contains only a single description:</p>
                 </div>
                 <div class="blc">
                     <ul>
                         <li><span>vmp3.txt contents</span>: Imported as "[Cjam Import VMP3]".</li>
                         <li><span>TAG descriptions</span>: Imported as "[Cjam Metadata TAG Selected]".</li>
+                        <li><span>Descriptions beginning with a CJM Command</span>: Imported as "[Cjam Import CJM]".</li>
                         <li><span>Descriptions beginning with an MP3 path</span>: Imported as "[Cjam Import MP3]".</li>
                         <li><span>Descriptions beginning with an image path</span>: Imported as "[Cjam Metadata Image Selected]".</li>
                     </ul>
@@ -3819,8 +3993,10 @@ title: "Manual"
             </div>
             <div class="blc">
                 <h4>[Aliases for Text File Paths]</h4>
-                <p>As a special command not included in the eight types above, an alias for the absolute path of any CJM file can be defined and used in parallel with profile commands in the command input box on the main screen.</p>
-                <p>This alias cannot be used in text files or the "Text Editor" screen, and arguments cannot be set.</p>
+                <p>As a special command not included in the eight types above, an alias for one or more text file paths can be defined and used in parallel with profile commands on the main screen.</p>
+                <p>Multiple text file paths can be specified for each alias by separating them with commas (,).</p>
+                <p>Each alias can have arguments. The 1st, 2nd, 3rd, nth arguments replace the corresponding placeholders "{1}", "{2}", "{3}", "{n}" in the text files.</p>
+                <p>When arguments are specified, all replacement specifications in the placeholder section in the text are ignored.</p>
                 <p>Aliases are managed from the "Profiles [Command]" screen (Menu Bar > Settings > Manage Commands).</p>
             </div>
             <div class="blc">
