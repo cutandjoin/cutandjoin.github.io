@@ -65,7 +65,7 @@ Requires Microsoft .NET 6 Runtime.
 - CJAMJ (*.cjj) - Cjam's custom format
 - <a href="https://cjmapp.net/manual/manual.html#txt-cjm">CJAM</a> (*.cjm) - Cjam's custom format
 - <a href="https://cjmapp.net/manual/manual.html#txt-cjt">CJAMT</a> (*.cjt) - Cjam's custom format
-- TXT</a> (*.txt)
+- TXT (*.txt)
 
 ## Installation and Execution
 
