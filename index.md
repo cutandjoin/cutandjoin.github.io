@@ -32,6 +32,8 @@ If the latest version cannot be downloaded, the previous version is available [h
 
 For more information, see the <a href="https://forum.cjmapp.net/index.php">forum</a>.
 
+Resources for multiple languages are available <a href="https://forum.cjmapp.net/viewforum.php?f=10">here</a>.
+
 ## Alternative Downloads
 
 ### Framework-dependent (.NET 8)
