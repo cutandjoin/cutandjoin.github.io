@@ -40,7 +40,7 @@ title: "Manual"
 </head>
 <body>
     <div class="manual-content">
-      <h1>Cjam User Manual (Version 2.7.2.0)</h1>
+      <h1>Cjam User Manual (Version 2.7.3.0)</h1>
         <a name="manual-top"></a>
         <div class="cts">
             <div class="blc">
@@ -1275,7 +1275,7 @@ title: "Manual"
                         </ul>
                     </li>
                     <li id="prm-ld">
-                        <span>Selection Condition</span> (ld=0-9,0): Specifies the condition for selection.
+                        <span>Selection Condition</span> (ld=0-10,0): Specifies the condition for selection.
                         <ul class="itm">
                             <li><span>All</span> (ld=0): Selects all items.</li>
                             <li><span>Executable</span> (ld=1): Selects items that can be executed.</li>
@@ -1287,6 +1287,7 @@ title: "Manual"
                             <li><span>Label</span> (ld=7): Selects items based on a specified label.</li>
                             <li><span>Shift</span> (ld=8): Selects items relative to the position of selected items.</li>
                             <li><span>Random</span> (ld=9): Selects items randomly.</li>
+                            <li><span>Number</span> (ld=10): Selects items based on a specified number.</li>
                         </ul>
                     </li>
                     <li id="prm-le">
@@ -1373,6 +1374,7 @@ title: "Manual"
                         </ul>
                     </li>
                     <li id="prm-lv"><span>Random Count</span> (lv=0-1500,1): Specifies the number of items for the random specification (ld=9).</li>
+                    <li id="prm-lw"><span>Number String</span> (lw="Number" or "Block Number:IMP3 Number",""): Specifies the string for the number specification (ld=10). Specifies the item to select using "Number" or "Block Number and IMP3 Number". Multiple items can be specified by separating them with commas (,).</li>
                     <li id="prm-lx">
                         <span>Previous Selection</span> (lx=0-3,0): Specifies how to apply previously selected items before applying the selection conditions.
                         <ul class="itm">
@@ -3911,6 +3913,21 @@ title: "Manual"
                     </table>
                 </div>
                 <div class="blc">
+                    <h4>[Reference]</h4>
+                    <p>Write "[Cjam Reference]" on the first line, followed by any free-form text.</p>
+                    <p>The content of this section is ignored when the text is read.</p>
+                    <table>
+                        <tr>
+                            <td class="tbl">
+                                <div class="txt">
+                                    <p>[Cjam Reference]</p>
+                                    <p>Any description.</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="blc">
                     <h4>[Note]</h4>
                     <p>Write "[Cjam Note]" on the first line, followed by any free-form text.</p>
                     <p>The content of this section is ignored when the text is read.</p>
@@ -3926,8 +3943,8 @@ title: "Manual"
                     </table>
                 </div>
                 <div class="blc">
-                    <h4>[Multiple Descriptions]</h4>
-                    <p>A single CJAMT file can contain multiple descriptions. Each description must start with its own header line.</p>
+                    <h4>[Multiple Sections]</h4>
+                    <p>A single CJAMT file can contain multiple sections. Each section must start with its own header line.</p>
                     <table>
                         <tr>
                             <td class="tbl">
@@ -3953,9 +3970,31 @@ title: "Manual"
                     </table>
                 </div>
                 <div class="blc">
+                    <h4>[Header Label]</h4>
+                    <p>A section's header can have a name for identification, and the section's content can then be referenced from Define/Process Text (Lua) sections.</p>
+                    <p>Write the name as "#" followed by any string. The name cannot contain "#", spaces, "[", "]", or control characters (such as tab characters). Multiple names can be attached to a single header.</p>
+                    <p>See the <a href="https://forum.cjmapp.net">forum</a> for details on defining and processing Lua code.</p>
+                    <table>
+                        <tr>
+                            <td class="tbl">
+                                <div class="txt">
+                                    <p>[Cjam Reference #label1]</p>
+                                    <p>Any description.</p>
+                                    <p>&nbsp;</p>
+                                    <p>[Cjam Process Lua]</p>
+                                    <p>local sections = cjam.fs.readsection("label1")</p>
+                                    <p>sections = sections .. cjam.fs.readsection([[D:\otherfile.cjt#label2]])</p>
+                                    <p>&nbsp;</p>
+                                    <p>return sections</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="blc">
                     <h4>[Header Omission]</h4>
                     <p>CJAMT files must begin with a header string. If the header is omitted, the file cannot be imported.</p>
-                    <p>The following formats are exceptions and can omit the header string at the beginning of the file, provided that the file contains only a single description:</p>
+                    <p>The following formats are exceptions and can omit the header string at the beginning of the file, provided that the file contains only a single section:</p>
                 </div>
                 <div class="blc">
                     <ul>
@@ -4121,6 +4160,9 @@ title: "Manual"
                     <li><span>SELECTRANDOMINB</span> (lv): la=1,lc=0,ld=9,lv=3,in="SELECTRANDOMINB"</li>
                     <li><span>SELECTRANDOM</span> (lv): la=1,lc=1,ld=9,lv=3,in="SELECTRANDOM"</li>
                     <li><span>SELECTRANDOMB</span> (lv): la=2,lc=1,ld=9,lv=3,in="SELECTRANDOMB"</li>
+                    <li><span>SELECTNUMBERINB</span> (lw): la=1,lc=0,ld=10,lw="1",in="SELECTNUMBERINB"</li>
+                    <li><span>SELECTNUMBER</span> (lw): la=1,lc=1,ld=10,lw="1",in="SELECTNUMBER"</li>
+                    <li><span>SELECTNUMBERB</span> (lw): la=2,lc=1,ld=10,lw="1",in="SELECTNUMBERB"</li>
                     <li><span>SELECTAND</span>: lx=1</li>
                     <li><span>SELECTOR</span>: lx=2</li>
                     <li><span>SELECTXOR</span>: lx=3</li>
