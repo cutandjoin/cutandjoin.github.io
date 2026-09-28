@@ -19,16 +19,16 @@ title: "Cjam"
 
 ## Download
 
-### [Download Cjam](https://github.com/cutandjoin/Cjam/releases/download/v2720/cjam_v2720.zip)
+### [Download Cjam](https://github.com/cutandjoin/Cjam/releases/download/v2730/cjam_v2730.zip)
 
-**Version**: 2.7.2.0  
-**Release Date**: Sep 19, 2026  
+**Version**: 2.7.3.0  
+**Release Date**: Sep 28, 2026  
 **File Size**: 54.4 MB  
-**SHA-256**: 1b8ffc96f09a86fa0bce4d9a949a9153bfe55286547c1b0e11eab175e9143158
+**SHA-256**: c5e955162975c66a5febde032eae19a80ee2a2dd789ee52630836527d561129b
 
 Includes the .NET 8 runtime. No additional software is required.
 
-If the latest version cannot be downloaded, the previous version is available [here](https://github.com/cutandjoin/Cjam/releases/download/v2700/cjam_v2700.zip).
+If the latest version cannot be downloaded, the previous version is available [here](https://github.com/cutandjoin/Cjam/releases/download/v2720/cjam_v2720.zip).
 
 For more information, see the <a href="https://forum.cjmapp.net/index.php">forum</a>.
 
@@ -40,19 +40,19 @@ Resources for multiple languages are available <a href="https://forum.cjmapp.net
 
 Requires Microsoft .NET 8 Runtime.
 
-[Download](https://github.com/cutandjoin/Cjam/releases/download/v2720/cjam_v2720_net8.zip)
+[Download](https://github.com/cutandjoin/Cjam/releases/download/v2730/cjam_v2730_net8.zip)
 
-**File Size**: 2.08 MB  
-**SHA-256**: 64e294d27d0bf7c969ce2b73b924322f40557354acbc0cba3d5b736997e3c179
+**File Size**: 2.09 MB  
+**SHA-256**: 9517278c3cce8b53ef44fa0568fa759988eaaf130cf8739de5bf31a64d361dd9
 
 ### Framework-dependent (.NET 6)
 
 Requires Microsoft .NET 6 Runtime.
 
-[Download](https://github.com/cutandjoin/Cjam/releases/download/v2720/cjam_v2720_net6.zip)
+[Download](https://github.com/cutandjoin/Cjam/releases/download/v2730/cjam_v2730_net6.zip)
 
-**File Size**: 2.08 MB  
-**SHA-256**: 351369aec664cac032124d8b3bb05ff9fec5d6a48de95338c6372ece34c92de1
+**File Size**: 2.09 MB  
+**SHA-256**: a272cbcc64b7728bcb67006657e4d05b4b38920d641fb871e6c5266d6264bae6
 
 ## Supported Devices
 
@@ -81,12 +81,14 @@ Requires Microsoft .NET 6 Runtime.
 
 ### Version 2.0.0.0 - Jun 28, 2025
 
-### Version 2.7.2.0 - Sep 19, 2026
-- Added support for new section types in .cjt and .txt files (Lua definition)
-- Added support for custom properties accessible from Lua
-- Fixed a bug where Lua code in .cjt and .txt files was not applied under certain conditions
-- Fixed a bug where comment lines in CJM sections in .cjt and .txt files were not removed
-- Fixed a bug where the run order of CJMP commands was not properly prioritized
-
+### Version 2.7.3.0 - Sep 28, 2026
+- Added a new value to the command parameter (ld)
+- Added new command parameter (lw)
+- Added new command aliases (e.g., selectnumber)
+- Added support for new section types in .cjt/.txt files (Reference)
+- Added support for labels in .cjt/.txt sections 
+- Added new built-in Lua properties and functions for Lua sections in .cjt/.txt files (e.g., vmtext, readsection)
+- Added new lang.txt entries (pli_c472–pli_c474)
+- Posted text for several language files on the forum
 
 For detailed update information, see the <a href="https://forum.cjmapp.net/viewforum.php?f=3">full changelog</a>.
