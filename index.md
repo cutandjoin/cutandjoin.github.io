@@ -84,11 +84,11 @@ Requires Microsoft .NET 6 Runtime.
 ### Version 2.7.4.0 - Oct 10, 2026
 - Fixed a bug where unexpected behavior occurred after closing certain Profile sub-screens
 - Posted text for several language files on the forum:
-  - German: https://forum.cjmapp.net/viewtopic.php?t=6298
-  - French: https://forum.cjmapp.net/viewtopic.php?t=6300
-  - Russian: https://forum.cjmapp.net/viewtopic.php?t=6301
-  - Simplified Chinese: https://forum.cjmapp.net/viewtopic.php?t=6302
-  - Traditional Chinese: https://forum.cjmapp.net/viewtopic.php?t=6303
-  - Japanese (user-translated): https://forum.cjmapp.net/viewtopic.php?t=6290
+  - German: [https://forum.cjmapp.net/viewtopic.php?t=6298](https://forum.cjmapp.net/viewtopic.php?t=6298)
+  - French: [https://forum.cjmapp.net/viewtopic.php?t=6300](https://forum.cjmapp.net/viewtopic.php?t=6300)
+  - Russian: [https://forum.cjmapp.net/viewtopic.php?t=6301](https://forum.cjmapp.net/viewtopic.php?t=6301)
+  - Simplified Chinese: [https://forum.cjmapp.net/viewtopic.php?t=6302](https://forum.cjmapp.net/viewtopic.php?t=6302)
+  - Traditional Chinese: [https://forum.cjmapp.net/viewtopic.php?t=6303](https://forum.cjmapp.net/viewtopic.php?t=6303)
+  - Japanese (user-translated): [https://forum.cjmapp.net/viewtopic.php?t=6290](https://forum.cjmapp.net/viewtopic.php?t=6290)
 
 For detailed update information, see the <a href="https://forum.cjmapp.net/viewforum.php?f=3">full changelog</a>.
