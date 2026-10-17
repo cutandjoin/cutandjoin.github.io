@@ -19,16 +19,16 @@ title: "Cjam"
 
 ## Download
 
-### [Download Cjam](https://github.com/cutandjoin/Cjam/releases/download/v2740/cjam_v2740.zip)
+### [Download Cjam](https://github.com/cutandjoin/Cjam/releases/download/v2750/cjam_v2750.zip)
 
-**Version**: 2.7.4.0  
-**Release Date**: Oct 10, 2026  
+**Version**: 2.7.5.0  
+**Release Date**: Oct 17, 2026  
 **File Size**: 54.4 MB  
-**SHA-256**: 1beede71d6981c6ff8c3fd74683141582c0f36e47066d46db5910d4a0695f455
+**SHA-256**: 49366c5fa059b55a3f36754073b54e957eba35af8e10d557f11174173754bc6a
 
 Includes the .NET 8 runtime. No additional software is required.
 
-If the latest version cannot be downloaded, the previous version is available [here](https://github.com/cutandjoin/Cjam/releases/download/v2730/cjam_v2730.zip).
+If the latest version cannot be downloaded, the previous version is available [here](https://github.com/cutandjoin/Cjam/releases/download/v2740/cjam_v2740.zip).
 
 For more information, see the <a href="https://forum.cjmapp.net/index.php">forum</a>.
 
@@ -40,19 +40,19 @@ Resources for multiple languages are available <a href="https://forum.cjmapp.net
 
 Requires Microsoft .NET 8 Runtime.
 
-[Download](https://github.com/cutandjoin/Cjam/releases/download/v2740/cjam_v2740_net8.zip)
+[Download](https://github.com/cutandjoin/Cjam/releases/download/v2750/cjam_v2750_net8.zip)
 
 **File Size**: 2.09 MB  
-**SHA-256**: ef5bdb98ebdbf5b095851e1faa9e9587bf2853f0904a8ec48725b813dc5e74c2
+**SHA-256**: 1d3afadaa5221f1f1f9ccca933c16631c3101abe45741b328ddc7fe8a097252e
 
 ### Framework-dependent (.NET 6)
 
 Requires Microsoft .NET 6 Runtime.
 
-[Download](https://github.com/cutandjoin/Cjam/releases/download/v2740/cjam_v2740_net6.zip)
+[Download](https://github.com/cutandjoin/Cjam/releases/download/v2750/cjam_v2750_net6.zip)
 
 **File Size**: 2.09 MB  
-**SHA-256**: 82486a8b311799a28b43c115f8ff7d6fa0ccb7efb84aef95c8d18dd44cf64978
+**SHA-256**: dc9b5ddcddc75428aedc94c5a98a08d4d6ece5bd0a9efc3c215a4e3cbbedefa1
 
 ## Supported Devices
 
@@ -81,14 +81,12 @@ Requires Microsoft .NET 6 Runtime.
 
 ### Version 2.0.0.0 - Jun 28, 2025
 
-### Version 2.7.4.0 - Oct 10, 2026
-- Fixed a bug where unexpected behavior occurred after closing certain Profile sub-screens
+### Version 2.7.5.0 - Oct 17, 2026
+- Fixed a bug that caused an error when displaying image files with incorrect extensions
 - Posted text for several language files on the forum:
-  - German: [https://forum.cjmapp.net/viewtopic.php?t=6298](https://forum.cjmapp.net/viewtopic.php?t=6298)
-  - French: [https://forum.cjmapp.net/viewtopic.php?t=6300](https://forum.cjmapp.net/viewtopic.php?t=6300)
-  - Russian: [https://forum.cjmapp.net/viewtopic.php?t=6301](https://forum.cjmapp.net/viewtopic.php?t=6301)
-  - Simplified Chinese: [https://forum.cjmapp.net/viewtopic.php?t=6302](https://forum.cjmapp.net/viewtopic.php?t=6302)
-  - Traditional Chinese: [https://forum.cjmapp.net/viewtopic.php?t=6303](https://forum.cjmapp.net/viewtopic.php?t=6303)
-  - Japanese (user-translated): [https://forum.cjmapp.net/viewtopic.php?t=6290](https://forum.cjmapp.net/viewtopic.php?t=6290)
+  - Polish: [https://forum.cjmapp.net/viewtopic.php?t=6305](https://forum.cjmapp.net/viewtopic.php?t=6305)
+  - Czech: [https://forum.cjmapp.net/viewtopic.php?t=6306](https://forum.cjmapp.net/viewtopic.php?t=6306)
+  - Portuguese: [https://forum.cjmapp.net/viewtopic.php?t=6307](https://forum.cjmapp.net/viewtopic.php?t=6307)
+  - Spanish: [https://forum.cjmapp.net/viewtopic.php?t=6308](https://forum.cjmapp.net/viewtopic.php?t=6308)
 
 For detailed update information, see the <a href="https://forum.cjmapp.net/viewforum.php?f=3">full changelog</a>.
